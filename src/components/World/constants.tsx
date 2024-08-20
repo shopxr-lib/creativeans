@@ -39,14 +39,14 @@ export const sprites = [
     offset: { x: -1680, y: -620 },
   },
   {
-    key: "building3",
-    image: Building3Img,
-    offset: { x: -653, y: -410 },
-  },
-  {
     key: "building4",
     image: Building4Img,
     offset: { x: 0, y: -767 },
+  },
+  {
+    key: "building3",
+    image: Building3Img,
+    offset: { x: -653, y: -410 },
   },
   {
     key: "building6",
