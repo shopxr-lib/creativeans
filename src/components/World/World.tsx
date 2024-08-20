@@ -11,7 +11,7 @@ const World: React.FC = () => {
 
   const [isDragging, setIsDragging] = useState(false);
   const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
-  const [scale, setScale] = useState(0.3);
+  const [scale, setScale] = useState(0.8);
   const [initialDistance, setInitialDistance] = useState(0);
 
   const handleMouseDown = (event: React.MouseEvent) => {
@@ -28,10 +28,10 @@ const World: React.FC = () => {
         const newY = prevPosition.y + dy;
 
         // Define boundaries
-        const minX = window.innerWidth * 0.1;
-        const maxX = window.innerWidth * 0.9;
-        const minY = window.innerHeight * 0.1;
-        const maxY = window.innerHeight * 0.9;
+        const minX = window.innerWidth * -1 * scale;
+        const maxX = window.innerWidth * 1.5 * scale;
+        const minY = window.innerHeight * -1 * scale;
+        const maxY = window.innerHeight * 2 * scale;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
@@ -95,13 +95,18 @@ const World: React.FC = () => {
       />
 
       {sprites.map((sprite) => {
+        const scaledOffset = {
+          x: sprite.offset.x * scale,
+          y: sprite.offset.y * scale,
+        };
+
         return (
           <Sprite
             key={sprite.key}
             image={sprite.image}
             anchor={0.5}
-            x={position.x + sprite.offset.x}
-            y={position.y + sprite.offset.y}
+            x={position.x + scaledOffset.x}
+            y={position.y + scaledOffset.y}
             scale={{ x: scale, y: scale }}
           />
         );
