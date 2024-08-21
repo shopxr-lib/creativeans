@@ -185,8 +185,10 @@ const World: React.FC = () => {
             y: sprite.offset.scale?.y || 1,
           };
 
+          const Component = sprite.component || Sprite;
+
           return (
-            <Sprite
+            <Component
               key={sprite.key}
               image={sprite.image}
               anchor={0.5}

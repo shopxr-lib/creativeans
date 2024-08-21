@@ -24,12 +24,14 @@ import PlantPot1 from "../../assets/images/Creativeans-plant-pot1.webp";
 import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
+import Lollipop from "../Lollipop/LolliPop";
 
 type Sprite = {
   key: string;
   image: string;
   offset: { x: number; y: number; scale?: { x?: number; y?: number } };
   rotation?: number;
+  component?: React.ComponentType;
 };
 
 export const sprites: Sprite[] = [
@@ -147,41 +149,49 @@ export const sprites: Sprite[] = [
   {
     key: "red-lollipop-1",
     image: RedLolliPopImg,
+    component: Lollipop,
     offset: { x: 340, y: -1160, scale: { x: 0.5, y: 0.5 } },
   },
   {
     key: "red-lollipop-2",
+    component: Lollipop,
     image: RedLolliPopImg,
     offset: { x: 340, y: -1040, scale: { x: 0.18, y: 0.18 } },
   },
   {
     key: "purple-lollipop-1",
+    component: Lollipop,
     image: PurpleLolliPopImg,
     offset: { x: 270, y: -1070, scale: { x: 0.25, y: 0.25 } },
   },
   {
     key: "purple-lollipop-2",
+    component: Lollipop,
     image: PurpleLolliPopImg,
     offset: { x: 420, y: -1065, scale: { x: 0.25, y: 0.25 } },
   },
 
   {
     key: "purple-lollipop-3",
+    component: Lollipop,
     image: PurpleLolliPopImg,
     offset: { x: -1534, y: -135, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "red-lollipop-3",
+    component: Lollipop,
     image: RedLolliPopImg,
     offset: { x: -1480, y: -74, scale: { x: 0.2, y: 0.2 } },
   },
   {
     key: "red-lollipop-4",
+    component: Lollipop,
     image: RedLolliPopImg,
     offset: { x: 954, y: -180, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "purple-lollipop-4",
+    component: Lollipop,
     image: PurpleLolliPopImg,
     offset: { x: 1000, y: -117, scale: { x: 0.2, y: 0.2 } },
   },
