@@ -179,6 +179,10 @@ const World: React.FC = () => {
             x: sprite.offset.x * scale,
             y: sprite.offset.y * scale,
           };
+          const internalScale = {
+            x: sprite.offset.scale?.x || 1,
+            y: sprite.offset.scale?.y || 1,
+          };
 
           return (
             <Sprite
@@ -187,7 +191,8 @@ const World: React.FC = () => {
               anchor={0.5}
               x={position.x + scaledOffset.x}
               y={position.y + scaledOffset.y}
-              scale={{ x: scale, y: scale }}
+              scale={{ x: scale * internalScale.x, y: scale * internalScale.y }}
+              rotation={sprite.rotation}
             />
           );
         })}

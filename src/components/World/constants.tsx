@@ -17,8 +17,22 @@ import FishDenisonImg from "../../assets/images/Creativeans-Fish-Denison-Barp.we
 import FishBlueGerman from "../../assets/images/Creativeans-blue-german-fish.webp";
 import FishAngel from "../../assets/images/Creativeans-angel-fish.webp";
 import PipeImg from "../../assets/images/Creativeans-pipes.webp";
+import RedLolliPopImg from "../../assets/images/Creativeans-red-lollipop-top.webp";
+import PurpleLolliPopImg from "../../assets/images/Creativeans-purple-lollipop-top.webp";
+import FishOrange from "../../assets/images/Creativeans-orange-fish.webp";
+import PlantPot1 from "../../assets/images/Creativeans-plant-pot1.webp";
+import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
+import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
+import Otter from "../../assets/images/Creativeans-otter.webp";
 
-export const sprites = [
+type Sprite = {
+  key: string;
+  image: string;
+  offset: { x: number; y: number; scale?: { x?: number; y?: number } };
+  rotation?: number;
+};
+
+export const sprites: Sprite[] = [
   {
     key: "c-building",
     image: CBuildingImg,
@@ -129,5 +143,76 @@ export const sprites = [
     key: "fish-angel-2",
     image: FishAngel,
     offset: { x: -333, y: 1033 },
+  },
+  {
+    key: "red-lollipop-1",
+    image: RedLolliPopImg,
+    offset: { x: 340, y: -1160, scale: { x: 0.5, y: 0.5 } },
+  },
+  {
+    key: "red-lollipop-2",
+    image: RedLolliPopImg,
+    offset: { x: 340, y: -1040, scale: { x: 0.18, y: 0.18 } },
+  },
+  {
+    key: "purple-lollipop-1",
+    image: PurpleLolliPopImg,
+    offset: { x: 270, y: -1070, scale: { x: 0.25, y: 0.25 } },
+  },
+  {
+    key: "purple-lollipop-2",
+    image: PurpleLolliPopImg,
+    offset: { x: 420, y: -1065, scale: { x: 0.25, y: 0.25 } },
+  },
+
+  {
+    key: "purple-lollipop-3",
+    image: PurpleLolliPopImg,
+    offset: { x: -1534, y: -135, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "red-lollipop-3",
+    image: RedLolliPopImg,
+    offset: { x: -1480, y: -74, scale: { x: 0.2, y: 0.2 } },
+  },
+  {
+    key: "red-lollipop-4",
+    image: RedLolliPopImg,
+    offset: { x: 954, y: -180, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "purple-lollipop-4",
+    image: PurpleLolliPopImg,
+    offset: { x: 1000, y: -117, scale: { x: 0.2, y: 0.2 } },
+  },
+  {
+    key: "fish-orange",
+    image: FishOrange,
+    offset: { x: 1797, y: -364 },
+  },
+  {
+    key: "plant-pot-1",
+    image: PlantPot1,
+    offset: { x: -1140, y: -150 },
+  },
+  {
+    key: "plant-pot-2",
+    image: PlantPot2,
+    offset: { x: -1145, y: -23 },
+  },
+  {
+    key: "plant-pot-3",
+    image: PlantPot3,
+    offset: { x: -950, y: 95 },
+  },
+  {
+    key: "otter-1",
+    image: Otter,
+    offset: { x: -254, y: 270 },
+  },
+  {
+    key: "otter-2",
+    image: Otter,
+    offset: { x: 270, y: -107, scale: { x: -1 } },
   },
 ];
