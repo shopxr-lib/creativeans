@@ -16,6 +16,7 @@ import TrainChocolateImg from "../../assets/images/Creativeans-Train-Chocolate.w
 import FishDenisonImg from "../../assets/images/Creativeans-Fish-Denison-Barp.webp";
 import FishBlueGerman from "../../assets/images/Creativeans-blue-german-fish.webp";
 import FishAngel from "../../assets/images/Creativeans-angel-fish.webp";
+import PipeImg from "../../assets/images/Creativeans-pipes.webp";
 
 export const sprites = [
   {
@@ -73,11 +74,10 @@ export const sprites = [
     image: PurpleBallImg,
     offset: { x: 1143, y: 317 },
   },
-  // near building 1
   {
-    key: "tree-building-1",
-    image: TreeImg,
-    offset: { x: -1617, y: -233 },
+    key: "pipe",
+    image: PipeImg,
+    offset: { x: -1485, y: -210 },
   },
   // near building 3
   {
