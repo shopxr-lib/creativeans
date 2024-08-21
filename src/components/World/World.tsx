@@ -152,6 +152,7 @@ const World: React.FC = () => {
         overflow: "hidden",
         margin: 0,
         padding: 0,
+        cursor: isDragging ? "grabbing" : "grab",
       }}
     >
       <Stage
