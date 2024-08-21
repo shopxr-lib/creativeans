@@ -3,6 +3,8 @@ import { Sprite, Stage } from "@pixi/react";
 import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp";
 import { sprites } from "./constants";
 
+const initialScale = 0.3;
+
 const World: React.FC = () => {
   const [position, setPosition] = useState({
     x: window.innerWidth / 2,
@@ -11,7 +13,7 @@ const World: React.FC = () => {
 
   const [isDragging, setIsDragging] = useState(false);
   const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
-  const [scale, setScale] = useState(0.8);
+  const [scale, setScale] = useState(initialScale);
   const [initialDistance, setInitialDistance] = useState(0);
 
   const handleMouseDown = (event: React.MouseEvent) => {
@@ -28,9 +30,9 @@ const World: React.FC = () => {
         const newY = prevPosition.y + dy;
 
         // Define boundaries
-        const minX = window.innerWidth * -1 * scale;
-        const maxX = window.innerWidth * 1.5 * scale;
-        const minY = window.innerHeight * -1 * scale;
+        const minX = window.innerWidth * -2 * scale;
+        const maxX = window.innerWidth * 2 * scale;
+        const minY = window.innerHeight * -2 * scale;
         const maxY = window.innerHeight * 2 * scale;
 
         return {
@@ -47,8 +49,13 @@ const World: React.FC = () => {
   };
 
   const handleTouchStart = (event: React.TouchEvent) => {
-    if (event.touches.length === 2) {
-      // pinch to zoom
+    if (event.touches.length === 1) {
+      setIsDragging(true);
+      setLastPosition({
+        x: event.touches[0].clientX,
+        y: event.touches[0].clientY,
+      });
+    } else if (event.touches.length === 2) {
       const dx = event.touches[0].clientX - event.touches[1].clientX;
       const dy = event.touches[0].clientY - event.touches[1].clientY;
       setInitialDistance(Math.sqrt(dx * dx + dy * dy));
@@ -56,16 +63,72 @@ const World: React.FC = () => {
   };
 
   const handleTouchMove = (event: React.TouchEvent) => {
-    if (event.touches.length === 2) {
+    if (isDragging && event.touches.length === 1) {
+      const dx = event.touches[0].clientX - lastPosition.x;
+      const dy = event.touches[0].clientY - lastPosition.y;
+      setPosition((prevPosition) => {
+        const newX = prevPosition.x + dx;
+        const newY = prevPosition.y + dy;
+
+        // Define boundaries
+        const minX = window.innerWidth * -4 * scale;
+        const maxX = window.innerWidth * 6 * scale;
+        const minY = window.innerHeight * -1 * scale;
+        const maxY = window.innerHeight * 3 * scale;
+
+        return {
+          x: Math.max(minX, Math.min(maxX, newX)),
+          y: Math.max(minY, Math.min(maxY, newY)),
+        };
+      });
+      setLastPosition({
+        x: event.touches[0].clientX,
+        y: event.touches[0].clientY,
+      });
+    } else if (event.touches.length === 2) {
       const dx = event.touches[0].clientX - event.touches[1].clientX;
       const dy = event.touches[0].clientY - event.touches[1].clientY;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-      const scaleChange = distance / initialDistance;
-      setScale((prevScale) =>
-        Math.max(0.1, Math.min(prevScale * scaleChange, 2))
-      );
-      setInitialDistance(distance);
+      const newDistance = Math.sqrt(dx * dx + dy * dy);
+      const scaleChange = newDistance / initialDistance;
+
+      const dampingFactor = 0.05; // Adjust this value to control the smoothness
+      const adjustedScaleChange = 1 + (scaleChange - 1) * dampingFactor;
+
+      const midpoint = {
+        x: (event.touches[0].clientX + event.touches[1].clientX) / 2,
+        y: (event.touches[0].clientY + event.touches[1].clientY) / 2,
+      };
+
+      setScale((prevScale) => {
+        const newScale = Math.max(
+          initialScale,
+          Math.min(3, prevScale * adjustedScaleChange)
+        );
+        const scaleRatio = newScale / prevScale;
+
+        setPosition((prevPosition) => {
+          const newX = midpoint.x - (midpoint.x - prevPosition.x) * scaleRatio;
+          const newY = midpoint.y - (midpoint.y - prevPosition.y) * scaleRatio;
+
+          // Define boundaries
+          const minX = window.innerWidth * -4 * newScale;
+          const maxX = window.innerWidth * 6 * newScale;
+          const minY = window.innerHeight * -1 * newScale;
+          const maxY = window.innerHeight * 3 * newScale;
+
+          return {
+            x: Math.max(minX, Math.min(maxX, newX)),
+            y: Math.max(minY, Math.min(maxY, newY)),
+          };
+        });
+
+        return newScale;
+      });
     }
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
   };
 
   useEffect(() => {
@@ -76,42 +139,54 @@ const World: React.FC = () => {
   }, []);
 
   return (
-    <Stage
-      width={window.innerWidth}
-      height={window.innerHeight}
-      options={{ backgroundColor: 0x10bb99 }}
-      onMouseMove={handleMouseMove}
-      onMouseDown={handleMouseDown}
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        overflow: "hidden",
+        margin: 0,
+        padding: 0,
+      }}
     >
-      <Sprite
-        image={WorldBaseImg}
-        anchor={0.5}
-        x={position.x}
-        y={position.y}
-        scale={{ x: scale, y: scale }}
-        pointerdown={handleMouseDown}
-      />
+      <Stage
+        width={window.innerWidth}
+        height={window.innerHeight}
+        options={{ backgroundColor: 0x10bb99 }}
+        onMouseMove={handleMouseMove}
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{ touchAction: "none" }} // Prevent default touch actions
+      >
+        <Sprite
+          image={WorldBaseImg}
+          anchor={0.5}
+          x={position.x}
+          y={position.y}
+          scale={{ x: scale, y: scale }}
+          pointerdown={handleMouseDown}
+        />
 
-      {sprites.map((sprite) => {
-        const scaledOffset = {
-          x: sprite.offset.x * scale,
-          y: sprite.offset.y * scale,
-        };
+        {sprites.map((sprite) => {
+          const scaledOffset = {
+            x: sprite.offset.x * scale,
+            y: sprite.offset.y * scale,
+          };
 
-        return (
-          <Sprite
-            key={sprite.key}
-            image={sprite.image}
-            anchor={0.5}
-            x={position.x + scaledOffset.x}
-            y={position.y + scaledOffset.y}
-            scale={{ x: scale, y: scale }}
-          />
-        );
-      })}
-    </Stage>
+          return (
+            <Sprite
+              key={sprite.key}
+              image={sprite.image}
+              anchor={0.5}
+              x={position.x + scaledOffset.x}
+              y={position.y + scaledOffset.y}
+              scale={{ x: scale, y: scale }}
+            />
+          );
+        })}
+      </Stage>
+    </div>
   );
 };
 
