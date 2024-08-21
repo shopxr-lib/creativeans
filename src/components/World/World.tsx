@@ -4,6 +4,8 @@ import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp"
 import { sprites } from "./constants";
 
 const initialScale = 0.3;
+const worldBaseImgWidth = 4096;
+const worldBaseImgHeight = 2671;
 
 const World: React.FC = () => {
   const [position, setPosition] = useState({
@@ -29,11 +31,13 @@ const World: React.FC = () => {
         const newX = prevPosition.x + dx;
         const newY = prevPosition.y + dy;
 
-        // Define boundaries
-        const minX = window.innerWidth * -2 * scale;
-        const maxX = window.innerWidth * 2 * scale;
-        const minY = window.innerHeight * -2 * scale;
-        const maxY = window.innerHeight * 2 * scale;
+        // Calculate boundaries based on the scaled image dimensions
+        const scaledWidth = worldBaseImgWidth * scale;
+        const scaledHeight = worldBaseImgHeight * scale;
+        const minX = window.innerWidth / 2 - scaledWidth / 2;
+        const maxX = window.innerWidth / 2 + scaledWidth / 2;
+        const minY = window.innerHeight / 2 - scaledHeight / 2;
+        const maxY = window.innerHeight / 2 + scaledHeight / 2;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
@@ -110,11 +114,13 @@ const World: React.FC = () => {
           const newX = midpoint.x - (midpoint.x - prevPosition.x) * scaleRatio;
           const newY = midpoint.y - (midpoint.y - prevPosition.y) * scaleRatio;
 
-          // Define boundaries
-          const minX = window.innerWidth * -4 * newScale;
-          const maxX = window.innerWidth * 6 * newScale;
-          const minY = window.innerHeight * -1 * newScale;
-          const maxY = window.innerHeight * 3 * newScale;
+          // Calculate boundaries based on the new scaled image dimensions
+          const scaledWidth = worldBaseImgWidth * newScale;
+          const scaledHeight = worldBaseImgHeight * newScale;
+          const minX = window.innerWidth / 2 - scaledWidth / 2;
+          const maxX = window.innerWidth / 2 + scaledWidth / 2;
+          const minY = window.innerHeight / 2 - scaledHeight / 2;
+          const maxY = window.innerHeight / 2 + scaledHeight / 2;
 
           return {
             x: Math.max(minX, Math.min(maxX, newX)),
