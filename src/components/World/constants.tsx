@@ -25,6 +25,7 @@ import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
 import Lollipop from "../Lollipop/LolliPop";
+import PlantPot from "../PlantPot/PlantPot";
 
 type Sprite = {
   key: string;
@@ -203,18 +204,42 @@ export const sprites: Sprite[] = [
   {
     key: "plant-pot-1",
     image: PlantPot1,
-    offset: { x: -1140, y: -150 },
+    component: ({ ...props }) => (
+      <PlantPot
+        {...props}
+        trails={[
+          { x: -1234, y: -84 },
+          { x: -1020, y: -224 },
+          { x: -1140, y: -150 },
+        ]}
+      />
+    ),
+    offset: { x: -1234, y: -84 },
   },
-  {
-    key: "plant-pot-2",
-    image: PlantPot2,
-    offset: { x: -1145, y: -23 },
-  },
-  {
-    key: "plant-pot-3",
-    image: PlantPot3,
-    offset: { x: -950, y: 95 },
-  },
+  // {
+  //   key: "plant-pot-1-1",
+  //   image: PlantPot1,
+  //   component: PlantPot,
+  //   offset: { x: -1020, y: -224 },
+  // },
+  // {
+  //   key: "plant-pot-1-2",
+  //   image: PlantPot1,
+  //   component: PlantPot,
+  //   offset: { x: -1234, y: -84 },
+  // },
+  // {
+  //   key: "plant-pot-2",
+  //   image: PlantPot2,
+  //   // component: PlantPot,
+  //   offset: { x: -1145, y: -23 },
+  // },
+  // {
+  //   key: "plant-pot-3",
+  //   image: PlantPot3,
+  //   // component: PlantPot,
+  //   offset: { x: -950, y: 95 },
+  // },
   {
     key: "otter-1",
     image: Otter,

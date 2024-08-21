@@ -1,8 +1,21 @@
 import "./App.css";
 import { World } from "./components/World";
+import { WorldProvider } from "./context/World/WorldContext";
+
+const initialScale = 0.3;
+const worldBaseImgWidth = 4096;
+const worldBaseImgHeight = 2671;
 
 function App() {
-  return <World />;
+  return (
+    <WorldProvider
+      initialScale={initialScale}
+      width={worldBaseImgWidth}
+      height={worldBaseImgHeight}
+    >
+      <World />
+    </WorldProvider>
+  );
 }
 
 export default App;
