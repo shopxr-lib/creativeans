@@ -46,3 +46,4 @@
 # Development
 
 For development, we will use the branch `dev`.
+For production, we will use the branch `main`
