@@ -3,14 +3,14 @@ import { Sprite, Stage } from "@pixi/react";
 import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp";
 import { sprites } from "./constants";
 
-const initialScale = 0.3;
+const initialScale = 0.5;
 const worldBaseImgWidth = 4096;
 const worldBaseImgHeight = 2671;
 
 const World: React.FC = () => {
   const [position, setPosition] = useState({
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
+    x: window.innerWidth / 2 - 400,
+    y: window.innerHeight / 2 + 350,
   });
 
   const [isDragging, setIsDragging] = useState(false);
