@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# Creativeans
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image info](./docs/images/world.png)
 
-Currently, two official plugins are available:
+# Pre-requisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- node >= 18
+- npm >= 10.8.1
 
-## Expanding the ESLint configuration
+# Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Install dependencies
 
-- Configure the top-level `parserOptions` property like this:
+   ```
+   npm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Start development server
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Open the address in the output command
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+# To test on mobile
+
+1. Make sure your computer and mobile phone are connected to the same network
+2. Start dev server with `--host` parameter
+   ```
+   npm run dev -- --host 0.0.0.0
+   ```
+3. Open the IP address in your mobile phone, usually starts with 192.168...
+
+   ```
+   VITE v5.4.1  ready in 87 ms
+
+   ➜  Local:   http://localhost:5173/
+   ➜  Network: http://192.168.18.3:5173/
+   ➜  Network: http://10.211.55.1:5173/
+   ➜  press h + enter to show help
+   ```
+
+   > In the above case, the IP address to open is 192.168.18.3:5173
+
+# Development
+
+For development, we will use the branch `dev`.
+For production, we will use the branch `main`.

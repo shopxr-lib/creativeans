@@ -18,8 +18,8 @@ export const WorldProvider: React.FC<
   PropsWithChildren & { initialScale: number; width: number; height: number }
 > = ({ children, initialScale, width, height }) => {
   const [position, setPosition] = useState({
-    x: window.innerWidth / 2,
-    y: window.innerHeight / 2,
+    x: window.innerWidth / 2 - 400,
+    y: window.innerHeight / 2 + 350,
   });
 
   const [isDragging, setIsDragging] = useState(false);
