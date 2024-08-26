@@ -58,7 +58,9 @@ const World: React.FC = () => {
             y: sprite.offset.scale?.y || 1,
           };
 
-          const Component = sprite.component || Sprite;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const Component: React.ComponentProps<any> =
+            sprite.component || Sprite;
 
           return (
             <Component

@@ -208,38 +208,56 @@ export const sprites: Sprite[] = [
       <PlantPot
         {...props}
         trails={[
-          { x: -1234, y: -84 },
-          { x: -1020, y: -224 },
-          { x: -1140, y: -150 },
+          { x: -1020, y: 76, visible: true },
+          { x: -1276, y: -80, visible: true },
+          { x: -1072, y: -196, visible: false },
+          { x: -1020, y: -224, visible: false },
+          { x: -744, y: -374, visible: false },
+          { x: -480, y: -180, visible: false },
+          { x: -948, y: 104, visible: false },
         ]}
       />
     ),
-    offset: { x: -1234, y: -84 },
+    offset: { x: 0, y: 0 },
   },
-  // {
-  //   key: "plant-pot-1-1",
-  //   image: PlantPot1,
-  //   component: PlantPot,
-  //   offset: { x: -1020, y: -224 },
-  // },
-  // {
-  //   key: "plant-pot-1-2",
-  //   image: PlantPot1,
-  //   component: PlantPot,
-  //   offset: { x: -1234, y: -84 },
-  // },
-  // {
-  //   key: "plant-pot-2",
-  //   image: PlantPot2,
-  //   // component: PlantPot,
-  //   offset: { x: -1145, y: -23 },
-  // },
-  // {
-  //   key: "plant-pot-3",
-  //   image: PlantPot3,
-  //   // component: PlantPot,
-  //   offset: { x: -950, y: 95 },
-  // },
+  {
+    key: "plant-pot-2",
+    image: PlantPot2,
+    component: ({ ...props }) => (
+      <PlantPot
+        {...props}
+        trails={[
+          { x: -948, y: 104, visible: false },
+          { x: -1010, y: 70, visible: true },
+          { x: -1276, y: -80, visible: true },
+          { x: -1072, y: -196, visible: false },
+          { x: -1020, y: -224, visible: false },
+          { x: -744, y: -374, visible: false },
+          { x: -480, y: -180, visible: false },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
+  {
+    key: "plant-pot-3",
+    image: PlantPot3,
+    component: ({ ...props }) => (
+      <PlantPot
+        {...props}
+        trails={[
+          { x: -480, y: -180, visible: false },
+          { x: -948, y: 104, visible: false },
+          { x: -1020, y: 76, visible: true },
+          { x: -1276, y: -80, visible: true },
+          { x: -1072, y: -196, visible: false },
+          { x: -1020, y: -224, visible: false },
+          { x: -744, y: -374, visible: false },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
   {
     key: "otter-1",
     image: Otter,
