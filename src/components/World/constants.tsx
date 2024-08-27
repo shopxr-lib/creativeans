@@ -321,6 +321,27 @@ export const sprites: Sprite[] = [
   {
     key: "fish-orange",
     image: FishOrange,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: 2316, y: -64, visible: true, speed: 0.001 },
+          {
+            x: -368,
+            y: -1614,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: -368,
+            y: -1614,
+            visible: false, // fade-out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
     offset: { x: 1797, y: -364 },
   },
   {
