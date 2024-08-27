@@ -79,6 +79,15 @@ export const sprites: Sprite[] = [
   {
     key: "brain",
     image: BrainImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: 1483, y: -400, visible: true, speed: 0.01 },
+          { x: 1483, y: -350, visible: true, speed: 0.01 },
+        ]}
+      />
+    ),
     offset: { x: 1483, y: -400 },
   },
   {
