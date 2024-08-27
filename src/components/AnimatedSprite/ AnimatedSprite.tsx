@@ -22,7 +22,6 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     x: props.x || 0,
     y: props.y || 0,
   });
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [opacity, setOpacity] = useState(1);
