@@ -25,7 +25,7 @@ import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
 import Lollipop from "../Lollipop/LolliPop";
-import PlantPot from "../PlantPot/PlantPot";
+import AnimatedSprite from "../AnimatedSprite/ AnimatedSprite";
 
 type Sprite = {
   key: string;
@@ -84,12 +84,98 @@ export const sprites: Sprite[] = [
   {
     key: "yellow-ball",
     image: YellowBallImg,
-    offset: { x: 1017, y: 467 },
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: 1032,
+            y: 460,
+            visible: true,
+            delayMs: 15000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 1574,
+            y: -25,
+            visible: true,
+            speed: 0.01,
+          },
+          {
+            x: 1666,
+            y: 32,
+            visible: true,
+          },
+          {
+            x: 1530,
+            y: 125,
+            visible: false,
+            speed: 0.003,
+          },
+          {
+            x: 1240,
+            y: 248,
+            visible: true,
+          },
+          {
+            x: 1050,
+            y: 380,
+            visible: true,
+            speed: 0.05,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
   },
   {
     key: "purple-ball",
     image: PurpleBallImg,
-    offset: { x: 1143, y: 317 },
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: 1574,
+            y: -25,
+            visible: true,
+            speed: 0.01,
+          },
+          {
+            x: 1666,
+            y: 32,
+            visible: true,
+          },
+          {
+            x: 1530,
+            y: 125,
+            visible: false,
+            speed: 0.003,
+          },
+          {
+            x: 1240,
+            y: 248,
+            visible: true,
+          },
+          {
+            x: 1050,
+            y: 380,
+            visible: true,
+            speed: 0.05,
+          },
+          {
+            x: 1032,
+            y: 460,
+            visible: true,
+            delayMs: 15000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
   },
   {
     key: "pipe",
@@ -205,7 +291,7 @@ export const sprites: Sprite[] = [
     key: "plant-pot-1",
     image: PlantPot1,
     component: ({ ...props }) => (
-      <PlantPot
+      <AnimatedSprite
         {...props}
         trails={[
           { x: -1020, y: 76, visible: true },
@@ -224,7 +310,7 @@ export const sprites: Sprite[] = [
     key: "plant-pot-2",
     image: PlantPot2,
     component: ({ ...props }) => (
-      <PlantPot
+      <AnimatedSprite
         {...props}
         trails={[
           { x: -948, y: 104, visible: false },
@@ -243,7 +329,7 @@ export const sprites: Sprite[] = [
     key: "plant-pot-3",
     image: PlantPot3,
     component: ({ ...props }) => (
-      <PlantPot
+      <AnimatedSprite
         {...props}
         trails={[
           { x: -480, y: -180, visible: false },
