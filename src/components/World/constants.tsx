@@ -57,6 +57,43 @@ export const sprites: Sprite[] = [
     offset: { x: -1680, y: -620 },
   },
   {
+    key: "pipe",
+    image: PipeImg,
+    offset: { x: -1485, y: -210 },
+  },
+  {
+    key: "fish-blue-german",
+    image: FishBlueGerman,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: -2424,
+            y: 183,
+            visible: true,
+            speed: 0.001,
+          },
+          {
+            x: 259,
+            y: -1367,
+            visible: true,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 259,
+            y: -1367,
+            visible: false, // fade out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -433, y: -967 },
+  },
+  {
     key: "building4",
     image: Building4Img,
     offset: { x: 0, y: -767 },
@@ -186,11 +223,11 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 0, y: 0 },
   },
-  {
-    key: "pipe",
-    image: PipeImg,
-    offset: { x: -1485, y: -210 },
-  },
+  // {
+  //   key: "pipe",
+  //   image: PipeImg,
+  //   offset: { x: -1485, y: -210 },
+  // },
   // near building 3
   {
     key: "tree-building-3",
@@ -226,38 +263,6 @@ export const sprites: Sprite[] = [
     key: "fish-denison-3",
     image: FishDenisonImg,
     offset: { x: 617, y: 700 },
-  },
-  {
-    key: "fish-blue-german",
-    image: FishBlueGerman,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          {
-            x: -2165,
-            y: 33,
-            visible: true,
-            speed: 0.001,
-          },
-          {
-            x: 259,
-            y: -1367,
-            visible: true,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-          {
-            x: 259,
-            y: -1367,
-            visible: false, // fade out
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -433, y: -967 },
   },
   {
     key: "fish-angel-1",
