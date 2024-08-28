@@ -27,6 +27,8 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const [opacity, setOpacity] = useState(1);
   const [delayTimer, setDelayTimer] = useState(0);
 
+  const isAnimating = props.trails && props.trails.length > 1;
+
   useTick((delta, ticker) => {
     if (!props.trails || props.trails.length < 2) {
       return;
@@ -91,7 +93,14 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     }
   });
 
-  return <Sprite {...props} x={position.x} y={position.y} alpha={opacity} />;
+  return (
+    <Sprite
+      {...props}
+      x={isAnimating ? position.x : props.x}
+      y={isAnimating ? position.y : props.y}
+      alpha={opacity}
+    />
+  );
 };
 
 function calculateActualPosition(

@@ -262,12 +262,54 @@ export const sprites: Sprite[] = [
   {
     key: "fish-angel-1",
     image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: -2865,
+            y: -217,
+            visible: true,
+            speed: 0.001,
+          },
+          {
+            x: 1032,
+            y: 2033,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 1032,
+            y: 2033,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
     offset: { x: -700, y: 833 },
   },
   {
     key: "fish-angel-2",
     image: FishAngel,
-    offset: { x: -333, y: 1033 },
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -2065, y: 433, speed: 0.001 },
+          { x: 1400, y: 2433, speed: 1, visible: true },
+          {
+            x: 1400,
+            y: 2433,
+            speed: 1,
+            visible: false,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -333, y: 1433 },
   },
   {
     key: "red-lollipop-1",
