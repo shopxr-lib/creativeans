@@ -18,8 +18,9 @@ export const WorldProvider: React.FC<
   PropsWithChildren & { initialScale: number; width: number; height: number }
 > = ({ children, initialScale, width, height }) => {
   const [position, setPosition] = useState({
-    x: window.innerWidth / 2 - 400,
-    y: window.innerHeight / 2 + 350,
+    // Center at C-logo of building-c by default
+    x: window.innerWidth / 2 - (960 - 100) * initialScale,
+    y: window.innerHeight / 2 + 863 * initialScale,
   });
 
   const [isDragging, setIsDragging] = useState(false);
