@@ -206,8 +206,8 @@ export const sprites: Sprite[] = [
             visible: true,
           },
           {
-            x: 1530,
-            y: 125,
+            x: 1536,
+            y: 107,
             visible: false,
             speed: 0.003,
           },
@@ -246,8 +246,8 @@ export const sprites: Sprite[] = [
             visible: true,
           },
           {
-            x: 1530,
-            y: 125,
+            x: 1536,
+            y: 107,
             visible: false,
             speed: 0.003,
           },
