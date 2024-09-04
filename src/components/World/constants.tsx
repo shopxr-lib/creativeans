@@ -206,8 +206,8 @@ export const sprites: Sprite[] = [
             visible: true,
           },
           {
-            x: 1536,
-            y: 107,
+            x: 1544,
+            y: 102,
             visible: false,
             speed: 0.003,
           },
@@ -246,8 +246,8 @@ export const sprites: Sprite[] = [
             visible: true,
           },
           {
-            x: 1536,
-            y: 107,
+            x: 1544,
+            y: 102,
             visible: false,
             speed: 0.003,
           },
@@ -273,7 +273,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: 0, y: 0 },
+    offset: { x: 1240, y: 248 },
   },
   {
     key: "tree-building-3",
@@ -402,7 +402,7 @@ export const sprites: Sprite[] = [
           {
             x: -976,
             y: -249,
-            visible: true,
+            visible: false,
             skipLinearInterpolation: true,
             speed: 1,
           },
