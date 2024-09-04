@@ -275,12 +275,6 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 0, y: 0 },
   },
-  // {
-  //   key: "pipe",
-  //   image: PipeImg,
-  //   offset: { x: -1485, y: -210 },
-  // },
-  // near building 3
   {
     key: "tree-building-3",
     image: TreeImg,
@@ -399,12 +393,19 @@ export const sprites: Sprite[] = [
         {...props}
         trails={[
           { x: -1020, y: 76, visible: true },
-          { x: -1276, y: -80, visible: true },
-          { x: -1072, y: -196, visible: false },
-          { x: -1020, y: -224, visible: false },
-          { x: -744, y: -374, visible: false },
-          { x: -480, y: -180, visible: false },
-          { x: -948, y: 104, visible: false },
+          { x: -1279, y: -74, visible: true },
+          {
+            x: -1063,
+            y: -199,
+            visible: false,
+          },
+          {
+            x: -976,
+            y: -249,
+            visible: true,
+            skipLinearInterpolation: true,
+            speed: 1,
+          },
         ]}
       />
     ),
@@ -417,13 +418,23 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: -948, y: 104, visible: false },
-          { x: -1010, y: 70, visible: true },
-          { x: -1276, y: -80, visible: true },
-          { x: -1072, y: -196, visible: false },
-          { x: -1020, y: -224, visible: false },
-          { x: -744, y: -374, visible: false },
-          { x: -480, y: -180, visible: false },
+          {
+            x: -1265,
+            y: -89,
+          },
+          {
+            x: -1048,
+            y: -214,
+            visible: false,
+          },
+          {
+            x: -961,
+            y: -264,
+            visible: false,
+            skipLinearInterpolation: true,
+            speed: 1,
+          },
+          { x: -1014, y: 56 },
         ]}
       />
     ),
@@ -436,13 +447,20 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: -480, y: -180, visible: false },
-          { x: -948, y: 104, visible: false },
-          { x: -1020, y: 76, visible: true },
-          { x: -1276, y: -80, visible: true },
-          { x: -1072, y: -196, visible: false },
-          { x: -1020, y: -224, visible: false },
-          { x: -744, y: -374, visible: false },
+          {
+            x: -1063,
+            y: -199,
+            visible: false,
+          },
+          {
+            x: -976,
+            y: -249,
+            skipLinearInterpolation: true,
+            visible: false,
+            speed: 1,
+          },
+          { x: -1020, y: 76 },
+          { x: -1279, y: -74 },
         ]}
       />
     ),
