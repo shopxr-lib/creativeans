@@ -62,6 +62,58 @@ export const sprites: Sprite[] = [
     offset: { x: -1485, y: -210 },
   },
   {
+    key: "fish-angel-1",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: -3817,
+            y: -767,
+            visible: true,
+            speed: 0.001,
+          },
+          {
+            x: 2331,
+            y: 2783,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 2331,
+            y: 2783,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -700, y: 833 },
+  },
+  {
+    key: "fish-angel-2",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -3450, y: -367, speed: 0.001 },
+          { x: 2698, y: 3183, speed: 1, visible: true },
+          {
+            x: 2698,
+            y: 3183,
+            speed: 1,
+            visible: false,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -333, y: 1433 },
+  },
+  {
     key: "fish-blue-german",
     image: FishBlueGerman,
     component: (props) => (
@@ -69,21 +121,21 @@ export const sprites: Sprite[] = [
         {...props}
         trails={[
           {
-            x: -2424,
-            y: 183,
+            x: -3550,
+            y: 833,
             visible: true,
             speed: 0.001,
           },
           {
-            x: 259,
-            y: -1367,
+            x: 1818,
+            y: -2267,
             visible: true,
             speed: 1,
             skipLinearInterpolation: true,
           },
           {
-            x: 259,
-            y: -1367,
+            x: 1818,
+            y: -2267,
             visible: false, // fade out
             speed: 1,
             skipLinearInterpolation: true,
@@ -265,58 +317,6 @@ export const sprites: Sprite[] = [
     offset: { x: 617, y: 700 },
   },
   {
-    key: "fish-angel-1",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          {
-            x: -2865,
-            y: -217,
-            visible: true,
-            speed: 0.001,
-          },
-          {
-            x: 1032,
-            y: 2033,
-            visible: true,
-            speed: 1,
-          },
-          {
-            x: 1032,
-            y: 2033,
-            visible: false,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -700, y: 833 },
-  },
-  {
-    key: "fish-angel-2",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          { x: -2065, y: 433, speed: 0.001 },
-          { x: 1400, y: 2433, speed: 1, visible: true },
-          {
-            x: 1400,
-            y: 2433,
-            speed: 1,
-            visible: false,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -333, y: 1433 },
-  },
-  {
     key: "red-lollipop-1",
     image: RedLolliPopImg,
     component: Lollipop,
@@ -372,16 +372,16 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: 2316, y: -64, visible: true, speed: 0.001 },
+          { x: 3529, y: 636, visible: true, speed: 0.001 },
           {
-            x: -368,
-            y: -1614,
+            x: -1840,
+            y: -2464,
             visible: true,
             speed: 1,
           },
           {
-            x: -368,
-            y: -1614,
+            x: -1840,
+            y: -2464,
             visible: false, // fade-out
             speed: 1,
             skipLinearInterpolation: true,
