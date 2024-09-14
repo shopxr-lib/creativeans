@@ -1,4 +1,5 @@
 import "./App.css";
+import "@pixi/events";
 import { World } from "./components/World";
 import { WorldProvider } from "./context/World/WorldContext";
 import { useMediaQuery } from "usehooks-ts";

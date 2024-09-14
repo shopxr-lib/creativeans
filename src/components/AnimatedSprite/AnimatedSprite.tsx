@@ -14,6 +14,7 @@ type Props = React.ComponentProps<typeof Sprite> & {
     delayMs?: number;
     skipLinearInterpolation?: boolean;
   }[];
+  hoverImg?: string;
 };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
@@ -26,6 +27,15 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const [progress, setProgress] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [delayTimer, setDelayTimer] = useState(0);
+  const [hover, setHover] = useState(false);
+
+  const onMouseOver = () => {
+    setHover(true);
+  };
+
+  const onMouseOut = () => {
+    setHover(false);
+  };
 
   const isAnimating = props.trails && props.trails.length > 1;
 
@@ -99,6 +109,12 @@ const AnimatedSprite: React.FC<Props> = (props) => {
       x={isAnimating ? position.x : props.x}
       y={isAnimating ? position.y : props.y}
       alpha={opacity}
+      interactive
+      image={hover && props.hoverImg ? props.hoverImg : props.image}
+      mouseover={onMouseOver}
+      mouseout={onMouseOut}
+      mousedown={onMouseOver}
+      cursor="pointer"
     />
   );
 };

@@ -1,10 +1,16 @@
+import { Sprite } from "@pixi/react";
 import BrainImg from "../../assets/images/Creativeans-brain.webp";
+import BrainImgGlow from "../../assets/images/Creativeans-brain-glow.webp";
 import CBuildingImg from "../../assets/images/Creativeans-C-building.webp";
 import TrainImg from "../../assets/images/Creativeans-train.webp";
+import TrainImgGlow from "../../assets/images/Creativeans-train-glow.webp";
 import TrainPlatformImg from "../../assets/images/Creativeans-train-platform.webp";
 import Building1Img from "../../assets/images/Creativeans-building1.webp";
+import Building1ImgGlow from "../../assets/images/Creativeans-building1-glow.webp";
 import Building3Img from "../../assets/images/Creativeans-building3.webp";
+import Building3ImgGlow from "../../assets/images/Creativeans-building3-glow.webp";
 import Building4Img from "../../assets/images/Creativeans-building4.webp";
+import Building4ImgGlow from "../../assets/images/Creativeans-building4-glow.webp";
 import Building6Img from "../../assets/images/Creativeans-building6.webp";
 import Building7Img from "../../assets/images/Creativeans-building7.webp";
 import YellowBallImg from "../../assets/images/Creativeans-yellow-ball.webp";
@@ -26,6 +32,7 @@ import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
 import Lollipop from "../Lollipop/LolliPop";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
+import CustomSprite from "../CustomSprite";
 
 type Sprite = {
   key: string;
@@ -45,6 +52,7 @@ export const sprites: Sprite[] = [
     key: "train",
     image: TrainImg,
     offset: { x: -1427, y: 230 },
+    component: (props) => <CustomSprite {...props} hoverImg={TrainImgGlow} />,
   },
   {
     key: "train-platform",
@@ -55,6 +63,9 @@ export const sprites: Sprite[] = [
     key: "building1",
     image: Building1Img,
     offset: { x: -1680, y: -620 },
+    component: (props) => (
+      <CustomSprite {...props} hoverImg={Building1ImgGlow} />
+    ),
   },
   {
     key: "pipe",
@@ -149,11 +160,17 @@ export const sprites: Sprite[] = [
     key: "building4",
     image: Building4Img,
     offset: { x: 0, y: -767 },
+    component: (props) => (
+      <CustomSprite {...props} hoverImg={Building4ImgGlow} />
+    ),
   },
   {
     key: "building3",
     image: Building3Img,
     offset: { x: -653, y: -410 },
+    component: (props) => (
+      <CustomSprite {...props} hoverImg={Building3ImgGlow} />
+    ),
   },
   {
     key: "building6",
@@ -175,6 +192,7 @@ export const sprites: Sprite[] = [
           { x: 1483, y: -400, visible: true, speed: 0.01 },
           { x: 1483, y: -350, visible: true, speed: 0.01 },
         ]}
+        hoverImg={BrainImgGlow}
       />
     ),
     offset: { x: 1483, y: -400 },
