@@ -3,7 +3,7 @@ import {
   useTick,
   AnimatedSprite as PixiAnimatedSprite,
 } from "@pixi/react";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
@@ -23,6 +23,8 @@ type Props = React.ComponentProps<typeof Sprite> &
     }[];
     enableGlowEffect?: boolean;
     spritesheet?: string;
+    spriteAnimationIntervals?: number[];
+    initialSpriteAnimationPlaying?: boolean;
   };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
@@ -123,6 +125,46 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     });
   }, [props.spritesheet]);
 
+  const [isPlaying, setIsPlaying] = useState(
+    props.initialSpriteAnimationPlaying || false
+  );
+  const intervalIndexRef = useRef(0);
+  const timeoutRef = useRef<number>(0);
+
+  useEffect(() => {
+    if (
+      props.spriteAnimationIntervals &&
+      props.spriteAnimationIntervals.length > 0
+    ) {
+      const toggleIsPlaying = () => {
+        if (!props.spriteAnimationIntervals) return;
+
+        clearTimeout(timeoutRef.current);
+        setIsPlaying((prev) => !prev);
+
+        intervalIndexRef.current =
+          (intervalIndexRef.current + 1) %
+          props.spriteAnimationIntervals.length;
+
+        timeoutRef.current = setTimeout(
+          toggleIsPlaying,
+          props.spriteAnimationIntervals[intervalIndexRef.current]
+        );
+      };
+
+      timeoutRef.current = setTimeout(
+        toggleIsPlaying,
+        props.spriteAnimationIntervals[0]
+      );
+
+      return () => {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      };
+    }
+  }, [props.spriteAnimationIntervals]);
+
   const commonProps = {
     ...props,
     x: isAnimating ? position.x : props.x,
@@ -145,7 +187,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
         {...props}
         {...commonProps}
         textures={frames}
-        isPlaying
+        isPlaying={isPlaying}
       />
     );
   }

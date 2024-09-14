@@ -373,20 +373,40 @@ export const sprites: Sprite[] = [
     offset: { x: -367, y: 473 },
   },
   {
+    key: "elevator",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/elevator.json"
+        animationSpeed={0.1}
+        spriteAnimationIntervals={[1000, 8900]}
+        initialSpriteAnimationPlaying
+      />
+    ),
+    offset: { x: 285, y: 1040 },
+  },
+  {
     key: "train-chocolate",
     image: TrainChocolateImg,
     component: (props) => (
       <AnimatedSprite
         {...props}
         trails={[
-          { x: 1473, y: 532 },
+          // stop at elevator
           {
             x: 373,
             y: 1167,
             delayMs: 1000,
+            speed: 0.003,
+          },
+          {
+            x: -1964,
+            y: 2517,
             speed: 1,
             skipLinearInterpolation: true,
           },
+          { x: 1473, y: 532 },
         ]}
       />
     ),
