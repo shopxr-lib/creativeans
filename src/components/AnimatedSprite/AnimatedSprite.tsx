@@ -1,22 +1,29 @@
-import { Sprite, useTick } from "@pixi/react";
-import React, { useState } from "react";
+import {
+  Sprite,
+  useTick,
+  AnimatedSprite as PixiAnimatedSprite,
+} from "@pixi/react";
+import React, { useEffect, useState } from "react";
 import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
+import { Texture, Resource, Assets } from "pixi.js";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
 
-type Props = React.ComponentProps<typeof Sprite> & {
-  trails?: {
-    x: number;
-    y: number;
-    visible?: boolean;
-    speed?: number;
-    delayMs?: number;
-    skipLinearInterpolation?: boolean;
-  }[];
-  enableGlowEffect?: boolean;
-};
+type Props = React.ComponentProps<typeof Sprite> &
+  Partial<React.ComponentProps<typeof PixiAnimatedSprite>> & {
+    trails?: {
+      x: number;
+      y: number;
+      visible?: boolean;
+      speed?: number;
+      delayMs?: number;
+      skipLinearInterpolation?: boolean;
+    }[];
+    enableGlowEffect?: boolean;
+    spritesheet?: string;
+  };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
   const worldContext = useWorld();
@@ -104,20 +111,46 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     }
   });
 
-  return (
-    <Sprite
-      {...props}
-      x={isAnimating ? position.x : props.x}
-      y={isAnimating ? position.y : props.y}
-      alpha={opacity}
-      interactive
-      filters={props.enableGlowEffect && hover ? [glowFilter] : []}
-      mouseover={onMouseOver}
-      mouseout={onMouseOut}
-      mousedown={onMouseOver}
-      {...(props.enableGlowEffect && { cursor: "pointer" })}
-    />
-  );
+  const [frames, setFrames] = useState<Texture<Resource>[]>([]);
+
+  useEffect(() => {
+    if (!props.spritesheet) return;
+
+    Assets.load(props.spritesheet).then((resource) => {
+      setFrames(
+        Object.keys(resource.data.frames).map((frame) => Texture.from(frame))
+      );
+    });
+  }, [props.spritesheet]);
+
+  const commonProps = {
+    ...props,
+    x: isAnimating ? position.x : props.x,
+    y: isAnimating ? position.y : props.y,
+    alpha: opacity,
+    interactive: true,
+    filters: props.enableGlowEffect && hover ? [glowFilter] : [],
+    mouseover: onMouseOver,
+    mouseout: onMouseOut,
+    mousedown: onMouseOver,
+    ...(props.enableGlowEffect && { cursor: "pointer" }),
+  };
+
+  if (props.spritesheet) {
+    // required check to prevent crashing
+    if (frames.length === 0) return null;
+
+    return (
+      <PixiAnimatedSprite
+        {...props}
+        {...commonProps}
+        textures={frames}
+        isPlaying
+      />
+    );
+  }
+
+  return <Sprite {...props} {...commonProps} />;
 };
 
 function calculateActualPosition(

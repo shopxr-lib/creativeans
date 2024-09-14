@@ -24,6 +24,7 @@ import PipeImg from "../../assets/images/Creativeans-pipes.webp";
 import RedLolliPopImg from "../../assets/images/Creativeans-red-lollipop-top.webp";
 import PurpleLolliPopImg from "../../assets/images/Creativeans-purple-lollipop-top.webp";
 import FishOrange from "../../assets/images/Creativeans-orange-fish.webp";
+import FishOrangePartial from "../../assets/images/Creativeans-orange-fish-partial.webp";
 import PlantPot1 from "../../assets/images/Creativeans-plant-pot1.webp";
 import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
@@ -438,6 +439,60 @@ export const sprites: Sprite[] = [
   {
     key: "fish-orange",
     image: FishOrange,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: 3529, y: 636, visible: true, speed: 0.0003 },
+          {
+            x: -1840,
+            y: -2464,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: -1840,
+            y: -2464,
+            visible: false, // fade-out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 1797, y: -364 },
+  },
+  {
+    key: "human-1",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human1.json"
+        animationSpeed={0.07}
+        trails={[
+          { x: 3429, y: 636, visible: true, speed: 0.0003 },
+          {
+            x: -1840,
+            y: -2464,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: -1840,
+            y: -2464,
+            visible: false, // fade-out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 1727, y: -364, scale: { x: 0.7, y: 0.7 } },
+  },
+  {
+    key: "fish-orange-partial",
+    image: FishOrangePartial,
     component: (props) => (
       <AnimatedSprite
         {...props}
