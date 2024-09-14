@@ -106,6 +106,7 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 1483, y: -400 },
   },
+  // A
   {
     key: "yellow-ball",
     image: YellowBallImg,
@@ -113,11 +114,126 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
+          // A
+          {
+            x: 1574,
+            y: -25,
+            visible: true,
+            speed: 0.01,
+          },
+          // A'
+          {
+            x: 1666,
+            y: 32,
+            visible: true,
+          },
+          // B
+          {
+            x: 1544,
+            y: 102,
+            visible: false,
+            speed: 0.004,
+          },
+          // C
+          {
+            x: 1240,
+            y: 248,
+            visible: true,
+          },
+          // C'
+          {
+            x: 1050,
+            y: 380,
+            visible: true,
+            speed: 0.05,
+          },
+          // D
           {
             x: 1032,
             y: 460,
             visible: true,
-            delayMs: 15000,
+            delayMs: 5000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
+  // B
+  {
+    key: "purple-ball-2",
+    image: PurpleBallImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: 1544,
+            y: 102,
+            visible: false,
+            speed: 0.004,
+          },
+          {
+            x: 1240,
+            y: 248,
+            visible: true,
+          },
+          {
+            x: 1050,
+            y: 380,
+            visible: true,
+            speed: 0.05,
+          },
+          {
+            x: 1032,
+            y: 460,
+            visible: true,
+            delayMs: 5000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 1574,
+            y: -25,
+            visible: true,
+            speed: 0.01,
+          },
+          {
+            x: 1666,
+            y: 32,
+            visible: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
+  // C
+  {
+    key: "yellow-ball-2",
+    image: YellowBallImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: 1240,
+            y: 248,
+            visible: true,
+          },
+          {
+            x: 1050,
+            y: 380,
+            visible: true,
+            speed: 0.05,
+          },
+          {
+            x: 1032,
+            y: 460,
+            visible: true,
+            delayMs: 5000,
             speed: 1,
             skipLinearInterpolation: true,
           },
@@ -136,24 +252,14 @@ export const sprites: Sprite[] = [
             x: 1544,
             y: 102,
             visible: false,
-            speed: 0.003,
-          },
-          {
-            x: 1240,
-            y: 248,
-            visible: true,
-          },
-          {
-            x: 1050,
-            y: 380,
-            visible: true,
-            speed: 0.05,
+            speed: 0.004,
           },
         ]}
       />
     ),
     offset: { x: 0, y: 0 },
   },
+  // D
   {
     key: "purple-ball",
     image: PurpleBallImg,
@@ -162,6 +268,14 @@ export const sprites: Sprite[] = [
         {...props}
         trails={[
           {
+            x: 1032,
+            y: 460,
+            visible: true,
+            delayMs: 5000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+          {
             x: 1574,
             y: -25,
             visible: true,
@@ -176,7 +290,7 @@ export const sprites: Sprite[] = [
             x: 1544,
             y: 102,
             visible: false,
-            speed: 0.003,
+            speed: 0.004,
           },
           {
             x: 1240,
@@ -188,14 +302,6 @@ export const sprites: Sprite[] = [
             y: 380,
             visible: true,
             speed: 0.05,
-          },
-          {
-            x: 1032,
-            y: 460,
-            visible: true,
-            delayMs: 15000,
-            speed: 1,
-            skipLinearInterpolation: true,
           },
         ]}
       />
