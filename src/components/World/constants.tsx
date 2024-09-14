@@ -14,7 +14,9 @@ import TreeImg from "../../assets/images/Creativeans-tree.webp";
 import GlobeImg from "../../assets/images/Creativeans-globe.webp";
 import TrainStrawberryImg from "../../assets/images/Creativeans-Train-Strawberry.webp";
 import TrainChocolateImg from "../../assets/images/Creativeans-Train-Chocolate.webp";
-import FishDenisonImg from "../../assets/images/Creativeans-Fish-Denison-Barp.webp";
+import YellowFishImg from "../../assets/images/Creativeans-yellow-fish.webp";
+import PinkFishImg from "../../assets/images/Creativeans-pink-fish.webp";
+import BlueFishImg from "../../assets/images/Creativeans-blue-fish.webp";
 import FishBlueGerman from "../../assets/images/Creativeans-blue-german-fish.webp";
 import FishAngel from "../../assets/images/Creativeans-angel-fish.webp";
 import PipeImg from "../../assets/images/Creativeans-pipes.webp";
@@ -222,17 +224,44 @@ export const sprites: Sprite[] = [
   },
   {
     key: "fish-denison-1",
-    image: FishDenisonImg,
+    image: YellowFishImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -900, y: 333 },
+          { x: -900, y: 303 },
+        ]}
+      />
+    ),
     offset: { x: -900, y: 333 },
   },
   {
     key: "fish-denison-2",
-    image: FishDenisonImg,
+    image: PinkFishImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -1017, y: 267, speed: 0.003 },
+          { x: -1017, y: 237, speed: 0.003 },
+        ]}
+      />
+    ),
     offset: { x: -1017, y: 267 },
   },
   {
     key: "fish-denison-3",
-    image: FishDenisonImg,
+    image: BlueFishImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: 617, y: 700, speed: 0.004 },
+          { x: 617, y: 670, speed: 0.004 },
+        ]}
+      />
+    ),
     offset: { x: 617, y: 700 },
   },
   {
