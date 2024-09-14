@@ -26,8 +26,8 @@ const CustomSprite: React.FC<Props> = (props) => {
       mouseout={onMouseOut}
       mousedown={onMouseOver}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
-      cursor={props.enableGlowEffect ? "pointer" : undefined}
       interactive
+      {...(props.enableGlowEffect && { cursor: "pointer" })}
     />
   );
 };

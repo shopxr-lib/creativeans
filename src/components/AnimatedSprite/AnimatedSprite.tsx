@@ -115,7 +115,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
       mouseover={onMouseOver}
       mouseout={onMouseOut}
       mousedown={onMouseOver}
-      cursor={props.enableGlowEffect ? "pointer" : undefined}
+      {...(props.enableGlowEffect && { cursor: "pointer" })}
     />
   );
 };
