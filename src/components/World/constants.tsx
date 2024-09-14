@@ -67,90 +67,6 @@ export const sprites: Sprite[] = [
     offset: { x: -1485, y: -210 },
   },
   {
-    key: "fish-angel-1",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          {
-            x: -3817,
-            y: -767,
-            visible: true,
-            speed: 0.001,
-          },
-          {
-            x: 2331,
-            y: 2783,
-            visible: true,
-            speed: 1,
-          },
-          {
-            x: 2331,
-            y: 2783,
-            visible: false,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -700, y: 833 },
-  },
-  {
-    key: "fish-angel-2",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          { x: -3450, y: -367, speed: 0.001 },
-          { x: 2698, y: 3183, speed: 1, visible: true },
-          {
-            x: 2698,
-            y: 3183,
-            speed: 1,
-            visible: false,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -333, y: 1433 },
-  },
-  {
-    key: "fish-blue-german",
-    image: FishBlueGerman,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        trails={[
-          {
-            x: -3550,
-            y: 833,
-            visible: true,
-            speed: 0.001,
-          },
-          {
-            x: 1818,
-            y: -2267,
-            visible: true,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-          {
-            x: 1818,
-            y: -2267,
-            visible: false, // fade out
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -433, y: -967 },
-  },
-  {
     key: "building4",
     image: Building4Img,
     offset: { x: 0, y: -767 },
@@ -484,5 +400,96 @@ export const sprites: Sprite[] = [
     key: "otter-2",
     image: Otter,
     offset: { x: 270, y: -107, scale: { x: -1 } },
+  },
+  {
+    key: "fish-angel-1",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        scale={{ x: 0.3, y: 0.3 }}
+        trails={[
+          {
+            x: -3456,
+            y: -1367,
+            visible: true,
+            speed: 0.0003,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -700, y: 833 },
+  },
+  {
+    key: "fish-angel-2",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        scale={{ x: 0.4, y: 0.4 }}
+        trails={[
+          { x: -2764, y: -967, speed: 0.0003 },
+          {
+            x: 3731,
+            y: 2783,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -333, y: 1433 },
+  },
+  {
+    key: "fish-blue-german",
+    image: FishBlueGerman,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          {
+            x: -3550,
+            y: 833,
+            visible: true,
+            speed: 0.0003,
+          },
+          {
+            x: 1818,
+            y: -2267,
+            visible: true,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 1818,
+            y: -2267,
+            visible: false, // fade out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -433, y: -967 },
   },
 ];
