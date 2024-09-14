@@ -1,4 +1,5 @@
 import { Sprite } from "@pixi/react";
+import BridgeTop from "../../assets/images/Creativeans-bridge-top.webp";
 import BrainImg from "../../assets/images/Creativeans-brain.webp";
 import CBuildingImg from "../../assets/images/Creativeans-C-building.webp";
 import TrainImg from "../../assets/images/Creativeans-train.webp";
@@ -81,6 +82,52 @@ export const sprites: Sprite[] = [
     image: Building3Img,
     offset: { x: -653, y: -410 },
     component: (props) => <CustomSprite {...props} enableGlowEffect />,
+  },
+  {
+    key: "human-2",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human2.json"
+        animationSpeed={0.07}
+        trails={[
+          {
+            x: 300,
+            y: 192,
+            speed: 0.003,
+          },
+          {
+            x: 56,
+            y: 0,
+            speed: 0.003,
+          },
+          {
+            x: -196,
+            y: -90,
+            speed: 0.005,
+          },
+          {
+            x: -310,
+            y: -170,
+            speed: 1,
+          },
+          {
+            x: -310,
+            y: -170,
+            visible: false,
+            delayMs: 2000,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -310, y: -170, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "bridge-top",
+    image: BridgeTop,
+    offset: { x: 30, y: 70 },
   },
   {
     key: "building6",
