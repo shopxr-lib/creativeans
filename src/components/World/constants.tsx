@@ -770,4 +770,16 @@ export const sprites: Sprite[] = [
     image: TrainHoleTopLayer,
     offset: { x: 1692, y: 427 },
   },
+  {
+    key: "shiba",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/shiba.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 26, y: 980, scale: { x: 0.8, y: 0.8 } },
+  },
 ];
