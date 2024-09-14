@@ -1,69 +1,69 @@
 {
   "frames": {
-    "human-1.png": {
+    "human-2-1.png": {
       "frame": { "x": 1, "y": 332, "w": 98, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 98, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-2.png": {
+    "human-2-2.png": {
       "frame": { "x": 1, "y": 69, "w": 79, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 10, "y": 0, "w": 79, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-3.png": {
+    "human-2-3.png": {
       "frame": { "x": 1, "y": 1, "w": 66, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 23, "y": 0, "w": 66, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-4.png": {
+    "human-2-4.png": {
       "frame": { "x": 1, "y": 150, "w": 82, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 7, "y": 0, "w": 82, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-5.png": {
+    "human-2-5.png": {
       "frame": { "x": 1, "y": 234, "w": 96, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-6.png": {
+    "human-2-6.png": {
       "frame": { "x": 1, "y": 234, "w": 96, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-7.png": {
+    "human-2-7.png": {
       "frame": { "x": 1, "y": 150, "w": 82, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 7, "y": 0, "w": 82, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-8.png": {
+    "human-2-8.png": {
       "frame": { "x": 1, "y": 1, "w": 66, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 23, "y": 0, "w": 66, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-9.png": {
+    "human-2-9.png": {
       "frame": { "x": 1, "y": 69, "w": 79, "h": 180 },
       "rotated": true,
       "trimmed": true,
       "spriteSourceSize": { "x": 10, "y": 0, "w": 79, "h": 180 },
       "sourceSize": { "w": 100, "h": 180 }
     },
-    "human-10.png": {
+    "human-2-10.png": {
       "frame": { "x": 1, "y": 332, "w": 98, "h": 180 },
       "rotated": true,
       "trimmed": true,
@@ -73,16 +73,16 @@
   },
   "animations": {
     "human": [
-      "human-1.png",
-      "human-2.png",
-      "human-3.png",
-      "human-4.png",
-      "human-5.png",
-      "human-6.png",
-      "human-7.png",
-      "human-8.png",
-      "human-9.png",
-      "human-10.png"
+      "human-2-1.png",
+      "human-2-2.png",
+      "human-2-3.png",
+      "human-2-4.png",
+      "human-2-5.png",
+      "human-2-6.png",
+      "human-2-7.png",
+      "human-2-8.png",
+      "human-2-9.png",
+      "human-2-10.png"
     ]
   },
   "meta": {
