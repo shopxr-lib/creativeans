@@ -30,6 +30,7 @@ import PlantPot1 from "../../assets/images/Creativeans-plant-pot1.webp";
 import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
+import WaterBridgeShadow from "../../assets/images/Creativeans-water-bridge-shadow.webp";
 import Lollipop from "../Lollipop/LolliPop";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
@@ -48,6 +49,30 @@ export const sprites: Sprite[] = [
     image: CBuildingImg,
     offset: { x: 960, y: -583 },
     component: (props) => <CustomSprite {...props} enableGlowEffect />,
+  },
+  {
+    key: "red-bubble",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/redbubble.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1118, y: -430 },
+  },
+  {
+    key: "purple-bubble",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/purplebubble.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 966, y: -294 },
   },
   {
     key: "train",

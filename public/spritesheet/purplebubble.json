@@ -1,0 +1,47 @@
+{"frames": {
+
+"Purplebubble1.png":
+{
+	"frame": {"x":1,"y":1,"w":120,"h":352},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":352},
+	"sourceSize": {"w":120,"h":352}
+},
+"Purplebubble2.png":
+{
+	"frame": {"x":1,"y":355,"w":120,"h":352},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":352},
+	"sourceSize": {"w":120,"h":352}
+},
+"Purplebubble3.png":
+{
+	"frame": {"x":1,"y":709,"w":120,"h":352},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":352},
+	"sourceSize": {"w":120,"h":352}
+},
+"Purplebubble4.png":
+{
+	"frame": {"x":1,"y":1063,"w":120,"h":352},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":352},
+	"sourceSize": {"w":120,"h":352}
+}},
+"animations": {
+	"Purplebubble": ["Purplebubble1.png","Purplebubble2.png","Purplebubble3.png","Purplebubble4.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "purplebubble.png",
+	"format": "RGBA8888",
+	"size": {"w":122,"h":1416},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:f5f719c024cd59814b17dfbc130461da:bccf7cc0d763112b16733b88ed482c83:45845834490bcd8f39778e74d2b2699c$"
+}
+}
