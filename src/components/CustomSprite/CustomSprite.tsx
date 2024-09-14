@@ -1,10 +1,11 @@
 import { Sprite } from "@pixi/react";
 
 import React, { useState } from "react";
+import { glowFilter } from "../../constants/filters";
 
-type Props = {
-  hoverImg?: string;
-} & React.ComponentProps<typeof Sprite>;
+type Props = { enableGlowEffect?: boolean } & React.ComponentProps<
+  typeof Sprite
+>;
 
 const CustomSprite: React.FC<Props> = (props) => {
   const [hover, setHover] = useState(false);
@@ -20,11 +21,12 @@ const CustomSprite: React.FC<Props> = (props) => {
   return (
     <Sprite
       {...props}
-      image={hover ? props.hoverImg : props.image}
+      image={props.image}
       mouseover={onMouseOver}
       mouseout={onMouseOut}
       mousedown={onMouseOver}
-      cursor="pointer"
+      filters={props.enableGlowEffect && hover ? [glowFilter] : []}
+      cursor={props.enableGlowEffect ? "pointer" : undefined}
       interactive
     />
   );

@@ -1,6 +1,7 @@
 import { Sprite, useTick } from "@pixi/react";
 import React, { useState } from "react";
 import { useWorld } from "../../context/World/hooks";
+import { glowFilter } from "../../constants/filters";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
@@ -14,7 +15,7 @@ type Props = React.ComponentProps<typeof Sprite> & {
     delayMs?: number;
     skipLinearInterpolation?: boolean;
   }[];
-  hoverImg?: string;
+  enableGlowEffect?: boolean;
 };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
@@ -110,11 +111,11 @@ const AnimatedSprite: React.FC<Props> = (props) => {
       y={isAnimating ? position.y : props.y}
       alpha={opacity}
       interactive
-      image={hover && props.hoverImg ? props.hoverImg : props.image}
+      filters={props.enableGlowEffect && hover ? [glowFilter] : []}
       mouseover={onMouseOver}
       mouseout={onMouseOut}
       mousedown={onMouseOver}
-      cursor="pointer"
+      cursor={props.enableGlowEffect ? "pointer" : undefined}
     />
   );
 };
