@@ -44,10 +44,10 @@ export const WorldProvider: React.FC<
         // Calculate boundaries based on the scaled image dimensions
         const scaledWidth = width * scale;
         const scaledHeight = height * scale;
-        const minX = window.innerWidth / 2 - scaledWidth / 2;
-        const maxX = window.innerWidth / 2 + scaledWidth / 2;
-        const minY = window.innerHeight / 2 - scaledHeight / 2;
-        const maxY = window.innerHeight / 2 + scaledHeight / 2;
+        const minX = window.innerWidth / 2 - scaledWidth / 3;
+        const maxX = window.innerWidth / 2 + scaledWidth / 3;
+        const minY = window.innerHeight / 2 - scaledHeight / 3;
+        const maxY = window.innerHeight / 2 + scaledHeight / 3;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
@@ -84,15 +84,17 @@ export const WorldProvider: React.FC<
         const newX = prevPosition.x + dx;
         const newY = prevPosition.y + dy;
 
-        // Define boundaries
-        const minX = window.innerWidth * -4 * scale;
-        const maxX = window.innerWidth * 6 * scale;
-        const minY = window.innerHeight * -1 * scale;
-        const maxY = window.innerHeight * 3 * scale;
+        // Calculate boundaries based on the scaled image dimensions
+        const scaledWidth = width * scale;
+        const scaledHeight = height * scale;
+        const minX = window.innerWidth / 2 - scaledWidth / 2.5;
+        const maxX = window.innerWidth / 2 + scaledWidth / 2.5;
+        const minY = window.innerHeight / 2 - scaledHeight / 4;
+        const maxY = window.innerHeight / 2 + scaledHeight / 4;
 
         return {
-          x: Math.max(minX, Math.min(maxX, newX)),
-          y: Math.max(minY, Math.min(maxY, newY)),
+          x: Math.max(minX, Math.min(newX, maxX)),
+          y: Math.max(minY, Math.min(newY, maxY)),
         };
       });
       setLastPosition({
