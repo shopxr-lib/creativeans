@@ -25,7 +25,7 @@ import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
 import Lollipop from "../Lollipop/LolliPop";
-import AnimatedSprite from "../AnimatedSprite/ AnimatedSprite";
+import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 
 type Sprite = {
   key: string;
