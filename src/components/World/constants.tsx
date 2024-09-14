@@ -563,15 +563,15 @@ export const sprites: Sprite[] = [
         spritesheet="./spritesheet/human1.json"
         animationSpeed={0.07}
         trails={[
-          { x: 3429, y: 636, visible: true, speed: 0.0003 },
+          { x: 3459, y: 636, visible: true, speed: 0.0003 },
           {
-            x: -1840,
+            x: -1910,
             y: -2464,
             visible: true,
             speed: 1,
           },
           {
-            x: -1840,
+            x: -1910,
             y: -2464,
             visible: false, // fade-out
             speed: 1,
