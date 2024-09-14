@@ -129,41 +129,27 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     props.initialSpriteAnimationPlaying || false
   );
   const intervalIndexRef = useRef(0);
-  const timeoutRef = useRef<number>(0);
+  const elapsedRef = useRef(0);
 
-  useEffect(() => {
+  useTick((delta) => {
     if (
       props.spriteAnimationIntervals &&
       props.spriteAnimationIntervals.length > 0
     ) {
-      const toggleIsPlaying = () => {
-        if (!props.spriteAnimationIntervals) return;
+      elapsedRef.current += delta * 16.67; // Convert delta to milliseconds
 
-        clearTimeout(timeoutRef.current);
-        setIsPlaying((prev) => !prev);
-
+      if (
+        elapsedRef.current >=
+        props.spriteAnimationIntervals[intervalIndexRef.current]
+      ) {
+        elapsedRef.current = 0;
         intervalIndexRef.current =
           (intervalIndexRef.current + 1) %
           props.spriteAnimationIntervals.length;
-
-        timeoutRef.current = setTimeout(
-          toggleIsPlaying,
-          props.spriteAnimationIntervals[intervalIndexRef.current]
-        );
-      };
-
-      timeoutRef.current = setTimeout(
-        toggleIsPlaying,
-        props.spriteAnimationIntervals[0]
-      );
-
-      return () => {
-        if (timeoutRef.current) {
-          clearTimeout(timeoutRef.current);
-        }
-      };
+        setIsPlaying((prev) => !prev);
+      }
     }
-  }, [props.spriteAnimationIntervals]);
+  });
 
   const commonProps = {
     ...props,
