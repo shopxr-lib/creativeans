@@ -126,7 +126,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   }, [props.spritesheet]);
 
   const [isPlaying, setIsPlaying] = useState(
-    props.initialSpriteAnimationPlaying || false
+    props.initialSpriteAnimationPlaying ?? true
   );
   const intervalIndexRef = useRef(0);
   const elapsedRef = useRef(0);
