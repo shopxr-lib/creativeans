@@ -807,4 +807,10 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 26, y: 980, scale: { x: 0.8, y: 0.8 } },
   },
+
+  {
+    key: "water-bridge-shadow",
+    image: WaterBridgeShadow,
+    offset: { x: 305, y: -305 },
+  },
 ];
