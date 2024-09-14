@@ -14,6 +14,7 @@ import TreeImg from "../../assets/images/Creativeans-tree.webp";
 import GlobeImg from "../../assets/images/Creativeans-globe.webp";
 import TrainStrawberryImg from "../../assets/images/Creativeans-Train-Strawberry.webp";
 import TrainChocolateImg from "../../assets/images/Creativeans-Train-Chocolate.webp";
+import TrainHoleTopLayer from "../../assets/images/Creativeans-train-hole-top-layer.webp";
 import YellowFishImg from "../../assets/images/Creativeans-yellow-fish.webp";
 import PinkFishImg from "../../assets/images/Creativeans-pink-fish.webp";
 import BlueFishImg from "../../assets/images/Creativeans-blue-fish.webp";
@@ -326,7 +327,22 @@ export const sprites: Sprite[] = [
   {
     key: "train-chocolate",
     image: TrainChocolateImg,
-    offset: { x: 893, y: 867 },
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: 1473, y: 532 },
+          {
+            x: 373,
+            y: 1167,
+            delayMs: 1000,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 1473, y: 532 },
   },
   {
     key: "fish-denison-1",
@@ -626,5 +642,10 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -433, y: -967 },
+  },
+  {
+    key: "train-hole-top-layer",
+    image: TrainHoleTopLayer,
+    offset: { x: 1692, y: 427 },
   },
 ];
