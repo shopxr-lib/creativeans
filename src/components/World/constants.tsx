@@ -291,7 +291,7 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: 3529, y: 636, visible: true, speed: 0.001 },
+          { x: 3529, y: 636, visible: true, speed: 0.0003 },
           {
             x: -1840,
             y: -2464,
