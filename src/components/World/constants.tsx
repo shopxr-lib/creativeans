@@ -813,4 +813,17 @@ export const sprites: Sprite[] = [
     image: WaterBridgeShadow,
     offset: { x: 305, y: -305 },
   },
+
+  {
+    key: "leaf",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/leaf.json"
+        animationSpeed={0.01}
+      />
+    ),
+    offset: { x: 15, y: -1200 },
+  },
 ];
