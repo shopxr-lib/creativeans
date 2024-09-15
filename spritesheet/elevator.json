@@ -1,0 +1,30 @@
+{
+  "frames": {
+    "elevator1.png": {
+      "frame": { "x": 1, "y": 1, "w": 89, "h": 418 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 89, "h": 418 },
+      "sourceSize": { "w": 89, "h": 418 }
+    },
+    "elevator2.png": {
+      "frame": { "x": 1, "y": 421, "w": 89, "h": 418 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 89, "h": 418 },
+      "sourceSize": { "w": 89, "h": 418 }
+    }
+  },
+  "animations": {
+    "elevator": ["elevator1.png", "elevator2.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "elevator.png",
+    "format": "RGBA8888",
+    "size": { "w": 91, "h": 840 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:0cec3ed4ef3d7fdcbdf19850caa00187:4d24776dc11d0af1b53158b243df6a4a:755bdff64b6c159df5fb63eab85d63d0$"
+  }
+}

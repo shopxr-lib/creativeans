@@ -1,0 +1,55 @@
+{"frames": {
+
+"Redbubble1.png":
+{
+	"frame": {"x":1,"y":1,"w":145,"h":514},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":514},
+	"sourceSize": {"w":145,"h":514}
+},
+"Redbubble2.png":
+{
+	"frame": {"x":1,"y":517,"w":145,"h":514},
+	"rotated": true,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":514},
+	"sourceSize": {"w":145,"h":514}
+},
+"Redbubble3.png":
+{
+	"frame": {"x":148,"y":1,"w":145,"h":514},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":514},
+	"sourceSize": {"w":145,"h":514}
+},
+"Redbubble4.png":
+{
+	"frame": {"x":295,"y":1,"w":145,"h":514},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":514},
+	"sourceSize": {"w":145,"h":514}
+},
+"Redbubble5.png":
+{
+	"frame": {"x":442,"y":1,"w":145,"h":514},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":514},
+	"sourceSize": {"w":145,"h":514}
+}},
+"animations": {
+	"Redbubble": ["Redbubble1.png","Redbubble2.png","Redbubble3.png","Redbubble4.png","Redbubble5.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "redbubble.png",
+	"format": "RGBA8888",
+	"size": {"w":588,"h":663},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:401db440618a8ed1bb0c3fd55808f452:342decf392f83ca96ccfff8d1473ed9e:774602b8a8e0ea0ca9708807f1732d2d$"
+}
+}
