@@ -18,7 +18,13 @@ const Sidebar: React.FC = () => {
             data-label="header"
             className="flex items-center justify-between"
           >
-            <img src={logo} alt="Creativeans Logo" className="max-w-[50%]" />
+            <a href="https://creativeans.com" target="_blank">
+              <img
+                src={logo}
+                alt="Creativeans Logo"
+                className="max-w-[50%] lg:max-w-none"
+              />
+            </a>
             <X
               onClick={sidebarContext.closeSidebar}
               size={48}
