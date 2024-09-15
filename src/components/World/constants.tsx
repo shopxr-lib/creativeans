@@ -35,7 +35,7 @@ import Lollipop from "../Lollipop/LolliPop";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
-type Sprite = {
+export type Sprite = {
   key: string;
   image: string;
   offset: { x: number; y: number; scale?: { x?: number; y?: number } };
@@ -827,3 +827,65 @@ export const sprites: Sprite[] = [
     offset: { x: 15, y: -1200 },
   },
 ];
+
+const starSpriteSheetChoices = [
+  "./spritesheet/starOne.json",
+  "./spritesheet/starTwo.json",
+];
+
+export const generateRandomStars = (
+  maxNumber: number,
+  worldScale: number
+): Sprite[] => {
+  const stars: Sprite[] = [];
+
+  const minX = -1200;
+  const maxX = 1200;
+  const minY = -1000;
+  const maxY = 800;
+
+  for (let i = 0; i < maxNumber; i++) {
+    const randomSpriteSheetIdx = Math.floor(Math.random() * 2);
+    const spritesheet = starSpriteSheetChoices[randomSpriteSheetIdx];
+    const randomPoint = generateRandomPointWithinBoundingBox(
+      minX,
+      maxX,
+      minY,
+      maxY
+    );
+
+    // random animationSpeed from 0.07 to 0.1
+    const randomAnimationSpeed = Math.random() * (0.1 - 0.07) + 0.07;
+
+    stars.push({
+      key: `star-${i}`,
+      image: "",
+      component: (props) => (
+        <AnimatedSprite
+          {...props}
+          spritesheet={spritesheet}
+          animationSpeed={randomAnimationSpeed}
+        />
+      ),
+      offset: {
+        x: randomPoint.x * (1 / worldScale),
+        y: randomPoint.y * (1 / worldScale),
+      },
+    });
+  }
+
+  return stars;
+};
+
+function generateRandomPointWithinBoundingBox(
+  minX: number,
+  maxX: number,
+  minY: number,
+  maxY: number
+) {
+  const x = Math.random() * (maxX - minX) + minX;
+  const y = Math.random() * (maxY - minY) + minY;
+  return { x, y };
+}
+
+export const stars: Sprite[] = generateRandomStars(100, 0.5);
