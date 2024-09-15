@@ -6,13 +6,13 @@ import logo from "../../assets/images/creativeans-logo.webp";
 const Sidebar: React.FC = () => {
   const sidebarContext = useSidebar();
 
-  if (!sidebarContext.isOpen) {
-    return null;
-  }
-
   return (
     <>
-      <div className="fixed right-0 z-20 h-screen w-screen bg-[#f6f7fb] px-12 py-8 lg:w-1/2">
+      <div
+        className={`fixed right-0 z-20 h-screen w-screen transform bg-[#f6f7fb] px-12 py-8 transition-transform duration-300 ease-in-out lg:w-1/2 ${
+          sidebarContext.isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="flex flex-col gap-8">
           <div
             data-label="header"
@@ -47,10 +47,12 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* Overlay */}
-      <div
-        className="fixed z-10 h-screen w-screen bg-black opacity-70 hover:cursor-pointer"
-        onClick={sidebarContext.closeSidebar}
-      ></div>
+      {sidebarContext.isOpen && (
+        <div
+          className="fixed z-10 h-screen w-screen bg-black opacity-70 hover:cursor-pointer"
+          onClick={sidebarContext.closeSidebar}
+        />
+      )}
     </>
   );
 };
