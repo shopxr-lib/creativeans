@@ -3,6 +3,7 @@ import "@pixi/events";
 import { World } from "./components/World";
 import { WorldProvider } from "./context/World/WorldContext";
 import { useMediaQuery } from "usehooks-ts";
+import { SidebarProvider } from "./context/Sidebar/SidebarContext";
 
 const worldBaseImgWidth = 4096;
 const worldBaseImgHeight = 2671;
@@ -18,7 +19,9 @@ function App() {
       width={worldBaseImgWidth}
       height={worldBaseImgHeight}
     >
-      <World />
+      <SidebarProvider>
+        <World />
+      </SidebarProvider>
     </WorldProvider>
   );
 }

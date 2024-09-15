@@ -48,7 +48,16 @@ export const sprites: Sprite[] = [
     key: "c-building",
     image: CBuildingImg,
     offset: { x: 960, y: -583 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_4",
+        }}
+      />
+    ),
   },
   {
     key: "red-bubble",
@@ -78,7 +87,16 @@ export const sprites: Sprite[] = [
     key: "train",
     image: TrainImg,
     offset: { x: -1427, y: 230 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_7",
+        }}
+      />
+    ),
   },
   {
     key: "train-platform",
@@ -89,7 +107,16 @@ export const sprites: Sprite[] = [
     key: "building1",
     image: Building1Img,
     offset: { x: -1680, y: -620 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_2",
+        }}
+      />
+    ),
   },
   {
     key: "pipe",
@@ -100,13 +127,31 @@ export const sprites: Sprite[] = [
     key: "building4",
     image: Building4Img,
     offset: { x: 0, y: -767 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_3",
+        }}
+      />
+    ),
   },
   {
     key: "building3",
     image: Building3Img,
     offset: { x: -653, y: -410 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_1",
+        }}
+      />
+    ),
   },
   {
     key: "human-2",
@@ -158,7 +203,16 @@ export const sprites: Sprite[] = [
     key: "building6",
     image: Building6Img,
     offset: { x: 593, y: 267 },
-    component: (props) => <CustomSprite {...props} enableGlowEffect />,
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_6",
+        }}
+      />
+    ),
   },
   {
     key: "building7",
@@ -176,6 +230,10 @@ export const sprites: Sprite[] = [
           { x: 1483, y: -350, visible: true, speed: 0.01 },
         ]}
         enableGlowEffect
+        metadata={{
+          iframeUrl:
+            "https://www.creativeans.com/contact-objects/?section=section_object_5",
+        }}
       />
     ),
     offset: { x: 1483, y: -400 },
@@ -835,7 +893,7 @@ const starSpriteSheetChoices = [
 
 export const generateRandomStars = (
   maxNumber: number,
-  worldScale: number
+  worldScale: number,
 ): Sprite[] => {
   const stars: Sprite[] = [];
 
@@ -851,7 +909,7 @@ export const generateRandomStars = (
       minX,
       maxX,
       minY,
-      maxY
+      maxY,
     );
 
     // random animationSpeed from 0.07 to 0.1
@@ -881,7 +939,7 @@ function generateRandomPointWithinBoundingBox(
   minX: number,
   maxX: number,
   minY: number,
-  maxY: number
+  maxY: number,
 ) {
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;

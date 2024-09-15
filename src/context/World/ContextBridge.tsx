@@ -1,6 +1,7 @@
 import { Stage as PixiStage } from "@pixi/react";
 import { WorldContext } from "./WorldContext";
 import { PropsWithChildren } from "react";
+import { SidebarContext } from "../Sidebar/SidebarContext";
 
 export const ContextBridge: React.FC<
   PropsWithChildren<{
@@ -23,7 +24,14 @@ export const Stage: React.FC<StageProps> = ({ children, ...props }) => {
   return (
     <ContextBridge
       Context={WorldContext}
-      render={(children) => <PixiStage {...props}>{children}</PixiStage>}
+      render={(children) => (
+        <ContextBridge
+          Context={SidebarContext}
+          render={(children) => <PixiStage {...props}>{children}</PixiStage>}
+        >
+          {children}
+        </ContextBridge>
+      )}
     >
       {children}
     </ContextBridge>

@@ -7,6 +7,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
+import { useSidebar } from "../../context/Sidebar/hooks";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
@@ -25,6 +26,7 @@ type Props = React.ComponentProps<typeof Sprite> &
     spritesheet?: string;
     spriteAnimationIntervals?: number[];
     initialSpriteAnimationPlaying?: boolean;
+    metadata?: { iframeUrl: string };
   };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
@@ -38,6 +40,8 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const [opacity, setOpacity] = useState(1);
   const [delayTimer, setDelayTimer] = useState(0);
   const [hover, setHover] = useState(false);
+
+  const sidebarContext = useSidebar();
 
   const onMouseOver = () => {
     setHover(true);
@@ -120,13 +124,13 @@ const AnimatedSprite: React.FC<Props> = (props) => {
 
     Assets.load(props.spritesheet).then((resource) => {
       setFrames(
-        Object.keys(resource.data.frames).map((frame) => Texture.from(frame))
+        Object.keys(resource.data.frames).map((frame) => Texture.from(frame)),
       );
     });
   }, [props.spritesheet]);
 
   const [isPlaying, setIsPlaying] = useState(
-    props.initialSpriteAnimationPlaying ?? true
+    props.initialSpriteAnimationPlaying ?? true,
   );
   const intervalIndexRef = useRef(0);
   const elapsedRef = useRef(0);
@@ -161,6 +165,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     mouseover: onMouseOver,
     mouseout: onMouseOut,
     mousedown: onMouseOver,
+    onclick: () => sidebarContext.openSidebar(props.metadata?.iframeUrl ?? ""),
     ...(props.enableGlowEffect && { cursor: "pointer" }),
   };
 
@@ -183,7 +188,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
 
 function calculateActualPosition(
   offset: { x: number; y: number },
-  worldContext: { position: { x: number; y: number }; scale: number }
+  worldContext: { position: { x: number; y: number }; scale: number },
 ) {
   return {
     x: offset.x * worldContext.scale + worldContext.position.x,

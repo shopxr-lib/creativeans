@@ -4,6 +4,8 @@ import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp"
 import { sprites, stars, type Sprite } from "./constants";
 import { Stage } from "../../context/World/ContextBridge";
 import { useWorld } from "../../context/World/hooks";
+import Sidebar from "../Sidebar/Sidebar";
+import { useSidebar } from "../../context/Sidebar/hooks";
 
 const World: React.FC = () => {
   const {
@@ -16,6 +18,8 @@ const World: React.FC = () => {
     handleTouchMove,
     handleTouchEnd,
   } = useWorld();
+
+  const sidebarContext = useSidebar();
 
   const renderSprite = (sprite: Sprite[]) => {
     return sprite.map((sprite) => {
@@ -47,16 +51,8 @@ const World: React.FC = () => {
   };
 
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        overflow: "hidden",
-        margin: 0,
-        padding: 0,
-        cursor: isDragging ? "grabbing" : "grab",
-      }}
-    >
+    <div className="relative m-0 h-screen w-screen overflow-hidden p-0">
+      <Sidebar />
       <Stage
         width={window.innerWidth}
         height={window.innerHeight}
@@ -65,7 +61,10 @@ const World: React.FC = () => {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        style={{ touchAction: "none" }} // Prevent default touch actions
+        style={{
+          touchAction: "none", // Prevent default touch actions
+          cursor: isDragging ? "grabbing" : "grab",
+        }}
       >
         {renderSprite(stars)}
         <PixiSprite
@@ -75,6 +74,8 @@ const World: React.FC = () => {
           y={position.y}
           scale={{ x: scale, y: scale }}
           pointerdown={handleMouseDown}
+          interactive
+          onclick={sidebarContext.closeSidebar}
         />
         {renderSprite(sprites)}
       </Stage>
