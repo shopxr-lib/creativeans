@@ -29,7 +29,7 @@ const CustomSprite: React.FC<Props> = (props) => {
       mouseout={onMouseOut}
       mousedown={onMouseOver}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
-      interactive
+      eventMode="static"
       onpointerdown={() =>
         sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "")
       }

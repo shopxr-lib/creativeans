@@ -74,7 +74,7 @@ const World: React.FC = () => {
           y={position.y}
           scale={{ x: scale, y: scale }}
           pointerdown={handleMouseDown}
-          interactive
+          eventMode="static"
           onclick={sidebarContext.closeSidebar}
         />
         {renderSprite(sprites)}

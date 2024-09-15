@@ -3,6 +3,7 @@ import {
   useTick,
   AnimatedSprite as PixiAnimatedSprite,
 } from "@pixi/react";
+import { type EventMode } from "@pixi/events";
 import React, { useEffect, useRef, useState } from "react";
 import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
@@ -160,12 +161,13 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     x: isAnimating ? position.x : props.x,
     y: isAnimating ? position.y : props.y,
     alpha: opacity,
-    interactive: true,
+    eventMode: "static" satisfies EventMode as EventMode,
     filters: props.enableGlowEffect && hover ? [glowFilter] : [],
     mouseover: onMouseOver,
     mouseout: onMouseOut,
     mousedown: onMouseOver,
-    onclick: () => sidebarContext.openSidebar(props.metadata?.iframeUrl ?? ""),
+    onpointerdown: () =>
+      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? ""),
     ...(props.enableGlowEffect && { cursor: "pointer" }),
   };
 
