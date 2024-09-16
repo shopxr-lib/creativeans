@@ -18,9 +18,9 @@ export const WorldProvider: React.FC<
   PropsWithChildren & { initialScale: number; width: number; height: number }
 > = ({ children, initialScale, width, height }) => {
   const [position, setPosition] = useState({
-    // Center at C-logo of building-c by default
-    x: window.innerWidth / 2 - (960 - 100) * initialScale,
-    y: window.innerHeight / 2 + 863 * initialScale,
+    // Center building3 by default
+    x: window.innerWidth / 2 + 653 * initialScale,
+    y: window.innerHeight / 2 + (410 + 300) * initialScale,
   });
 
   const [isDragging, setIsDragging] = useState(false);
@@ -118,7 +118,7 @@ export const WorldProvider: React.FC<
       setScale((prevScale) => {
         const newScale = Math.max(
           initialScale,
-          Math.min(3, prevScale * adjustedScaleChange)
+          Math.min(3, prevScale * adjustedScaleChange),
         );
         const scaleRatio = newScale / prevScale;
 
