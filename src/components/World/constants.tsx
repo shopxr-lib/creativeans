@@ -31,6 +31,8 @@ import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
 import Otter from "../../assets/images/Creativeans-otter.webp";
 import WaterBridgeShadow from "../../assets/images/Creativeans-water-bridge-shadow.webp";
+import SpotsBallImg from "../../assets/images/Creativeans-spots-ball.webp";
+import StripesBallImg from "../../assets/images/Creativeans-stripes-ball.webp";
 import Lollipop from "../Lollipop/LolliPop";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
@@ -441,11 +443,6 @@ export const sprites: Sprite[] = [
     offset: { x: 1240, y: 248 },
   },
   {
-    key: "tree-building-3",
-    image: TreeImg,
-    offset: { x: -1040, y: -450 },
-  },
-  {
     key: "globe",
     image: GlobeImg,
     offset: { x: -750, y: -1033 },
@@ -815,6 +812,71 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -333, y: 1433 },
+  },
+  {
+    key: "spots-ball",
+    image: SpotsBallImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -870, y: -312, speed: 0.01 },
+          { x: -900, y: -308, speed: 0.01 },
+          { x: -956, y: -340, speed: 0.01 },
+          { x: -950, y: -375, speed: 0.003 },
+          { x: -846, y: -435, speed: 0.01 },
+          { x: -855, y: -453, speed: 0.003 },
+          { x: -1062, y: -573, speed: 0.01 },
+          { x: -1065, y: -610, speed: 0.003 },
+          { x: -891, y: -710, speed: 0.003 },
+          { x: -860, y: -700, speed: 1, skipLinearInterpolation: true },
+          {
+            x: -860,
+            y: -700,
+            speed: 1,
+            visible: false,
+            skipLinearInterpolation: true,
+            delayMs: 1000,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -874, y: -308 },
+  },
+  {
+    key: "stripes-ball",
+    image: StripesBallImg,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        trails={[
+          { x: -846, y: -435, speed: 0.01 },
+          { x: -855, y: -453, speed: 0.003 },
+          { x: -1062, y: -573, speed: 0.01 },
+          { x: -1065, y: -610, speed: 0.003 },
+          { x: -891, y: -710, speed: 0.003 },
+          { x: -860, y: -700, speed: 1, skipLinearInterpolation: true },
+          {
+            x: -860,
+            y: -700,
+            speed: 1,
+            visible: false,
+            skipLinearInterpolation: true,
+            delayMs: 1000,
+          },
+          { x: -870, y: -312, speed: 0.01 },
+          { x: -900, y: -308, speed: 0.01 },
+          { x: -956, y: -340, speed: 0.01 },
+          { x: -950, y: -375, speed: 0.003 },
+        ]}
+      />
+    ),
+    offset: { x: -874, y: -308 },
+  },
+  {
+    key: "tree-building-3",
+    image: TreeImg,
+    offset: { x: -1040, y: -450 },
   },
   {
     key: "fish-blue-german",
