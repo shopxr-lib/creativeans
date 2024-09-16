@@ -923,6 +923,7 @@ export const generateRandomStars = (
           {...props}
           spritesheet={spritesheet}
           animationSpeed={randomAnimationSpeed}
+          scale={0.2}
         />
       ),
       offset: {
@@ -946,4 +947,4 @@ function generateRandomPointWithinBoundingBox(
   return { x, y };
 }
 
-export const stars: Sprite[] = generateRandomStars(100, 0.5);
+export const stars: Sprite[] = generateRandomStars(200, 0.5);
