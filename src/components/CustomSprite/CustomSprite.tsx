@@ -3,6 +3,7 @@ import { Sprite } from "@pixi/react";
 import React, { useState } from "react";
 import { glowFilter } from "../../constants/filters";
 import { useSidebar } from "../../context/Sidebar/hooks";
+import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
 
 type Props = {
   enableGlowEffect?: boolean;
@@ -12,6 +13,11 @@ type Props = {
 const CustomSprite: React.FC<Props> = (props) => {
   const [hover, setHover] = useState(false);
   const sidebarContext = useSidebar();
+  const pointerHandler = usePointerHandler({
+    handleClick: () => {
+      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "");
+    },
+  });
 
   const onMouseOver = () => {
     setHover(true);
@@ -30,9 +36,7 @@ const CustomSprite: React.FC<Props> = (props) => {
       mousedown={onMouseOver}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
       eventMode="static"
-      onpointerdown={() =>
-        sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "")
-      }
+      {...pointerHandler}
       {...(props.enableGlowEffect && { cursor: "pointer" })}
     />
   );

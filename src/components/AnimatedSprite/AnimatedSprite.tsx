@@ -9,6 +9,7 @@ import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
 import { useSidebar } from "../../context/Sidebar/hooks";
+import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
@@ -43,6 +44,11 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const [hover, setHover] = useState(false);
 
   const sidebarContext = useSidebar();
+  const pointerHandler = usePointerHandler({
+    handleClick: () => {
+      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "");
+    },
+  });
 
   const onMouseOver = () => {
     setHover(true);
@@ -166,8 +172,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     mouseover: onMouseOver,
     mouseout: onMouseOut,
     mousedown: onMouseOver,
-    onpointerdown: () =>
-      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? ""),
+    ...pointerHandler,
     ...(props.enableGlowEffect && { cursor: "pointer" }),
   };
 
