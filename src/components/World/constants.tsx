@@ -683,8 +683,8 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: -1020, y: 76, visible: true },
-          { x: -1279, y: -74, visible: true },
+          { x: -1020, y: 76, visible: true, speed: 0.003 },
+          { x: -1279, y: -74, visible: true, speed: 0.003 },
           {
             x: -1063,
             y: -199,
@@ -712,6 +712,7 @@ export const sprites: Sprite[] = [
           {
             x: -1265,
             y: -89,
+            speed: 0.003,
           },
           {
             x: -1048,
@@ -725,7 +726,7 @@ export const sprites: Sprite[] = [
             skipLinearInterpolation: true,
             speed: 1,
           },
-          { x: -1014, y: 56 },
+          { x: -1014, y: 56, speed: 0.003 },
         ]}
       />
     ),
@@ -750,8 +751,8 @@ export const sprites: Sprite[] = [
             visible: false,
             speed: 1,
           },
-          { x: -1020, y: 76 },
-          { x: -1279, y: -74 },
+          { x: -1020, y: 76, speed: 0.003 },
+          { x: -1279, y: -74, speed: 0.003 },
         ]}
       />
     ),
