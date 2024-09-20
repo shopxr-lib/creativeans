@@ -959,6 +959,19 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 15, y: -1200 },
   },
+  {
+    key: "human-5",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human5.json"
+        animationSpeed={0.07}
+        scale={0.3}
+      />
+    ),
+    offset: { x: -120, y: 760 },
+  },
 ];
 
 const starSpriteSheetChoices = [
