@@ -62,6 +62,19 @@ export const sprites: Sprite[] = [
     ),
   },
   {
+    key: "human-4",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human4.json"
+        animationSpeed={0.1}
+        scale={0.4}
+      />
+    ),
+    offset: { x: 760, y: -870 },
+  },
+  {
     key: "red-bubble",
     image: "",
     component: (props) => (
