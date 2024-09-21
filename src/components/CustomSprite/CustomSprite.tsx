@@ -7,7 +7,7 @@ import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
 
 type Props = {
   enableGlowEffect?: boolean;
-  metadata?: { iframeUrl: string };
+  metadata?: { objectKey: string };
 } & React.ComponentProps<typeof Sprite>;
 
 const CustomSprite: React.FC<Props> = (props) => {
@@ -15,7 +15,7 @@ const CustomSprite: React.FC<Props> = (props) => {
   const sidebarContext = useSidebar();
   const pointerHandler = usePointerHandler({
     handleClick: () => {
-      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "");
+      sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
     },
   });
 

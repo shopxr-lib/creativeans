@@ -55,8 +55,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_4",
+          objectKey: "building-c",
         }}
       />
     ),
@@ -107,8 +106,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_7",
+          objectKey: "train",
         }}
       />
     ),
@@ -127,8 +125,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_2",
+          objectKey: "building-1",
         }}
       />
     ),
@@ -147,8 +144,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_3",
+          objectKey: "building-4",
         }}
       />
     ),
@@ -162,8 +158,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_1",
+          objectKey: "building-3",
         }}
       />
     ),
@@ -223,8 +218,7 @@ export const sprites: Sprite[] = [
         {...props}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_6",
+          objectKey: "building-6",
         }}
       />
     ),
@@ -246,8 +240,7 @@ export const sprites: Sprite[] = [
         ]}
         enableGlowEffect
         metadata={{
-          iframeUrl:
-            "https://www.creativeans.com/contact-objects/?section=section_object_5",
+          objectKey: "brain",
         }}
       />
     ),

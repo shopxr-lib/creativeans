@@ -3,9 +3,9 @@ import React, { useState } from "react";
 type SidebarContextType = {
   isOpen: boolean;
   toggleSidebar: () => void;
-  openSidebar: (iframeUrl: string) => void;
+  openSidebar: (objectKey: string) => void;
   closeSidebar: () => void;
-  iframeUrl: string;
+  activeObjectKey: string;
 };
 
 export const SidebarContext = React.createContext<SidebarContextType | null>(
@@ -20,15 +20,15 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
   children,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [iframeUrl, setIframeUrl] = useState("");
+  const [activeObjectKey, setActiveObjectKey] = useState("");
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
-  const openSidebar = (iframeUrl: string) => {
+  const openSidebar = (key: string) => {
     setIsOpen(true);
-    setIframeUrl(iframeUrl);
+    setActiveObjectKey(key);
   };
 
   const closeSidebar = () => {
@@ -37,7 +37,13 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
 
   return (
     <SidebarContext.Provider
-      value={{ isOpen, toggleSidebar, openSidebar, closeSidebar, iframeUrl }}
+      value={{
+        isOpen,
+        toggleSidebar,
+        openSidebar,
+        closeSidebar,
+        activeObjectKey,
+      }}
     >
       {children}
     </SidebarContext.Provider>

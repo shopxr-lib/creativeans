@@ -28,7 +28,7 @@ type Props = React.ComponentProps<typeof Sprite> &
     spritesheet?: string;
     spriteAnimationIntervals?: number[];
     initialSpriteAnimationPlaying?: boolean;
-    metadata?: { iframeUrl: string };
+    metadata?: { objectKey: string };
   };
 
 const AnimatedSprite: React.FC<Props> = (props) => {
@@ -46,7 +46,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const sidebarContext = useSidebar();
   const pointerHandler = usePointerHandler({
     handleClick: () => {
-      sidebarContext.openSidebar(props.metadata?.iframeUrl ?? "");
+      sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
     },
   });
 
