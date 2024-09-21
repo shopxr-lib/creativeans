@@ -877,11 +877,11 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/shiba.json"
-        scale={0.2}
+        scale={0.15}
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 30, y: 1000, scale: { x: 0.8, y: 0.8 } },
+    offset: { x: 30, y: 1010, scale: { x: 0.8, y: 0.8 } },
   },
 
   {
@@ -910,7 +910,7 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human3.json"
         animationSpeed={0.07}
-        scale={0.3}
+        scale={0.18}
       />
     ),
     offset: { x: 336, y: 622 },
@@ -923,10 +923,10 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human5.json"
         animationSpeed={0.07}
-        scale={0.2}
+        scale={0.15}
       />
     ),
-    offset: { x: 100, y: 770 },
+    offset: { x: 130, y: 770 },
   },
   {
     key: "fish-angel-1",
