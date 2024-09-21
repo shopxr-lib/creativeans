@@ -1,9 +1,9 @@
 import React from "react";
-import { X } from "tabler-icons-react";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { sidebarInfos } from "./constants";
 import Button from "../../assets/images/popup/button.png";
 import RightArrow from "../../assets/images/popup/right-arrow.svg";
+import { CloseIcon } from "../Icon";
 
 const Sidebar: React.FC = () => {
   const sidebarContext = useSidebar();
@@ -19,13 +19,7 @@ const Sidebar: React.FC = () => {
       >
         <div className="flex flex-col gap-8">
           <div data-label="header" className="flex items-center justify-end">
-            <X
-              onClick={sidebarContext.closeSidebar}
-              size={48}
-              strokeWidth={2}
-              color={"black"}
-              className="hover:cursor-pointer"
-            />
+            <CloseIcon onClick={sidebarContext.closeSidebar} />
           </div>
           <div data-label="body" className="mb-20 sm:mb-0">
             {sidebarInfo && (
