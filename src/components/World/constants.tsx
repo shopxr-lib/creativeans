@@ -1026,7 +1026,7 @@ export const generateRandomStars = (
           {...props}
           spritesheet={spritesheet}
           animationSpeed={randomAnimationSpeed}
-          scale={0.2}
+          scale={0.03}
         />
       ),
       offset: {
