@@ -69,7 +69,7 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human4.json"
         animationSpeed={0.1}
-        scale={0.4}
+        scale={0.3}
       />
     ),
     offset: { x: 760, y: -870 },
@@ -769,65 +769,6 @@ export const sprites: Sprite[] = [
     offset: { x: 270, y: -107, scale: { x: -1 } },
   },
   {
-    key: "fish-angel-1",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        scale={{ x: 0.3, y: 0.3 }}
-        trails={[
-          {
-            x: -3456,
-            y: -1367,
-            visible: true,
-            speed: 0.0003,
-          },
-          {
-            x: 3731,
-            y: 2783,
-            visible: true,
-            speed: 1,
-          },
-          {
-            x: 3731,
-            y: 2783,
-            visible: false,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -700, y: 833 },
-  },
-  {
-    key: "fish-angel-2",
-    image: FishAngel,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        scale={{ x: 0.4, y: 0.4 }}
-        trails={[
-          { x: -2764, y: -967, speed: 0.0003 },
-          {
-            x: 3731,
-            y: 2783,
-            visible: true,
-            speed: 1,
-          },
-          {
-            x: 3731,
-            y: 2783,
-            visible: false,
-            speed: 1,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -333, y: 1433 },
-  },
-  {
     key: "spots-ball",
     image: SpotsBallImg,
     component: (props) => (
@@ -936,6 +877,7 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/shiba.json"
+        scale={0.2}
         animationSpeed={0.07}
       />
     ),
@@ -981,10 +923,69 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human5.json"
         animationSpeed={0.07}
-        scale={0.3}
+        scale={0.2}
       />
     ),
-    offset: { x: -120, y: 760 },
+    offset: { x: 100, y: 770 },
+  },
+  {
+    key: "fish-angel-1",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        scale={{ x: 0.3, y: 0.3 }}
+        trails={[
+          {
+            x: -3456,
+            y: -1367,
+            visible: true,
+            speed: 0.0003,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -700, y: 833 },
+  },
+  {
+    key: "fish-angel-2",
+    image: FishAngel,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        scale={{ x: 0.4, y: 0.4 }}
+        trails={[
+          { x: -2764, y: -967, speed: 0.0003 },
+          {
+            x: 3731,
+            y: 2783,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: 3731,
+            y: 2783,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -333, y: 1433 },
   },
 ];
 
