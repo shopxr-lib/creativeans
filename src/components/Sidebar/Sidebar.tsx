@@ -31,7 +31,10 @@ const Sidebar: React.FC = () => {
             {sidebarInfo && (
               <div className="flex flex-col gap-8">
                 <div className="flex justify-center">
-                  <img className="h-[300px]" src={sidebarInfo.image} />
+                  <img
+                    className="h-[30vh] 2xl:h-[50vh]"
+                    src={sidebarInfo.image}
+                  />
                 </div>
                 <p className="font-brand text-5xl uppercase">
                   {sidebarInfo.title}
