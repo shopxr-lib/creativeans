@@ -1,9 +1,8 @@
 import React from "react";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { sidebarInfos } from "./constants";
-import Button from "../../assets/images/popup/button.png";
-import RightArrow from "../../assets/images/popup/right-arrow.svg";
 import { CloseIcon } from "../Icon";
+import LinkButton from "../LinkButton";
 
 const Sidebar: React.FC = () => {
   const sidebarContext = useSidebar();
@@ -40,20 +39,9 @@ const Sidebar: React.FC = () => {
 
                 {sidebarInfo.buttonLink && (
                   <div className="flex">
-                    <a
-                      href={sidebarInfo.buttonLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="relative flex-shrink-[1]"
-                    >
-                      <img src={Button} className="h-12" />
-                      <div className="absolute top-0 flex h-full w-full items-center justify-evenly">
-                        <p className="text-center text-[#48e4e0]">
-                          See Our Works
-                        </p>
-                        <img src={RightArrow} className="h-6" />
-                      </div>
-                    </a>
+                    <LinkButton href={sidebarInfo.buttonLink}>
+                      Learn More
+                    </LinkButton>
                   </div>
                 )}
               </div>
