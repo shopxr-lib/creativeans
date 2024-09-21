@@ -36,8 +36,7 @@ const CustomSprite: React.FC<Props> = (props) => {
       mousedown={onMouseOver}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
       eventMode="static"
-      {...pointerHandler}
-      {...(props.enableGlowEffect && { cursor: "pointer" })}
+      {...(props.enableGlowEffect && { cursor: "pointer", ...pointerHandler })}
     />
   );
 };

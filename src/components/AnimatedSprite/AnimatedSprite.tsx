@@ -172,8 +172,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     mouseover: onMouseOver,
     mouseout: onMouseOut,
     mousedown: onMouseOver,
-    ...pointerHandler,
-    ...(props.enableGlowEffect && { cursor: "pointer" }),
+    ...(props.enableGlowEffect && { cursor: "pointer", ...pointerHandler }),
   };
 
   if (props.spritesheet) {
