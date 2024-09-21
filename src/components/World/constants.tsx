@@ -683,16 +683,16 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         trails={[
-          { x: -1020, y: 76, visible: true, speed: 0.003 },
-          { x: -1279, y: -74, visible: true, speed: 0.003 },
+          { x: -985, y: 65, visible: true, speed: 0.003 },
+          { x: -1227, y: -75, visible: true, speed: 0.003 },
           {
-            x: -1063,
-            y: -199,
+            x: -1010,
+            y: -200,
             visible: false,
           },
           {
-            x: -976,
-            y: -249,
+            x: -924,
+            y: -250,
             visible: false,
             skipLinearInterpolation: true,
             speed: 1,
@@ -700,7 +700,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: 0, y: 0 },
+    offset: { x: -985, y: 65 },
   },
   {
     key: "plant-pot-2",
@@ -710,27 +710,27 @@ export const sprites: Sprite[] = [
         {...props}
         trails={[
           {
-            x: -1265,
-            y: -89,
+            x: -1222,
+            y: -84,
             speed: 0.003,
           },
           {
-            x: -1048,
-            y: -214,
+            x: -1005,
+            y: -209,
             visible: false,
           },
           {
-            x: -961,
-            y: -264,
+            x: -919,
+            y: -259,
             visible: false,
             skipLinearInterpolation: true,
             speed: 1,
           },
-          { x: -1014, y: 56, speed: 0.003 },
+          { x: -980, y: 56, speed: 0.003 },
         ]}
       />
     ),
-    offset: { x: 0, y: 0 },
+    offset: { x: -980, y: 56 },
   },
   {
     key: "plant-pot-3",
@@ -740,19 +740,19 @@ export const sprites: Sprite[] = [
         {...props}
         trails={[
           {
-            x: -1063,
-            y: -199,
+            x: -1010,
+            y: -200,
             visible: false,
           },
           {
-            x: -976,
-            y: -249,
-            skipLinearInterpolation: true,
+            x: -924,
+            y: -250,
             visible: false,
+            skipLinearInterpolation: true,
             speed: 1,
           },
-          { x: -1020, y: 76, speed: 0.003 },
-          { x: -1279, y: -74, speed: 0.003 },
+          { x: -985, y: 65, visible: true, speed: 0.003 },
+          { x: -1227, y: -75, visible: true, speed: 0.003 },
         ]}
       />
     ),
