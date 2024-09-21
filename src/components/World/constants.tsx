@@ -84,7 +84,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 1118, y: -430 },
+    offset: { x: 1116, y: -426 },
   },
   {
     key: "purple-bubble",
