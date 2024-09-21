@@ -881,7 +881,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 26, y: 980, scale: { x: 0.8, y: 0.8 } },
+    offset: { x: 30, y: 1000, scale: { x: 0.8, y: 0.8 } },
   },
 
   {
