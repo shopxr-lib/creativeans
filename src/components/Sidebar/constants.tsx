@@ -1,10 +1,10 @@
-import Section1 from "../../assets/images/popup/section1.png";
-import Section2 from "../../assets/images/popup/section2.png";
-import Section3 from "../../assets/images/popup/section3.png";
-import Section4 from "../../assets/images/popup/section4.png";
-import Section5 from "../../assets/images/popup/section5.png";
-import Section6 from "../../assets/images/popup/section6.png";
-import Section7 from "../../assets/images/popup/section7.png";
+import Section1 from "../../assets/images/popup/Section1.png";
+import Section2 from "../../assets/images/popup/Section2.png";
+import Section3 from "../../assets/images/popup/Section3.png";
+import Section4 from "../../assets/images/popup/Section4.png";
+import Section5 from "../../assets/images/popup/Section5.png";
+import Section6 from "../../assets/images/popup/Section6.png";
+import Section7 from "../../assets/images/popup/Section7.png";
 
 type SidebarInfo = {
   title: string;
