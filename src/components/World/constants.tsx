@@ -29,7 +29,6 @@ import FishOrangePartial from "../../assets/images/Creativeans-orange-fish-parti
 import PlantPot1 from "../../assets/images/Creativeans-plant-pot1.webp";
 import PlantPot2 from "../../assets/images/Creativeans-plant-pot2.webp";
 import PlantPot3 from "../../assets/images/Creativeans-plant-pot3.webp";
-import Otter from "../../assets/images/Creativeans-otter.webp";
 import WaterBridgeShadow from "../../assets/images/Creativeans-water-bridge-shadow.webp";
 import SpotsBallImg from "../../assets/images/Creativeans-spots-ball.webp";
 import StripesBallImg from "../../assets/images/Creativeans-stripes-ball.webp";
@@ -738,16 +737,6 @@ export const sprites: Sprite[] = [
     offset: { x: 0, y: 0 },
   },
   {
-    key: "otter-1",
-    image: Otter,
-    offset: { x: -254, y: 270 },
-  },
-  {
-    key: "otter-2",
-    image: Otter,
-    offset: { x: 270, y: -107, scale: { x: -1 } },
-  },
-  {
     key: "spots-ball",
     image: SpotsBallImg,
     component: (props) => (
@@ -978,6 +967,58 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -333, y: 1433 },
+  },
+  {
+    key: "otter-1",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter1.json"
+        animationSpeed={0.07}
+        scale={0.2}
+      />
+    ),
+    offset: { x: -254, y: 270 },
+  },
+  {
+    key: "otter-2",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter2.json"
+        animationSpeed={0.07}
+        scale={0.3}
+      />
+    ),
+    offset: { x: -186, y: 148 },
+  },
+  {
+    key: "otter-3",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter3.json"
+        animationSpeed={0.07}
+        scale={0.3}
+      />
+    ),
+    offset: { x: 244, y: -90 },
+  },
+  {
+    key: "otter-4",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter4.json"
+        animationSpeed={0.07}
+        scale={0.2}
+      />
+    ),
+    offset: { x: 182, y: -156 },
   },
 ];
 

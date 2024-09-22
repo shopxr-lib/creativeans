@@ -1,0 +1,73 @@
+{
+  "frames": {
+    "otter2-1.png": {
+      "frame": { "x": 71, "y": 153, "w": 86, "h": 67 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 25, "w": 86, "h": 67 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-2.png": {
+      "frame": { "x": 1, "y": 153, "w": 87, "h": 68 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 22, "w": 87, "h": 68 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-3.png": {
+      "frame": { "x": 1, "y": 80, "w": 89, "h": 71 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 3, "y": 19, "w": 89, "h": 71 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-4.png": {
+      "frame": { "x": 1, "y": 1, "w": 99, "h": 77 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 13, "w": 99, "h": 77 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-5.png": {
+      "frame": { "x": 102, "y": 1, "w": 96, "h": 74 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 16, "w": 96, "h": 74 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-6.png": {
+      "frame": { "x": 102, "y": 77, "w": 93, "h": 73 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 17, "w": 93, "h": 73 },
+      "sourceSize": { "w": 100, "h": 100 }
+    },
+    "otter2-7.png": {
+      "frame": { "x": 140, "y": 152, "w": 84, "h": 72 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 18, "w": 84, "h": 72 },
+      "sourceSize": { "w": 100, "h": 100 }
+    }
+  },
+  "animations": {
+    "otter": [
+      "otter2-1.png",
+      "otter2-2.png",
+      "otter2-3.png",
+      "otter2-4.png",
+      "otter2-5.png",
+      "otter2-6.png",
+      "otter2-7.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "otter2.png",
+    "format": "RGBA8888",
+    "size": { "w": 213, "h": 241 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:46a2588ead42299fcf674d4cc35dbe4c:5423e93a895b5a3c18159b83c6d7d59e:70655ad1ecc6d4ee87bf0b14d0839807$"
+  }
+}
