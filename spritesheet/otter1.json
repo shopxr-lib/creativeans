@@ -1,0 +1,57 @@
+{
+  "frames": {
+    "otter1-1.png": {
+      "frame": { "x": 1, "y": 505, "w": 115, "h": 131 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 7, "y": 1, "w": 115, "h": 131 },
+      "sourceSize": { "w": 126, "h": 136 }
+    },
+    "otter1-2.png": {
+      "frame": { "x": 1, "y": 243, "w": 117, "h": 131 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 7, "y": 5, "w": 117, "h": 131 },
+      "sourceSize": { "w": 126, "h": 136 }
+    },
+    "otter1-3.png": {
+      "frame": { "x": 1, "y": 376, "w": 117, "h": 127 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 7, "y": 9, "w": 117, "h": 127 },
+      "sourceSize": { "w": 126, "h": 136 }
+    },
+    "otter1-4.png": {
+      "frame": { "x": 1, "y": 128, "w": 113, "h": 122 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 7, "y": 11, "w": 113, "h": 122 },
+      "sourceSize": { "w": 126, "h": 136 }
+    },
+    "otter1-5.png": {
+      "frame": { "x": 1, "y": 1, "w": 125, "h": 126 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 9, "w": 125, "h": 126 },
+      "sourceSize": { "w": 126, "h": 136 }
+    }
+  },
+  "animations": {
+    "otter": [
+      "otter1-1.png",
+      "otter1-2.png",
+      "otter1-3.png",
+      "otter1-4.png",
+      "otter1-5.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "otter1.png",
+    "format": "RGBA8888",
+    "size": { "w": 128, "h": 637 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:b4b3d8c72787cadd48a99bae9d3cb644:20c9130b5ad698adb1aa095199d0a25d:fa8961fadda0919c54cd3242d83d74ba$"
+  }
+}

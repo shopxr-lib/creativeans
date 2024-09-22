@@ -1,0 +1,44 @@
+{
+  "frames": {
+    "otter3-1.png": {
+      "frame": { "x": 1, "y": 199, "w": 125, "h": 96 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 0, "w": 125, "h": 96 },
+      "sourceSize": { "w": 129, "h": 98 }
+    },
+    "otter3-2.png": {
+      "frame": { "x": 1, "y": 1, "w": 125, "h": 97 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 0, "w": 125, "h": 97 },
+      "sourceSize": { "w": 129, "h": 98 }
+    },
+    "otter3-3.png": {
+      "frame": { "x": 1, "y": 100, "w": 125, "h": 97 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 1, "w": 125, "h": 97 },
+      "sourceSize": { "w": 129, "h": 98 }
+    },
+    "otter3-4.png": {
+      "frame": { "x": 1, "y": 297, "w": 125, "h": 96 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 2, "w": 125, "h": 96 },
+      "sourceSize": { "w": 129, "h": 98 }
+    }
+  },
+  "animations": {
+    "otter": ["otter3-1.png", "otter3-2.png", "otter3-3.png", "otter3-4.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "otter3.png",
+    "format": "RGBA8888",
+    "size": { "w": 127, "h": 394 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:a333647b6008bbaf8507415faa1a2aa8:e18580972dcac21c1e48829fe1255673:dd18a781a409eebdd91b684c9506d852$"
+  }
+}
