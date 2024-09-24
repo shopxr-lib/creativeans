@@ -1083,7 +1083,6 @@ export const sprites: Sprite[] = [
     component: (props) => (
       <AnimatedSprite
         {...props}
-        scale={{ x: 0.3, y: 0.3 }}
         trails={[
           {
             x: -3456,
@@ -1107,7 +1106,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: -700, y: 833 },
+    offset: { x: -700, y: 833, scale: { x: 0.6, y: 0.6 } },
   },
   {
     key: "fish-angel-2",
@@ -1115,7 +1114,6 @@ export const sprites: Sprite[] = [
     component: (props) => (
       <AnimatedSprite
         {...props}
-        scale={{ x: 0.4, y: 0.4 }}
         trails={[
           { x: -2764, y: -967, speed: 0.0003 },
           {
@@ -1134,7 +1132,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: -333, y: 1433 },
+    offset: { x: -333, y: 1433, scale: { x: 0.6, y: 0.6 } },
   },
 ];
 
