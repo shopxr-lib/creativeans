@@ -872,6 +872,7 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/shiba.json"
         scale={0.15}
+        scaleMultipler={{ xl: 2 }}
         animationSpeed={0.07}
       />
     ),
@@ -891,7 +892,8 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human3.json"
         animationSpeed={0.07}
-        scale={0.18}
+        scale={0.15}
+        scaleMultipler={{ xl: 2 }}
       />
     ),
     offset: { x: 336, y: 622 },
@@ -905,6 +907,7 @@ export const sprites: Sprite[] = [
         spritesheet="./spritesheet/human5.json"
         animationSpeed={0.07}
         scale={0.15}
+        scaleMultipler={{ xl: 2 }}
       />
     ),
     offset: { x: 130, y: 770 },
