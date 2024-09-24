@@ -135,6 +135,32 @@ export const sprites: Sprite[] = [
     offset: { x: -1485, y: -210 },
   },
   {
+    key: "building4",
+    image: Building4Img,
+    offset: { x: 0, y: -767 },
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          objectKey: "building-4",
+        }}
+      />
+    ),
+  },
+  {
+    key: "leaf",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/leaf.json"
+        animationSpeed={0.01}
+      />
+    ),
+    offset: { x: 15, y: -1200 },
+  },
+  {
     key: "building3",
     image: Building3Img,
     offset: { x: -653, y: -410 },
@@ -856,32 +882,6 @@ export const sprites: Sprite[] = [
     key: "water-bridge-shadow",
     image: WaterBridgeShadow,
     offset: { x: 305, y: -305 },
-  },
-  {
-    key: "building4",
-    image: Building4Img,
-    offset: { x: 0, y: -767 },
-    component: (props) => (
-      <CustomSprite
-        {...props}
-        enableGlowEffect
-        metadata={{
-          objectKey: "building-4",
-        }}
-      />
-    ),
-  },
-  {
-    key: "leaf",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/leaf.json"
-        animationSpeed={0.01}
-      />
-    ),
-    offset: { x: 15, y: -1200 },
   },
   {
     key: "human-3",
