@@ -25,8 +25,6 @@ export const WorldProvider: React.FC<
 
   const [isDragging, setIsDragging] = useState(false);
   const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
-  const [scale, setScale] = useState(initialScale);
-  const [initialDistance, setInitialDistance] = useState(0);
 
   const handleMouseDown = (event: React.MouseEvent) => {
     setIsDragging(true);
@@ -42,8 +40,8 @@ export const WorldProvider: React.FC<
         const newY = prevPosition.y + dy;
 
         // Calculate boundaries based on the scaled image dimensions
-        const scaledWidth = width * scale;
-        const scaledHeight = height * scale;
+        const scaledWidth = width;
+        const scaledHeight = height;
         const minX = window.innerWidth / 2 - scaledWidth / 3;
         const maxX = window.innerWidth / 2 + scaledWidth / 3;
         const minY = window.innerHeight / 2 - scaledHeight / 3;
@@ -69,10 +67,6 @@ export const WorldProvider: React.FC<
         x: event.touches[0].clientX,
         y: event.touches[0].clientY,
       });
-    } else if (event.touches.length === 2) {
-      const dx = event.touches[0].clientX - event.touches[1].clientX;
-      const dy = event.touches[0].clientY - event.touches[1].clientY;
-      setInitialDistance(Math.sqrt(dx * dx + dy * dy));
     }
   };
 
@@ -85,8 +79,8 @@ export const WorldProvider: React.FC<
         const newY = prevPosition.y + dy;
 
         // Calculate boundaries based on the scaled image dimensions
-        const scaledWidth = width * scale;
-        const scaledHeight = height * scale;
+        const scaledWidth = width;
+        const scaledHeight = height;
         const minX = window.innerWidth / 2 - scaledWidth / 2.5;
         const maxX = window.innerWidth / 2 + scaledWidth / 2.5;
         const minY = window.innerHeight / 2 - scaledHeight / 4;
@@ -100,47 +94,6 @@ export const WorldProvider: React.FC<
       setLastPosition({
         x: event.touches[0].clientX,
         y: event.touches[0].clientY,
-      });
-    } else if (event.touches.length === 2) {
-      const dx = event.touches[0].clientX - event.touches[1].clientX;
-      const dy = event.touches[0].clientY - event.touches[1].clientY;
-      const newDistance = Math.sqrt(dx * dx + dy * dy);
-      const scaleChange = newDistance / initialDistance;
-
-      const dampingFactor = 0.05; // Adjust this value to control the smoothness
-      const adjustedScaleChange = 1 + (scaleChange - 1) * dampingFactor;
-
-      const midpoint = {
-        x: (event.touches[0].clientX + event.touches[1].clientX) / 2,
-        y: (event.touches[0].clientY + event.touches[1].clientY) / 2,
-      };
-
-      setScale((prevScale) => {
-        const newScale = Math.max(
-          initialScale,
-          Math.min(3, prevScale * adjustedScaleChange),
-        );
-        const scaleRatio = newScale / prevScale;
-
-        setPosition((prevPosition) => {
-          const newX = midpoint.x - (midpoint.x - prevPosition.x) * scaleRatio;
-          const newY = midpoint.y - (midpoint.y - prevPosition.y) * scaleRatio;
-
-          // Calculate boundaries based on the new scaled image dimensions
-          const scaledWidth = width * newScale;
-          const scaledHeight = height * newScale;
-          const minX = window.innerWidth / 2 - scaledWidth / 2;
-          const maxX = window.innerWidth / 2 + scaledWidth / 2;
-          const minY = window.innerHeight / 2 - scaledHeight / 2;
-          const maxY = window.innerHeight / 2 + scaledHeight / 2;
-
-          return {
-            x: Math.max(minX, Math.min(maxX, newX)),
-            y: Math.max(minY, Math.min(maxY, newY)),
-          };
-        });
-
-        return newScale;
       });
     }
   };
@@ -160,7 +113,7 @@ export const WorldProvider: React.FC<
     <WorldContext.Provider
       value={{
         position,
-        scale,
+        scale: initialScale, // hardcoded for now, since we decided not to implement zooming
         isDragging,
         handleMouseDown,
         handleMouseMove,
