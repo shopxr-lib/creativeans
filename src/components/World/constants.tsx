@@ -68,6 +68,7 @@ export const sprites: Sprite[] = [
         spritesheet="./spritesheet/human4.json"
         animationSpeed={0.1}
         scale={0.3}
+        scaleMultipler={{ xl: 2 }}
       />
     ),
     offset: { x: 760, y: -870 },
@@ -627,6 +628,34 @@ export const sprites: Sprite[] = [
     offset: { x: 1797, y: -364 },
   },
   {
+    key: "khairul",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/khairul.json"
+        animationSpeed={0.07}
+        trails={[
+          { x: 3432, y: 626, visible: true, speed: 0.0003 },
+          {
+            x: -1937,
+            y: -2474,
+            visible: true,
+            speed: 1,
+          },
+          {
+            x: -1937,
+            y: -2474,
+            visible: false, // fade-out
+            speed: 1,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 1700, y: -374, scale: { x: 0.5, y: 0.5 } },
+  },
+  {
     key: "human-1",
     image: "",
     component: (props) => (
@@ -652,7 +681,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: 1727, y: -364, scale: { x: 0.7, y: 0.7 } },
+    offset: { x: 1727, y: -364, scale: { x: 0.5, y: 0.5 } },
   },
   {
     key: "fish-orange-partial",
@@ -910,7 +939,7 @@ export const sprites: Sprite[] = [
         scaleMultipler={{ xl: 2 }}
       />
     ),
-    offset: { x: 130, y: 770 },
+    offset: { x: 130, y: 780 },
   },
   {
     key: "fish-angel-1",
@@ -1022,6 +1051,118 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: 182, y: -156 },
+  },
+  {
+    key: "human3a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human3a.json"
+        animationSpeed={0.07}
+        scale={0.13}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: -600, y: -176 },
+  },
+  {
+    key: "human4a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human4a.json"
+        animationSpeed={0.07}
+        scale={0.13}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: -570, y: -196 },
+  },
+  {
+    key: "human5a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human5a.json"
+        animationSpeed={0.07}
+        scale={0.2}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: -1560, y: -760 },
+  },
+  {
+    key: "human8",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human8.json"
+        animationSpeed={0.07}
+        scale={0.2}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: -1500, y: -705 },
+  },
+  {
+    key: "human25",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human25.json"
+        animationSpeed={0.07}
+        scale={0.2}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: 110, y: 260 },
+  },
+  {
+    key: "human19",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human19.json"
+        animationSpeed={0.07}
+        scale={0.2}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: 80, y: 250 },
+  },
+  {
+    key: "human20",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human20.json"
+        animationSpeed={0.07}
+        scale={0.15}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: 100, y: 680 },
+  },
+  {
+    key: "human21",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human21.json"
+        animationSpeed={0.07}
+        scale={0.15}
+        scaleMultipler={{ xl: 2 }}
+      />
+    ),
+    offset: { x: 152, y: 710 },
   },
 ];
 
