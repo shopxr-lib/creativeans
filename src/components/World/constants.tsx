@@ -67,11 +67,9 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human4.json"
         animationSpeed={0.1}
-        scale={0.3}
-        scaleMultipler={{ xl: 2 }}
       />
     ),
-    offset: { x: 760, y: -870 },
+    offset: { x: 760, y: -870, scale: { x: 0.7, y: 0.7 } },
   },
   {
     key: "red-bubble",
@@ -900,12 +898,10 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/shiba.json"
-        scale={0.15}
-        scaleMultipler={{ xl: 2 }}
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 30, y: 1010, scale: { x: 0.8, y: 0.8 } },
+    offset: { x: 30, y: 1010, scale: { x: 0.3, y: 0.3 } },
   },
 
   {
@@ -921,11 +917,9 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human3.json"
         animationSpeed={0.07}
-        scale={0.15}
-        scaleMultipler={{ xl: 2 }}
       />
     ),
-    offset: { x: 336, y: 622 },
+    offset: { x: 336, y: 622, scale: { x: 0.3, y: 0.3 } },
   },
   {
     key: "human-5",
@@ -935,11 +929,153 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/human5.json"
         animationSpeed={0.07}
-        scale={0.15}
-        scaleMultipler={{ xl: 2 }}
       />
     ),
-    offset: { x: 130, y: 780 },
+    offset: { x: 130, y: 780, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "otter-1",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter1.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -254, y: 270, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "otter-2",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter2.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -186, y: 148, scale: { x: 0.5, y: 0.5 } },
+  },
+  {
+    key: "otter-3",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter3.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 244, y: -90, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "otter-4",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/otter4.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 182, y: -156, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "human3a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human3a.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -600, y: -176, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "human4a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human4a.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -570, y: -196, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "human5a",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human5a.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -1560, y: -760, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "human8",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human8.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -1500, y: -705, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "human25",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human25.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 110, y: 260, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "human19",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human19.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 80, y: 250, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "human20",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human20.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 100, y: 680, scale: { x: 0.25, y: 0.25 } },
+  },
+  {
+    key: "human21",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human21.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 152, y: 710, scale: { x: 0.25, y: 0.25 } },
   },
   {
     key: "fish-angel-1",
@@ -999,170 +1135,6 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -333, y: 1433 },
-  },
-  {
-    key: "otter-1",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/otter1.json"
-        animationSpeed={0.07}
-        scale={0.2}
-      />
-    ),
-    offset: { x: -254, y: 270 },
-  },
-  {
-    key: "otter-2",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/otter2.json"
-        animationSpeed={0.07}
-        scale={0.3}
-      />
-    ),
-    offset: { x: -186, y: 148 },
-  },
-  {
-    key: "otter-3",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/otter3.json"
-        animationSpeed={0.07}
-        scale={0.3}
-      />
-    ),
-    offset: { x: 244, y: -90 },
-  },
-  {
-    key: "otter-4",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/otter4.json"
-        animationSpeed={0.07}
-        scale={0.2}
-      />
-    ),
-    offset: { x: 182, y: -156 },
-  },
-  {
-    key: "human3a",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human3a.json"
-        animationSpeed={0.07}
-        scale={0.13}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: -600, y: -176 },
-  },
-  {
-    key: "human4a",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human4a.json"
-        animationSpeed={0.07}
-        scale={0.13}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: -570, y: -196 },
-  },
-  {
-    key: "human5a",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human5a.json"
-        animationSpeed={0.07}
-        scale={0.2}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: -1560, y: -760 },
-  },
-  {
-    key: "human8",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human8.json"
-        animationSpeed={0.07}
-        scale={0.2}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: -1500, y: -705 },
-  },
-  {
-    key: "human25",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human25.json"
-        animationSpeed={0.07}
-        scale={0.2}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: 110, y: 260 },
-  },
-  {
-    key: "human19",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human19.json"
-        animationSpeed={0.07}
-        scale={0.2}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: 80, y: 250 },
-  },
-  {
-    key: "human20",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human20.json"
-        animationSpeed={0.07}
-        scale={0.15}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: 100, y: 680 },
-  },
-  {
-    key: "human21",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human21.json"
-        animationSpeed={0.07}
-        scale={0.15}
-        scaleMultipler={{ xl: 2 }}
-      />
-    ),
-    offset: { x: 152, y: 710 },
   },
 ];
 

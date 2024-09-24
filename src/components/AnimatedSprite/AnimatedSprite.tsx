@@ -10,14 +10,9 @@ import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
-import { useMediaQuery } from "usehooks-ts";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
-
-const defaultScaleMultiplier = {
-  xl: 1,
-};
 
 type Props = React.ComponentProps<typeof Sprite> &
   Partial<React.ComponentProps<typeof PixiAnimatedSprite>> & {
@@ -176,23 +171,8 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     }
   });
 
-  const scaleMultiplier = props.scaleMultipler || defaultScaleMultiplier;
-  const isLargeScreen = useMediaQuery("(min-width: 1600px)");
-  const effectiveScaleMultiplier = isLargeScreen ? scaleMultiplier.xl : 1;
-
-  let scale: { x: number; y: number } | number;
-  if (typeof props.scale === "number") {
-    scale = props.scale * effectiveScaleMultiplier;
-  } else {
-    scale = {
-      x: props.scale?.x || 1 * effectiveScaleMultiplier,
-      y: props.scale?.y || 1 * effectiveScaleMultiplier,
-    };
-  }
-
   const commonProps = {
     ...props,
-    scale,
     x: isAnimating ? position.x : props.x,
     y: isAnimating ? position.y : props.y,
     alpha: opacity,
