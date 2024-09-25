@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEventContext } from "../Event/hooks";
 
 type SidebarContextType = {
   isOpen: boolean;
@@ -22,6 +23,8 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [activeObjectKey, setActiveObjectKey] = useState("");
 
+  const eventContext = useEventContext();
+
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
@@ -29,10 +32,12 @@ export const SidebarProvider: React.FC<SidebarProviderProps> = ({
   const openSidebar = (key: string) => {
     setIsOpen(true);
     setActiveObjectKey(key);
+    eventContext.setEnabled(false);
   };
 
   const closeSidebar = () => {
     setIsOpen(false);
+    eventContext.setEnabled(true);
   };
 
   return (

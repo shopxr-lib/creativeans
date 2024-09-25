@@ -10,6 +10,7 @@ import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
+import { useEventContext } from "../../context/Event/hooks";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
@@ -172,12 +173,16 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     }
   });
 
+  const eventContext = useEventContext();
+
   const commonProps = {
     ...props,
     x: isAnimating ? position.x : props.x,
     y: isAnimating ? position.y : props.y,
     alpha: opacity,
-    eventMode: "static" satisfies EventMode as EventMode,
+    eventMode: (eventContext.enabled
+      ? "static"
+      : "none") satisfies EventMode as EventMode,
     filters: props.enableGlowEffect && hover ? [glowFilter] : [],
     mouseover: onMouseOver,
     mouseout: onMouseOut,

@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { glowFilter } from "../../constants/filters";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
+import { useEventContext } from "../../context/Event/hooks";
 
 type Props = {
   enableGlowEffect?: boolean;
@@ -13,6 +14,7 @@ type Props = {
 const CustomSprite: React.FC<Props> = (props) => {
   const [hover, setHover] = useState(false);
   const sidebarContext = useSidebar();
+  const eventContext = useEventContext();
   const pointerHandler = usePointerHandler({
     handleClick: () => {
       sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
@@ -28,6 +30,10 @@ const CustomSprite: React.FC<Props> = (props) => {
     setHover(false);
   };
 
+  const onpointermove = () => {
+    setHover(true);
+  };
+
   return (
     <Sprite
       {...props}
@@ -35,9 +41,9 @@ const CustomSprite: React.FC<Props> = (props) => {
       mouseover={onMouseOver}
       mouseout={onMouseOut}
       mousedown={onMouseOver}
-      onpointermove={() => setHover(true)}
+      onpointermove={onpointermove}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
-      eventMode="static"
+      eventMode={eventContext.enabled ? "static" : "none"}
       {...(props.enableGlowEffect && { cursor: "pointer", ...pointerHandler })}
     />
   );
