@@ -57,6 +57,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     handleClick: () => {
       sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
     },
+    onPointerUp: () => setHover(false),
   });
 
   const onMouseOver = () => {
@@ -181,6 +182,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     mouseover: onMouseOver,
     mouseout: onMouseOut,
     mousedown: onMouseOver,
+    onpointermove: () => setHover(true),
     ...(props.enableGlowEffect && { cursor: "pointer", ...pointerHandler }),
   };
 

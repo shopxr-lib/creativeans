@@ -5,13 +5,18 @@ const thresholdDistance = 5;
 
 export const usePointerHandler = ({
   handleClick,
+  onPointerDown,
+  onPointerUp,
 }: {
-  handleClick: () => void;
+  handleClick?: () => void;
+  onPointerUp?: () => void;
+  onPointerDown?: () => void;
 }) => {
   const startPos = useRef({ x: 0, y: 0 });
 
   const onpointerdown: FederatedEventHandler = (event) => {
     startPos.current = { x: event.clientX, y: event.clientY };
+    onPointerDown?.();
   };
 
   const onpointerup: FederatedEventHandler = (event) => {
@@ -23,7 +28,9 @@ export const usePointerHandler = ({
 
     const isClicking = distance < thresholdDistance;
     if (isClicking) {
-      handleClick();
+      handleClick?.();
+    } else {
+      onPointerUp?.();
     }
   };
 

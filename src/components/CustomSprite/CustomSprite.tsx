@@ -17,6 +17,7 @@ const CustomSprite: React.FC<Props> = (props) => {
     handleClick: () => {
       sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
     },
+    onPointerUp: () => setHover(false),
   });
 
   const onMouseOver = () => {
@@ -34,6 +35,7 @@ const CustomSprite: React.FC<Props> = (props) => {
       mouseover={onMouseOver}
       mouseout={onMouseOut}
       mousedown={onMouseOver}
+      onpointermove={() => setHover(true)}
       filters={props.enableGlowEffect && hover ? [glowFilter] : []}
       eventMode="static"
       {...(props.enableGlowEffect && { cursor: "pointer", ...pointerHandler })}
