@@ -17,6 +17,7 @@ const CustomSprite: React.FC<Props> = (props) => {
   const eventContext = useEventContext();
   const pointerHandler = usePointerHandler({
     handleClick: () => {
+      setHover(false);
       sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
     },
     onPointerUp: () => setHover(false),
