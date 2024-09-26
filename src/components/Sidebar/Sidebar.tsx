@@ -11,9 +11,9 @@ const Sidebar: React.FC = () => {
 
   return (
     <>
-      {/* pb-[200px] because the contact page has a fixed hover button on the bottom of the screen, hence adding some space. */}
+      {/* py-[200px] because the contact page has a fixed menu on clients' web, hence adding some space. */}
       <div
-        className={`fixed right-0 z-20 h-screen w-screen transform overflow-y-scroll bg-[#f7f8fc] px-12 pb-[200px] pt-8 transition-transform duration-300 ease-in-out lg:w-1/2 ${
+        className={`fixed right-0 z-20 h-screen w-screen transform overflow-y-scroll bg-[#f7f8fc] px-12 py-[200px] transition-transform duration-300 ease-in-out lg:w-1/2 ${
           sidebarContext.isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
