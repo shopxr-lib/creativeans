@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 type WorldContextType = {
   position: { x: number; y: number };
@@ -14,13 +14,23 @@ type WorldContextType = {
 
 export const WorldContext = React.createContext<WorldContextType | null>(null);
 
-export const WorldProvider: React.FC<
-  PropsWithChildren & { initialScale: number; width: number; height: number }
-> = ({ children, initialScale, width, height }) => {
+type WorldProviderProps = {
+  scale: number;
+  width: number;
+  height: number;
+  children: React.ReactNode;
+};
+
+export const WorldProvider: React.FC<WorldProviderProps> = ({
+  children,
+  scale,
+  width,
+  height,
+}) => {
   const [position, setPosition] = useState({
     // Center building3 by default
-    x: window.innerWidth / 2 + 653 * initialScale,
-    y: window.innerHeight / 2 + (410 + 300) * initialScale,
+    x: window.innerWidth / 2 + 653 * scale,
+    y: window.innerHeight / 2 + (410 + 300) * scale,
   });
 
   const [isDragging, setIsDragging] = useState(false);
@@ -40,8 +50,8 @@ export const WorldProvider: React.FC<
         const newY = prevPosition.y + dy;
 
         // Calculate boundaries based on the scaled image dimensions
-        const scaledWidth = width;
-        const scaledHeight = height;
+        const scaledWidth = width * scale;
+        const scaledHeight = height * scale;
         const minX = window.innerWidth / 2 - scaledWidth / 3;
         const maxX = window.innerWidth / 2 + scaledWidth / 3;
         const minY = window.innerHeight / 2 - scaledHeight / 3;
@@ -79,8 +89,8 @@ export const WorldProvider: React.FC<
         const newY = prevPosition.y + dy;
 
         // Calculate boundaries based on the scaled image dimensions
-        const scaledWidth = width;
-        const scaledHeight = height;
+        const scaledWidth = width * scale;
+        const scaledHeight = height * scale;
         const minX = window.innerWidth / 2 - scaledWidth / 2.5;
         const maxX = window.innerWidth / 2 + scaledWidth / 2.5;
         const minY = window.innerHeight / 2 - scaledHeight / 4;
@@ -113,7 +123,7 @@ export const WorldProvider: React.FC<
     <WorldContext.Provider
       value={{
         position,
-        scale: initialScale, // hardcoded for now, since we decided not to implement zooming
+        scale, // hardcoded for now, since we decided not to implement zooming
         isDragging,
         handleMouseDown,
         handleMouseMove,

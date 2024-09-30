@@ -17,7 +17,7 @@ function App() {
   return (
     <EventProvider initialEnabled>
       <WorldProvider
-        initialScale={initialScale}
+        scale={initialScale}
         width={worldBaseImgWidth}
         height={worldBaseImgHeight}
       >
