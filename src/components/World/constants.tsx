@@ -39,6 +39,7 @@ import WaterBridgeShadow from "../../assets/images/Creativeans-water-bridge-shad
 import SpotsBallImg from "../../assets/images/Creativeans-spots-ball.webp";
 import StripesBallImg from "../../assets/images/Creativeans-stripes-ball.webp";
 import Lollipop from "../Lollipop/LolliPop";
+import CottonTree from "../../assets/images/Creativeans-Cotton-Tree.webp";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
@@ -1088,6 +1089,11 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: 80, y: 250, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "cotton-tree",
+    image: CottonTree,
+    offset: { x: -50, y: 286 },
   },
   {
     key: "human20",
