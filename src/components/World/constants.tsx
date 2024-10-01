@@ -1,12 +1,17 @@
 import { Sprite } from "@pixi/react";
 import BridgeTop from "../../assets/images/Creativeans-bridge-top.webp";
 import BrainImg from "../../assets/images/Creativeans-brain.webp";
+import BrainShadowImg from "../../assets/images/Creativeans-Brain-Factory-Shadow.webp";
 import CBuildingImg from "../../assets/images/Creativeans-C-building.webp";
+import CBuildingShadowImg from "../../assets/images/Creativeans-C-House-Shadow.webp";
 import TrainImg from "../../assets/images/Creativeans-train.webp";
 import TrainPlatformImg from "../../assets/images/Creativeans-train-platform.webp";
 import Building1Img from "../../assets/images/Creativeans-building1.webp";
+import DepotShadow from "../../assets/images/Creativeans-Depot-Shadow.webp";
 import Building3Img from "../../assets/images/Creativeans-building3.webp";
+import MainFactoryShadowImg from "../../assets/images/Creativeans-Main-Factory-Shadow.webp";
 import Building4Img from "../../assets/images/Creativeans-building4.webp";
+import PowerPlantShadowImg from "../../assets/images/Creativeans-Power-Plant-Shadow.webp";
 import Building6Img from "../../assets/images/Creativeans-building6.webp";
 import Building7Img from "../../assets/images/Creativeans-building7.webp";
 import YellowBallImg from "../../assets/images/Creativeans-yellow-ball.webp";
@@ -14,6 +19,7 @@ import PurpleBallImg from "../../assets/images/Creativeans-purple-ball.webp";
 import TreeImg from "../../assets/images/Creativeans-tree.webp";
 import GlobeImg from "../../assets/images/Creativeans-globe.webp";
 import TrainStrawberryImg from "../../assets/images/Creativeans-Train-Strawberry.webp";
+import TrainStrawberryShadowImg from "../../assets/images/Creativeans-Pink-Train-Strawberry-Shadow.webp";
 import TrainChocolateImg from "../../assets/images/Creativeans-Train-Chocolate.webp";
 import TrainHoleTopLayer from "../../assets/images/Creativeans-train-hole-top-layer.webp";
 import YellowFishImg from "../../assets/images/Creativeans-yellow-fish.webp";
@@ -45,6 +51,11 @@ export type Sprite = {
 };
 
 export const sprites: Sprite[] = [
+  {
+    key: "c-building-shadow",
+    image: CBuildingShadowImg,
+    offset: { x: 960, y: -310 },
+  },
   {
     key: "c-building",
     image: CBuildingImg,
@@ -115,6 +126,11 @@ export const sprites: Sprite[] = [
     offset: { x: -1427, y: 230 },
   },
   {
+    key: "depot-shadow",
+    image: DepotShadow,
+    offset: { x: -1620, y: -420 },
+  },
+  {
     key: "building1",
     image: Building1Img,
     offset: { x: -1680, y: -620 },
@@ -132,6 +148,11 @@ export const sprites: Sprite[] = [
     key: "pipe",
     image: PipeImg,
     offset: { x: -1485, y: -210 },
+  },
+  {
+    key: "power-plant-shadow",
+    image: PowerPlantShadowImg,
+    offset: { x: 0, y: -580 },
   },
   {
     key: "building4",
@@ -158,6 +179,11 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: 15, y: -1200 },
+  },
+  {
+    key: "main-factory-shadow",
+    image: MainFactoryShadowImg,
+    offset: { x: -680, y: -330 },
   },
   {
     key: "building3",
@@ -232,6 +258,11 @@ export const sprites: Sprite[] = [
         }}
       />
     ),
+  },
+  {
+    key: "brain-factory-shadow",
+    image: BrainShadowImg,
+    offset: { x: 1370, y: 20 },
   },
   {
     key: "building7",
@@ -462,6 +493,11 @@ export const sprites: Sprite[] = [
     key: "globe",
     image: GlobeImg,
     offset: { x: -750, y: -1033 },
+  },
+  {
+    key: "train-strawberry-shadow",
+    image: TrainStrawberryShadowImg,
+    offset: { x: -380, y: 510 },
   },
   {
     key: "train-strawberry",
