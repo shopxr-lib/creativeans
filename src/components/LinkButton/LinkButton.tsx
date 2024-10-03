@@ -19,7 +19,7 @@ const LinkButton: React.FC<Props> = (props) => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <img src={Button} className="h-12" />
+      <img src={Button} className="h-12 w-full" />
       <div className="absolute top-0 flex h-full w-full items-center justify-evenly">
         <p className="text-center font-bold uppercase text-[#48e4e0]">
           {props.children}
