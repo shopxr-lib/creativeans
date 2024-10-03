@@ -38,13 +38,23 @@ const Sidebar: React.FC = () => {
                 )}
                 {sidebarInfo.body}
 
-                {sidebarInfo.buttonLink && (
-                  <div className="flex">
+                <div className="grid items-center gap-4 sm:grid-cols-2">
+                  {sidebarInfo.buttonLink && (
                     <LinkButton href={sidebarInfo.buttonLink}>
                       Learn More
                     </LinkButton>
-                  </div>
-                )}
+                  )}
+                  <LinkButton
+                    onClick={() => {
+                      window.parent.postMessage(
+                        "openPopup",
+                        "https://www.creativeans.com",
+                      );
+                    }}
+                  >
+                    Contact Us
+                  </LinkButton>
+                </div>
               </div>
             )}
           </div>
