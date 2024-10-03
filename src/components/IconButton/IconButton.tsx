@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode;
 } & React.ComponentProps<"button">;
 
-const LinkButton: React.FC<Props> = (props) => {
+const IconButton: React.FC<Props> = (props) => {
   const [hover, setHover] = useState(false);
 
   if (!props.href) {
@@ -69,4 +69,4 @@ const LinkButton: React.FC<Props> = (props) => {
   );
 };
 
-export default LinkButton;
+export default IconButton;

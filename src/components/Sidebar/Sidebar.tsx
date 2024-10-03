@@ -2,7 +2,7 @@ import React from "react";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { sidebarInfos } from "./constants";
 import { CloseIcon } from "../Icon";
-import LinkButton from "../LinkButton";
+import IconButton from "../IconButton";
 
 const Sidebar: React.FC = () => {
   const sidebarContext = useSidebar();
@@ -40,11 +40,11 @@ const Sidebar: React.FC = () => {
 
                 <div className="grid items-center gap-4 sm:grid-cols-2">
                   {sidebarInfo.buttonLink && (
-                    <LinkButton href={sidebarInfo.buttonLink}>
+                    <IconButton href={sidebarInfo.buttonLink}>
                       Learn More
-                    </LinkButton>
+                    </IconButton>
                   )}
-                  <LinkButton
+                  <IconButton
                     onClick={() => {
                       window.parent.postMessage(
                         "openPopup",
@@ -53,7 +53,7 @@ const Sidebar: React.FC = () => {
                     }}
                   >
                     Contact Us
-                  </LinkButton>
+                  </IconButton>
                 </div>
               </div>
             )}
