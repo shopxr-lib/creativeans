@@ -494,6 +494,51 @@ export const sprites: Sprite[] = [
     key: "globe",
     image: GlobeImg,
     offset: { x: -750, y: -1033 },
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          objectKey: "globe",
+        }}
+      />
+    ),
+  },
+  {
+    key: "blue-pins",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/blue-pins.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -805, y: -1033, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "yellow-pins",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/yellow-pins.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -815, y: -1050, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "green-pins",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/green-pins.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -850, y: -1105, scale: { x: 0.3, y: 0.3 } },
   },
   {
     key: "train-strawberry-shadow",

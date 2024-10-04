@@ -5,6 +5,11 @@ import Section4 from "../../assets/images/popup/Section4.png";
 import Section5 from "../../assets/images/popup/Section5.png";
 import Section6 from "../../assets/images/popup/Section6.png";
 import Section7 from "../../assets/images/popup/Section7.png";
+import Globe from "../../assets/images/Creativeans-globe-with-pins.webp";
+import BluePin from "../../assets/images/popup/Creativeans-blue-pin.webp";
+import YellowPin from "../../assets/images/popup/Creativeans-yellow-pin.webp";
+import GreenPin from "../../assets/images/popup/Creativeans-green-pin.webp";
+import { ArrowUpRight } from "tabler-icons-react";
 
 type SidebarInfo = {
   title: string;
@@ -147,5 +152,67 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
     ),
     buttonLink: "https://www.creativeans.com/venture-studio/",
     image: Section7,
+  },
+
+  globe: {
+    title: "Location",
+    subtitle: "We'd love you to drop by our office!",
+    body: (
+      <div className="grid gap-8 font-body sm:grid-cols-3 sm:gap-4">
+        <div>
+          <div className="mb-4 flex items-center gap-4">
+            <img src={YellowPin} alt="" className="h-4" />
+            <div className="flex items-center">
+              <p className="font-brand uppercase">Singapore</p>
+              <a
+                href="https://maps.app.goo.gl/zfAiL59asx4riK7n6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black visited:text-black"
+              >
+                <ArrowUpRight size={24} />
+              </a>
+            </div>
+          </div>
+          <p>39 Woodlands Close, #08-56 Mega@Woodlands Singapore 737856</p>
+        </div>
+        <div>
+          <div className="mb-4 flex items-center gap-4">
+            <img src={BluePin} alt="" className="h-4" />
+            <div className="flex items-center">
+              <p className="font-brand uppercase">Indonesia</p>
+              <a
+                href="https://maps.app.goo.gl/cgKaRBsLkMP1ZhbF8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black visited:text-black"
+              >
+                <ArrowUpRight size={24} />
+              </a>
+            </div>
+          </div>
+          <p>The Energy Building, SCBD Jakarta 12190 Indonesia </p>
+        </div>
+        <div>
+          <div className="mb-4 flex items-center gap-4">
+            <img src={GreenPin} alt="" className="h-4" />
+            <div className="flex items-center">
+              <p className="font-brand uppercase">Milan</p>
+              <a
+                href="https://maps.app.goo.gl/4f3PAeKVTNf6zVNx9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black visited:text-black"
+              >
+                <ArrowUpRight size={24} />
+              </a>
+            </div>
+          </div>
+          <p>Via Fratelli Roselli Milan 20139 Italy</p>
+        </div>
+      </div>
+    ),
+    buttonLink: "",
+    image: Globe,
   },
 };

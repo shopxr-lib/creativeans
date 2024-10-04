@@ -1,0 +1,39 @@
+{"frames": {
+
+"Creativeans-blue-pin-1.png":
+{
+	"frame": {"x":1,"y":1,"w":66,"h":102},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":102},
+	"sourceSize": {"w":66,"h":102}
+},
+"Creativeans-blue-pin-2.png":
+{
+	"frame": {"x":69,"y":1,"w":66,"h":93},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":10,"w":66,"h":93},
+	"sourceSize": {"w":66,"h":103}
+},
+"Creativeans-blue-pin-3.png":
+{
+	"frame": {"x":137,"y":1,"w":66,"h":86},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":17,"w":66,"h":86},
+	"sourceSize": {"w":66,"h":103}
+}},
+"animations": {
+	"Creativeans-blue-pin": ["Creativeans-blue-pin-1.png","Creativeans-blue-pin-2.png","Creativeans-blue-pin-3.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "blue-pins.png",
+	"format": "RGBA8888",
+	"size": {"w":204,"h":104},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:522a59667dbbf96e66016dba65fb5058:c38bb933acb6548c0bba99b41c003952:a440b0e366604327c3cc877a2f6aecf9$"
+}
+}
