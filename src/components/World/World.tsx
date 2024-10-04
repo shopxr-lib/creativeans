@@ -1,9 +1,11 @@
 import React from "react";
-import { Sprite } from "@pixi/react";
+import { Sprite as PixiSprite } from "@pixi/react";
 import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp";
-import { sprites } from "./constants";
+import { sprites, stars, type Sprite } from "./constants";
 import { Stage } from "../../context/World/ContextBridge";
 import { useWorld } from "../../context/World/hooks";
+import Sidebar from "../Sidebar/Sidebar";
+import { useSidebar } from "../../context/Sidebar/hooks";
 
 const World: React.FC = () => {
   const {
@@ -17,63 +19,65 @@ const World: React.FC = () => {
     handleTouchEnd,
   } = useWorld();
 
+  const sidebarContext = useSidebar();
+
+  const renderSprite = (sprite: Sprite[]) => {
+    return sprite.map((sprite) => {
+      const scaledOffset = {
+        x: sprite.offset.x * scale,
+        y: sprite.offset.y * scale,
+      };
+      const internalScale = {
+        x: sprite.offset.scale?.x || 1,
+        y: sprite.offset.scale?.y || 1,
+      };
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const Component: React.ComponentProps<any> =
+        sprite.component || PixiSprite;
+
+      return (
+        <Component
+          key={sprite.key}
+          image={sprite.image}
+          anchor={0.5}
+          x={position.x + scaledOffset.x}
+          y={position.y + scaledOffset.y}
+          scale={{ x: scale * internalScale.x, y: scale * internalScale.y }}
+          rotation={sprite.rotation || 0}
+        />
+      );
+    });
+  };
+
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        overflow: "hidden",
-        margin: 0,
-        padding: 0,
-        cursor: isDragging ? "grabbing" : "grab",
-      }}
-    >
+    <div className="relative m-0 h-screen w-screen overflow-hidden p-0">
+      <Sidebar />
       <Stage
         width={window.innerWidth}
         height={window.innerHeight}
-        options={{ backgroundColor: 0x10bb99 }}
         onMouseMove={handleMouseMove}
         onMouseDown={handleMouseDown}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        style={{ touchAction: "none" }} // Prevent default touch actions
+        style={{
+          touchAction: "none", // Prevent default touch actions
+          cursor: isDragging ? "grabbing" : "grab",
+        }}
       >
-        <Sprite
+        {renderSprite(stars)}
+        <PixiSprite
           image={WorldBaseImg}
           anchor={0.5}
           x={position.x}
           y={position.y}
           scale={{ x: scale, y: scale }}
           pointerdown={handleMouseDown}
+          eventMode="static"
+          onclick={sidebarContext.closeSidebar}
         />
-
-        {sprites.map((sprite) => {
-          const scaledOffset = {
-            x: sprite.offset.x * scale,
-            y: sprite.offset.y * scale,
-          };
-          const internalScale = {
-            x: sprite.offset.scale?.x || 1,
-            y: sprite.offset.scale?.y || 1,
-          };
-
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          const Component: React.ComponentProps<any> =
-            sprite.component || Sprite;
-
-          return (
-            <Component
-              key={sprite.key}
-              image={sprite.image}
-              anchor={0.5}
-              x={position.x + scaledOffset.x}
-              y={position.y + scaledOffset.y}
-              scale={{ x: scale * internalScale.x, y: scale * internalScale.y }}
-              rotation={sprite.rotation || 0}
-            />
-          );
-        })}
+        {renderSprite(sprites)}
       </Stage>
     </div>
   );

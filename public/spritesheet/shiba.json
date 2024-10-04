@@ -1,0 +1,44 @@
+{
+  "frames": {
+    "shiba1.png": {
+      "frame": { "x": 1, "y": 1, "w": 141, "h": 146 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 0, "w": 141, "h": 146 },
+      "sourceSize": { "w": 142, "h": 146 }
+    },
+    "shiba2.png": {
+      "frame": { "x": 144, "y": 1, "w": 133, "h": 146 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 9, "y": 0, "w": 133, "h": 146 },
+      "sourceSize": { "w": 142, "h": 146 }
+    },
+    "shiba3.png": {
+      "frame": { "x": 279, "y": 1, "w": 130, "h": 146 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 12, "y": 0, "w": 130, "h": 146 },
+      "sourceSize": { "w": 142, "h": 146 }
+    },
+    "shiba4.png": {
+      "frame": { "x": 279, "y": 133, "w": 122, "h": 146 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 20, "y": 0, "w": 122, "h": 146 },
+      "sourceSize": { "w": 142, "h": 146 }
+    }
+  },
+  "animations": {
+    "shiba": ["shiba1.png", "shiba2.png", "shiba3.png", "shiba4.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "shiba.png",
+    "format": "RGBA8888",
+    "size": { "w": 426, "h": 256 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:cd813ea327ff5646193a2c199e848fdc:209f31c8ea4b1de0914996c3b1659e30:1189932c883992b5efdf84ad807adac7$"
+  }
+}
