@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
     <>
       {/* pb and pt are hardcoded because the contact page has a fixed menu on clients' web, hence adding some space. */}
       <div
-        className={`fixed right-0 z-20 h-screen w-screen transform overflow-y-scroll bg-[#f7f8fc] px-12 pb-[200px] pt-[100px] transition-transform duration-300 ease-in-out lg:w-1/2 lg:pt-[160px] ${
+        className={`fixed right-0 z-20 h-screen w-screen transform overflow-y-scroll bg-[#f7f8fc] px-12 pb-[300px] pt-[200px] transition-transform duration-300 ease-in-out lg:w-1/2 lg:pt-[160px] ${
           sidebarContext.isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
