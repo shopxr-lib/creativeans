@@ -288,6 +288,18 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 1483, y: -400 },
   },
+  {
+    key: "bubble-3",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/bubble-3.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1150, y: 7 },
+  },
   // A
   {
     key: "yellow-ball",

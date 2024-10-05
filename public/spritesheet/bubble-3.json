@@ -1,0 +1,47 @@
+{"frames": {
+
+"bubble3-1.png":
+{
+	"frame": {"x":1,"y":1,"w":225,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":225,"h":217},
+	"sourceSize": {"w":225,"h":217}
+},
+"bubble3-2.png":
+{
+	"frame": {"x":228,"y":1,"w":225,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":225,"h":217},
+	"sourceSize": {"w":225,"h":217}
+},
+"bubble3-3.png":
+{
+	"frame": {"x":455,"y":1,"w":225,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":225,"h":217},
+	"sourceSize": {"w":225,"h":217}
+},
+"bubble3-4.png":
+{
+	"frame": {"x":682,"y":1,"w":225,"h":217},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":225,"h":217},
+	"sourceSize": {"w":225,"h":217}
+}},
+"animations": {
+	"bubble3": ["bubble3-1.png","bubble3-2.png","bubble3-3.png","bubble3-4.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "bubble-3.png",
+	"format": "RGBA8888",
+	"size": {"w":908,"h":219},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:f22a316f263908fce4bb409ba4d4b743:c111b3d94beeeac51a074a6ea5b78649:43420fa4c2eddbfe6d5e9ac97d4edee4$"
+}
+}
