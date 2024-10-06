@@ -186,7 +186,7 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/leaves-1.json"
-        animationSpeed={0.01}
+        animationSpeed={0.05}
       />
     ),
     offset: { x: 0, y: -1250 },
