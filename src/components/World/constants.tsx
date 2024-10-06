@@ -211,6 +211,30 @@ export const sprites: Sprite[] = [
     ),
   },
   {
+    key: "bubble-2",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/bubble-2.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -586, y: -445 },
+  },
+  {
+    key: "bubble-1",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/bubble-1.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -670, y: -775 },
+  },
+  {
     key: "human-2-shadow",
     image: HumanGenericShadow,
     component: (props) => (
