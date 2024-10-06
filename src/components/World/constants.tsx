@@ -79,7 +79,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-4-shadow",
     image: Human4Shadow,
-    offset: { x: 760, y: -850, scale: { x: 0.1, y: 0.1 } },
+    offset: { x: 765, y: -846, scale: { x: 0.07, y: 0.07 } },
   },
   {
     key: "human-4",
@@ -1066,7 +1066,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-5-shadow",
     image: Human5Shadow,
-    offset: { x: 138, y: 800, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 140, y: 805, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human-5",
@@ -1182,7 +1182,7 @@ export const sprites: Sprite[] = [
   {
     key: "human8-shadow",
     image: Human8Shadow,
-    offset: { x: -1500, y: -690, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: -1505, y: -690, scale: { x: 0.04, y: 0.04 } },
   },
   {
     key: "human8",
@@ -1238,7 +1238,7 @@ export const sprites: Sprite[] = [
   {
     key: "human20-shadow",
     image: HumanGenericShadow,
-    offset: { x: 100, y: 720, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 105, y: 725, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human20",
