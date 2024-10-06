@@ -1046,6 +1046,11 @@ export const sprites: Sprite[] = [
     offset: { x: 1692, y: 427 },
   },
   {
+    key: "shiba-shadow",
+    image: HumanGenericShadow,
+    offset: { x: 40, y: 1030, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "shiba",
     image: "",
     component: (props) => (
