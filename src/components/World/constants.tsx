@@ -40,6 +40,11 @@ import SpotsBallImg from "../../assets/images/Creativeans-spots-ball.webp";
 import StripesBallImg from "../../assets/images/Creativeans-stripes-ball.webp";
 import Lollipop from "../Lollipop/LolliPop";
 import CottonTree from "../../assets/images/Creativeans-Cotton-Tree.webp";
+import Human8Shadow from "../../assets/images/Creativeans-shadow-human-8.webp";
+import Human5Shadow from "../../assets/images/Creativeans-shadow-human-5.webp";
+import Human25Shadow from "../../assets/images/Creativeans-shadow-human-25.webp";
+import Human4Shadow from "../../assets/images/Creativeans-shadow-human-4.webp";
+import HumanGenericShadow from "../../assets/images/Creativeans-shadow-generic-all-human.webp";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
@@ -70,6 +75,11 @@ export const sprites: Sprite[] = [
         }}
       />
     ),
+  },
+  {
+    key: "human-4-shadow",
+    image: Human4Shadow,
+    offset: { x: 760, y: -850, scale: { x: 0.1, y: 0.1 } },
   },
   {
     key: "human-4",
@@ -201,6 +211,46 @@ export const sprites: Sprite[] = [
     ),
   },
   {
+    key: "human-2-shadow",
+    image: HumanGenericShadow,
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        animationSpeed={0.07}
+        trails={[
+          {
+            x: 300,
+            y: 227,
+            speed: 0.003,
+          },
+          {
+            x: 56,
+            y: 35,
+            speed: 0.003,
+          },
+          {
+            x: -196,
+            y: -55,
+            speed: 0.005,
+          },
+          {
+            x: -310,
+            y: -135,
+            speed: 1,
+          },
+          {
+            x: -310,
+            y: -135,
+            visible: false,
+            delayMs: 2000,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -310, y: -170, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human-2",
     image: "",
     component: (props) => (
@@ -245,20 +295,6 @@ export const sprites: Sprite[] = [
     key: "bridge-top",
     image: BridgeTop,
     offset: { x: 30, y: 70 },
-  },
-  {
-    key: "building6",
-    image: Building6Img,
-    offset: { x: 593, y: 267 },
-    component: (props) => (
-      <CustomSprite
-        {...props}
-        enableGlowEffect
-        metadata={{
-          objectKey: "building-6",
-        }}
-      />
-    ),
   },
   {
     key: "brain-factory-shadow",
@@ -1004,16 +1040,9 @@ export const sprites: Sprite[] = [
     offset: { x: 305, y: -305 },
   },
   {
-    key: "human-3",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human3.json"
-        animationSpeed={0.07}
-      />
-    ),
-    offset: { x: 336, y: 622, scale: { x: 0.3, y: 0.3 } },
+    key: "human-5-shadow",
+    image: Human5Shadow,
+    offset: { x: 138, y: 800, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human-5",
@@ -1076,6 +1105,11 @@ export const sprites: Sprite[] = [
     offset: { x: 182, y: -156, scale: { x: 0.4, y: 0.4 } },
   },
   {
+    key: "human3a-shadow",
+    image: HumanGenericShadow,
+    offset: { x: -600, y: -136, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human3a",
     image: "",
     component: (props) => (
@@ -1086,6 +1120,11 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -600, y: -176, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "human4a-shadow",
+    image: HumanGenericShadow,
+    offset: { x: -560, y: -155, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human4a",
@@ -1100,6 +1139,11 @@ export const sprites: Sprite[] = [
     offset: { x: -570, y: -196, scale: { x: 0.3, y: 0.3 } },
   },
   {
+    key: "human5a-shadow",
+    image: HumanGenericShadow,
+    offset: { x: -1555, y: -715, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human5a",
     image: "",
     component: (props) => (
@@ -1110,6 +1154,11 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -1560, y: -760, scale: { x: 0.3, y: 0.3 } },
+  },
+  {
+    key: "human8-shadow",
+    image: Human8Shadow,
+    offset: { x: -1500, y: -690, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human8",
@@ -1124,6 +1173,11 @@ export const sprites: Sprite[] = [
     offset: { x: -1500, y: -705, scale: { x: 0.4, y: 0.4 } },
   },
   {
+    key: "human25-shadow",
+    image: Human25Shadow,
+    offset: { x: 150, y: 300, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human25",
     image: "",
     component: (props) => (
@@ -1134,6 +1188,11 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: 110, y: 260, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "human19-shadow",
+    image: HumanGenericShadow,
+    offset: { x: 80, y: 330, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human19",
@@ -1153,6 +1212,11 @@ export const sprites: Sprite[] = [
     offset: { x: -50, y: 286 },
   },
   {
+    key: "human20-shadow",
+    image: HumanGenericShadow,
+    offset: { x: 100, y: 720, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human20",
     image: "",
     component: (props) => (
@@ -1165,6 +1229,11 @@ export const sprites: Sprite[] = [
     offset: { x: 100, y: 680, scale: { x: 0.25, y: 0.25 } },
   },
   {
+    key: "human21-shadow",
+    image: HumanGenericShadow,
+    offset: { x: 155, y: 735, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
     key: "human21",
     image: "",
     component: (props) => (
@@ -1175,6 +1244,37 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: 152, y: 710, scale: { x: 0.25, y: 0.25 } },
+  },
+  {
+    key: "building6",
+    image: Building6Img,
+    offset: { x: 593, y: 267 },
+    component: (props) => (
+      <CustomSprite
+        {...props}
+        enableGlowEffect
+        metadata={{
+          objectKey: "building-6",
+        }}
+      />
+    ),
+  },
+  {
+    key: "human-3-shadow",
+    image: HumanGenericShadow,
+    offset: { x: 340, y: 650, scale: { x: 0.05, y: 0.05 } },
+  },
+  {
+    key: "human-3",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human3.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 336, y: 622, scale: { x: 0.3, y: 0.3 } },
   },
   {
     key: "fish-angel-1",
