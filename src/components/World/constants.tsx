@@ -517,28 +517,28 @@ export const sprites: Sprite[] = [
     ),
   },
   {
-    key: "blue-pins",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/blue-pins.json"
-        animationSpeed={0.07}
-      />
-    ),
-    offset: { x: -805, y: -1033, scale: { x: 0.3, y: 0.3 } },
-  },
-  {
     key: "yellow-pins",
     image: "",
     component: (props) => (
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/yellow-pins.json"
-        animationSpeed={0.07}
+        animationSpeed={0.03}
       />
     ),
-    offset: { x: -815, y: -1050, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: -815, y: -1055, scale: { x: 0.4, y: 0.4 } },
+  },
+  {
+    key: "blue-pins",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/blue-pins.json"
+        animationSpeed={0.03}
+      />
+    ),
+    offset: { x: -805, y: -1038, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "green-pins",
@@ -547,10 +547,10 @@ export const sprites: Sprite[] = [
       <AnimatedSprite
         {...props}
         spritesheet="./spritesheet/green-pins.json"
-        animationSpeed={0.07}
+        animationSpeed={0.03}
       />
     ),
-    offset: { x: -850, y: -1105, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: -850, y: -1105, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "train-strawberry-shadow",
