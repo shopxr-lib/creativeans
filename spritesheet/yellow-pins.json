@@ -1,39 +1,49 @@
-{"frames": {
-
-"Creativeans-yellow-pin-1.png":
 {
-	"frame": {"x":1,"y":1,"w":68,"h":98},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":68,"h":98},
-	"sourceSize": {"w":68,"h":98}
-},
-"Creativeans-yellow-pin-2.png":
-{
-	"frame": {"x":71,"y":1,"w":68,"h":91},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":0,"y":7,"w":68,"h":91},
-	"sourceSize": {"w":68,"h":98}
-},
-"Creativeans-yellow-pin-3.png":
-{
-	"frame": {"x":141,"y":1,"w":67,"h":84},
-	"rotated": false,
-	"trimmed": true,
-	"spriteSourceSize": {"x":1,"y":14,"w":67,"h":84},
-	"sourceSize": {"w":68,"h":98}
-}},
-"animations": {
-	"Creativeans-yellow-pin": ["Creativeans-yellow-pin-1.png","Creativeans-yellow-pin-2.png","Creativeans-yellow-pin-3.png"]
-},
-"meta": {
-	"app": "https://www.codeandweb.com/texturepacker",
-	"version": "1.1",
-	"image": "yellow-pins.png",
-	"format": "RGBA8888",
-	"size": {"w":209,"h":100},
-	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:960646e31e6f1205096c29604bd82e1c:c6026ba2da809e6bf2f946301f28b169:b3b5a0c2f8fef66408376775f1952623$"
-}
+  "frames": {
+    "Creativeans-yellow-pin-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 68, "h": 98 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 68, "h": 98 },
+      "sourceSize": { "w": 68, "h": 98 }
+    },
+    "Creativeans-yellow-pin-2.png": {
+      "frame": { "x": 71, "y": 1, "w": 68, "h": 91 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 7, "w": 68, "h": 91 },
+      "sourceSize": { "w": 68, "h": 98 }
+    },
+    "Creativeans-yellow-pin-3.png": {
+      "frame": { "x": 141, "y": 1, "w": 67, "h": 84 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 14, "w": 67, "h": 84 },
+      "sourceSize": { "w": 68, "h": 98 }
+    },
+    "Creativeans-yellow-pin-4.png": {
+      "frame": { "x": 71, "y": 1, "w": 68, "h": 91 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 7, "w": 68, "h": 91 },
+      "sourceSize": { "w": 68, "h": 98 }
+    }
+  },
+  "animations": {
+    "Creativeans-yellow-pin": [
+      "Creativeans-yellow-pin-1.png",
+      "Creativeans-yellow-pin-2.png",
+      "Creativeans-yellow-pin-3.png",
+      "Creativeans-yellow-pin-4.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "yellow-pins.png",
+    "format": "RGBA8888",
+    "size": { "w": 209, "h": 100 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:960646e31e6f1205096c29604bd82e1c:c6026ba2da809e6bf2f946301f28b169:b3b5a0c2f8fef66408376775f1952623$"
+  }
 }
