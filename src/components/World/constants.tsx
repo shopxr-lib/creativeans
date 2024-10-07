@@ -1255,7 +1255,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 100, y: 680, scale: { x: 0.25, y: 0.25 } },
+    offset: { x: 100, y: 680, scale: { x: 0.26, y: 0.26 } },
   },
   {
     key: "human21-shadow",
@@ -1291,7 +1291,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-3-shadow",
     image: HumanGenericShadow,
-    offset: { x: 340, y: 655, scale: { x: 0.5, y: 0.5 } },
+    offset: { x: 340, y: 650, scale: { x: 0.5, y: 0.5 } },
   },
   {
     key: "human-3",
@@ -1303,7 +1303,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 336, y: 622, scale: { x: 0.45, y: 0.45 } },
+    offset: { x: 336, y: 622, scale: { x: 0.375, y: 0.375 } },
   },
   {
     key: "fish-angel-1",
