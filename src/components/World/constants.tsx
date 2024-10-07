@@ -1243,7 +1243,7 @@ export const sprites: Sprite[] = [
   {
     key: "human20-shadow",
     image: HumanGenericShadow,
-    offset: { x: 100, y: 735, scale: { x: 0.4, y: 0.4 } },
+    offset: { x: 100, y: 725, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human20",
@@ -1255,7 +1255,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 100, y: 680, scale: { x: 0.3125, y: 0.3125 } },
+    offset: { x: 100, y: 680, scale: { x: 0.25, y: 0.25 } },
   },
   {
     key: "human21-shadow",
