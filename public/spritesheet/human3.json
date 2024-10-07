@@ -34,6 +34,27 @@
       "trimmed": false,
       "spriteSourceSize": { "x": 0, "y": 0, "w": 150, "h": 170 },
       "sourceSize": { "w": 150, "h": 170 }
+    },
+    "yulia6.png": {
+      "frame": { "x": 153, "y": 1, "w": 144, "h": 170 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 6, "y": 0, "w": 144, "h": 170 },
+      "sourceSize": { "w": 150, "h": 170 }
+    },
+    "yulia7.png": {
+      "frame": { "x": 299, "y": 1, "w": 142, "h": 170 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 8, "y": 0, "w": 142, "h": 170 },
+      "sourceSize": { "w": 150, "h": 170 }
+    },
+    "yulia8.png": {
+      "frame": { "x": 443, "y": 1, "w": 130, "h": 170 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 15, "y": 0, "w": 130, "h": 170 },
+      "sourceSize": { "w": 150, "h": 170 }
     }
   },
   "animations": {
@@ -43,9 +64,9 @@
       "yulia3.png",
       "yulia4.png",
       "yulia5.png",
-      "yulia4.png",
-      "yulia3.png",
-      "yulia2.png"
+      "yulia6.png",
+      "yulia7.png",
+      "yulia8.png"
     ]
   },
   "meta": {
