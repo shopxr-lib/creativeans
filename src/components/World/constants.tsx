@@ -79,7 +79,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-4-shadow",
     image: Human4Shadow,
-    offset: { x: 765, y: -846, scale: { x: 0.07, y: 0.07 } },
+    offset: { x: 765, y: -853, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human-4",
@@ -91,7 +91,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.1}
       />
     ),
-    offset: { x: 760, y: -870, scale: { x: 0.7, y: 0.7 } },
+    offset: { x: 760, y: -870, scale: { x: 0.5, y: 0.5 } },
   },
   {
     key: "red-bubble",
