@@ -1071,7 +1071,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-5-shadow",
     image: Human5Shadow,
-    offset: { x: 140, y: 805, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 130, y: 815, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human-5",
@@ -1083,7 +1083,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 130, y: 780, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: 130, y: 780, scale: { x: 0.375, y: 0.375 } },
   },
   {
     key: "otter-1",
@@ -1243,7 +1243,7 @@ export const sprites: Sprite[] = [
   {
     key: "human20-shadow",
     image: HumanGenericShadow,
-    offset: { x: 105, y: 725, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 105, y: 735, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human20",
@@ -1255,12 +1255,12 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 100, y: 680, scale: { x: 0.25, y: 0.25 } },
+    offset: { x: 100, y: 680, scale: { x: 0.3125, y: 0.3125 } },
   },
   {
     key: "human21-shadow",
     image: HumanGenericShadow,
-    offset: { x: 155, y: 735, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 155, y: 745, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human21",
@@ -1272,7 +1272,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 152, y: 710, scale: { x: 0.25, y: 0.25 } },
+    offset: { x: 152, y: 710, scale: { x: 0.3125, y: 0.3125 } },
   },
   {
     key: "building6",
@@ -1291,7 +1291,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-3-shadow",
     image: HumanGenericShadow,
-    offset: { x: 340, y: 650, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 340, y: 655, scale: { x: 0.05, y: 0.05 } },
   },
   {
     key: "human-3",
@@ -1303,7 +1303,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 336, y: 622, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: 336, y: 622, scale: { x: 0.375, y: 0.375 } },
   },
   {
     key: "fish-angel-1",
