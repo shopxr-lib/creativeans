@@ -44,7 +44,7 @@ import Human8Shadow from "../../assets/images/Creativeans-shadow-human-8.webp";
 import Human5Shadow from "../../assets/images/Creativeans-shadow-human-5.webp";
 import Human25Shadow from "../../assets/images/Creativeans-shadow-human-25.webp";
 import Human4Shadow from "../../assets/images/Creativeans-shadow-human-4.webp";
-import HumanGenericShadow from "../../assets/images/Creativeans-shadow-generic-all-human.webp";
+import HumanGenericShadow from "../../assets/images/creativeans-human-generic-shadow.png";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
@@ -272,7 +272,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: -310, y: -170, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: -310, y: -170, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human-2",
@@ -1048,7 +1048,7 @@ export const sprites: Sprite[] = [
   {
     key: "shiba-shadow",
     image: HumanGenericShadow,
-    offset: { x: 40, y: 1030, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 40, y: 1030, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "shiba",
@@ -1136,7 +1136,7 @@ export const sprites: Sprite[] = [
   {
     key: "human3a-shadow",
     image: HumanGenericShadow,
-    offset: { x: -600, y: -136, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: -600, y: -136, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human3a",
@@ -1153,7 +1153,7 @@ export const sprites: Sprite[] = [
   {
     key: "human4a-shadow",
     image: HumanGenericShadow,
-    offset: { x: -560, y: -155, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: -560, y: -155, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human4a",
@@ -1170,7 +1170,7 @@ export const sprites: Sprite[] = [
   {
     key: "human5a-shadow",
     image: HumanGenericShadow,
-    offset: { x: -1555, y: -715, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: -1560, y: -715, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human5a",
@@ -1221,7 +1221,7 @@ export const sprites: Sprite[] = [
   {
     key: "human19-shadow",
     image: HumanGenericShadow,
-    offset: { x: 80, y: 330, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 70, y: 330, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human19",
@@ -1243,7 +1243,7 @@ export const sprites: Sprite[] = [
   {
     key: "human20-shadow",
     image: HumanGenericShadow,
-    offset: { x: 105, y: 735, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 100, y: 735, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human20",
@@ -1260,7 +1260,7 @@ export const sprites: Sprite[] = [
   {
     key: "human21-shadow",
     image: HumanGenericShadow,
-    offset: { x: 155, y: 745, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 155, y: 740, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human21",
@@ -1291,7 +1291,7 @@ export const sprites: Sprite[] = [
   {
     key: "human-3-shadow",
     image: HumanGenericShadow,
-    offset: { x: 340, y: 655, scale: { x: 0.05, y: 0.05 } },
+    offset: { x: 340, y: 655, scale: { x: 0.4, y: 0.4 } },
   },
   {
     key: "human-3",
