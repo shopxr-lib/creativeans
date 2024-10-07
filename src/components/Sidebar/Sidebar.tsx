@@ -38,7 +38,7 @@ const Sidebar: React.FC = () => {
                 )}
                 {sidebarInfo.body}
 
-                <div className="grid items-center gap-4 sm:grid-cols-[250px,250px]">
+                <div className="grid grid-cols-[210px] items-center gap-4 sm:grid-cols-[210px,210px]">
                   {sidebarInfo.buttonLink && (
                     <IconButton href={sidebarInfo.buttonLink}>
                       Learn More
