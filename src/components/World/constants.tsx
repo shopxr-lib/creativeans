@@ -45,6 +45,7 @@ import Human5Shadow from "../../assets/images/Creativeans-shadow-human-5.webp";
 import Human25Shadow from "../../assets/images/Creativeans-shadow-human-25.webp";
 import Human4Shadow from "../../assets/images/Creativeans-shadow-human-4.webp";
 import HumanGenericShadow from "../../assets/images/Creativeans-shadow-generic-x5.png";
+import HumanGenericShadowLight from "../../assets/images/Creativeans-shadow-generic-x3.png";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
@@ -243,27 +244,27 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
         trails={[
           {
-            x: 300,
+            x: 295,
             y: 227,
             speed: 0.003,
           },
           {
-            x: 56,
+            x: 51,
             y: 35,
             speed: 0.003,
           },
           {
-            x: -196,
+            x: -201,
             y: -55,
             speed: 0.005,
           },
           {
-            x: -310,
+            x: -315,
             y: -135,
             speed: 1,
           },
           {
-            x: -310,
+            x: -315,
             y: -135,
             visible: false,
             delayMs: 2000,
@@ -272,7 +273,7 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: -310, y: -170, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: -310, y: -170, scale: { x: 0.25, y: 0.25 } },
   },
   {
     key: "human-2",
@@ -1136,7 +1137,7 @@ export const sprites: Sprite[] = [
   {
     key: "human3a-shadow",
     image: HumanGenericShadow,
-    offset: { x: -600, y: -133, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: -600, y: -133, scale: { x: 0.22, y: 0.22 } },
   },
   {
     key: "human3a",
@@ -1169,8 +1170,8 @@ export const sprites: Sprite[] = [
   },
   {
     key: "human5a-shadow",
-    image: HumanGenericShadow,
-    offset: { x: -1560, y: -718, scale: { x: 0.3, y: 0.3 } },
+    image: HumanGenericShadowLight,
+    offset: { x: -1560, y: -718, scale: { x: 0.25, y: 0.25 } },
   },
   {
     key: "human5a",
@@ -1243,7 +1244,7 @@ export const sprites: Sprite[] = [
   {
     key: "human20-shadow",
     image: HumanGenericShadow,
-    offset: { x: 100, y: 725, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: 99, y: 725, scale: { x: 0.22, y: 0.22 } },
   },
   {
     key: "human20",
@@ -1260,7 +1261,7 @@ export const sprites: Sprite[] = [
   {
     key: "human21-shadow",
     image: HumanGenericShadow,
-    offset: { x: 155, y: 740, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: 151, y: 742, scale: { x: 0.26, y: 0.26 } },
   },
   {
     key: "human21",
