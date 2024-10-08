@@ -181,16 +181,16 @@ export const sprites: Sprite[] = [
     ),
   },
   {
-    key: "leaves-1",
+    key: "creativeans-leaves",
     image: "",
     component: (props) => (
       <AnimatedSprite
         {...props}
-        spritesheet="./spritesheet/leaves-1.json"
+        spritesheet="./spritesheet/creativeans-leaves.json"
         animationSpeed={0.05}
       />
     ),
-    offset: { x: 0, y: -1250 },
+    offset: { x: 23, y: -1185 },
   },
   {
     key: "main-factory-shadow",
