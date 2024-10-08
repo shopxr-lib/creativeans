@@ -1222,7 +1222,7 @@ export const sprites: Sprite[] = [
   {
     key: "human19-shadow",
     image: HumanGenericShadow,
-    offset: { x: 70, y: 330, scale: { x: 0.3, y: 0.3 } },
+    offset: { x: 70, y: 328, scale: { x: 0.2, y: 0.2 } },
   },
   {
     key: "human19",
