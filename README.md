@@ -1,7 +1,5 @@
 # Creativeans
 
-![image info](./docs/images/world.png)
-
 # Pre-requisites
 
 - node >= 18
