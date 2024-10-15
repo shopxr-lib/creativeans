@@ -30,7 +30,7 @@ export const WorldProvider: React.FC<WorldProviderProps> = ({
   const [position, setPosition] = useState({
     // Center building3 by default
     x: window.innerWidth / 2 + (653 + 100) * scale,
-    y: window.innerHeight / 2 + (410 + 600) * scale,
+    y: window.innerHeight / 2 + (410 + 450) * scale,
   });
 
   const [isDragging, setIsDragging] = useState(false);
