@@ -54,8 +54,8 @@ export const WorldProvider: React.FC<WorldProviderProps> = ({
         const scaledHeight = height * scale;
         const minX = window.innerWidth / 2 - scaledWidth / 3;
         const maxX = window.innerWidth / 2 + scaledWidth / 3;
-        const minY = window.innerHeight / 2 - scaledHeight / 2;
-        const maxY = window.innerHeight / 2 + scaledHeight / 2;
+        const minY = window.innerHeight / 2 - scaledHeight / 2.5;
+        const maxY = window.innerHeight / 2 + scaledHeight / 2.5;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
