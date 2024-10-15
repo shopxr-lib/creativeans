@@ -12,7 +12,7 @@ const worldBaseImgHeight = 2671;
 function App() {
   const isLargeScreen = useMediaQuery("(min-width: 1600px)");
   const isMediumScreen = useMediaQuery("(min-width: 768px)");
-  const initialScale = isLargeScreen ? 0.8 : isMediumScreen ? 0.5 : 0.3;
+  const initialScale = isLargeScreen ? 1.2 : isMediumScreen ? 0.7 : 0.5;
 
   return (
     <EventProvider initialEnabled>
