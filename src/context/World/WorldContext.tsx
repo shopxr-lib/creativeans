@@ -29,8 +29,8 @@ export const WorldProvider: React.FC<WorldProviderProps> = ({
 }) => {
   const [position, setPosition] = useState({
     // Center building3 by default
-    x: window.innerWidth / 2 + 653 * scale,
-    y: window.innerHeight / 2 + (410 + 300) * scale,
+    x: window.innerWidth / 2 + (653 + 100) * scale,
+    y: window.innerHeight / 2 + (410 + 600) * scale,
   });
 
   const [isDragging, setIsDragging] = useState(false);
@@ -54,8 +54,8 @@ export const WorldProvider: React.FC<WorldProviderProps> = ({
         const scaledHeight = height * scale;
         const minX = window.innerWidth / 2 - scaledWidth / 3;
         const maxX = window.innerWidth / 2 + scaledWidth / 3;
-        const minY = window.innerHeight / 2 - scaledHeight / 3;
-        const maxY = window.innerHeight / 2 + scaledHeight / 3;
+        const minY = window.innerHeight / 2 - scaledHeight / 2;
+        const maxY = window.innerHeight / 2 + scaledHeight / 2;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
@@ -91,10 +91,10 @@ export const WorldProvider: React.FC<WorldProviderProps> = ({
         // Calculate boundaries based on the scaled image dimensions
         const scaledWidth = width * scale;
         const scaledHeight = height * scale;
-        const minX = window.innerWidth / 2 - scaledWidth / 2.5;
-        const maxX = window.innerWidth / 2 + scaledWidth / 2.5;
-        const minY = window.innerHeight / 2 - scaledHeight / 4;
-        const maxY = window.innerHeight / 2 + scaledHeight / 4;
+        const minX = window.innerWidth / 2 - scaledWidth / 2;
+        const maxX = window.innerWidth / 2 + scaledWidth / 2;
+        const minY = window.innerHeight / 2 - scaledHeight / 2.5;
+        const maxY = window.innerHeight / 2 + scaledHeight / 2.5;
 
         return {
           x: Math.max(minX, Math.min(newX, maxX)),
