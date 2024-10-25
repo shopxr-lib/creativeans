@@ -3,6 +3,7 @@ import { useSidebar } from "../../context/Sidebar/hooks";
 import { sidebarInfos } from "./constants";
 import { CloseIcon } from "../Icon";
 import IconButton from "../IconButton";
+import clsx from "clsx";
 
 const Sidebar: React.FC = () => {
   const sidebarContext = useSidebar();
@@ -26,7 +27,11 @@ const Sidebar: React.FC = () => {
               <div className="flex flex-col gap-8">
                 <div className="flex justify-center">
                   <img
-                    className="h-[30vh] 2xl:h-[50vh]"
+                    className={clsx(
+                      "h-[30vh]",
+                      !sidebarInfo.disableImageSizeIncreaseOnXl &&
+                        "2xl:h-[50vh]",
+                    )}
                     src={sidebarInfo.image}
                   />
                 </div>

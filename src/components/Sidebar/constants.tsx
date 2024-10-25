@@ -17,6 +17,7 @@ type SidebarInfo = {
   body: JSX.Element;
   buttonLink: string;
   image: string;
+  disableImageSizeIncreaseOnXl?: boolean;
 };
 
 export const sidebarInfos: Record<string, SidebarInfo> = {
@@ -214,5 +215,6 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
     ),
     buttonLink: "",
     image: Globe,
+    disableImageSizeIncreaseOnXl: true,
   },
 };
