@@ -1,0 +1,71 @@
+{
+  "frames": {
+    "preloaderHumans1.png": {
+      "frame": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    },
+    "preloaderHumans2.png": {
+      "frame": { "x": 669, "y": 0, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    },
+    "preloaderHumans3.png": {
+      "frame": { "x": 1338, "y": 0, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    },
+    "preloaderHumans4.png": {
+      "frame": { "x": 0, "y": 366, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    },
+    "preloaderHumans5.png": {
+      "frame": { "x": 669, "y": 366, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    },
+    "preloaderHumans6.png": {
+      "frame": { "x": 1338, "y": 366, "w": 669, "h": 366 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 669, "h": 366 },
+      "sourceSize": { "w": 669, "h": 366 },
+      "anchor": { "x": 0.5, "y": 0.5 }
+    }
+  },
+  "animations": {
+    "preloaderHumans": [
+      "preloaderHumans1.png",
+      "preloaderHumans2.png",
+      "preloaderHumans3.png",
+      "preloaderHumans4.png",
+      "preloaderHumans5.png",
+      "preloaderHumans6.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "preloaderHumans.png",
+    "format": "RGBA8888",
+    "size": { "w": 2007, "h": 732 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:c070a8fa01acd0fb3a4364d93189adb0:bcad901333030a68e7258e84d645bcae:3dd1a976078df8885225a7991c559f91$"
+  }
+}
