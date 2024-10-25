@@ -9,7 +9,7 @@ import Globe from "../../assets/images/Creativeans-globe-with-pins.webp";
 import BluePin from "../../assets/images/popup/Creativeans-blue-pin.webp";
 import YellowPin from "../../assets/images/popup/Creativeans-yellow-pin.webp";
 import GreenPin from "../../assets/images/popup/Creativeans-green-pin.webp";
-import { ArrowUpRight } from "tabler-icons-react";
+import ArrowRightUp from "../../assets/images/popup/right-up-arrow.svg";
 
 type SidebarInfo = {
   title: string;
@@ -162,7 +162,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
         <div>
           <div className="mb-4 flex items-center gap-4">
             <img src={YellowPin} alt="" className="h-4" />
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <p className="font-brand uppercase">Singapore</p>
               <a
                 href="https://maps.app.goo.gl/zfAiL59asx4riK7n6"
@@ -170,7 +170,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
                 rel="noopener noreferrer"
                 className="text-black visited:text-black"
               >
-                <ArrowUpRight size={24} />
+                <img src={ArrowRightUp} alt="" className="h-10" />
               </a>
             </div>
           </div>
@@ -179,7 +179,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
         <div>
           <div className="mb-4 flex items-center gap-4">
             <img src={BluePin} alt="" className="h-4" />
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <p className="font-brand uppercase">Indonesia</p>
               <a
                 href="https://maps.app.goo.gl/cgKaRBsLkMP1ZhbF8"
@@ -187,7 +187,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
                 rel="noopener noreferrer"
                 className="text-black visited:text-black"
               >
-                <ArrowUpRight size={24} />
+                <img src={ArrowRightUp} alt="" className="h-10" />
               </a>
             </div>
           </div>
@@ -196,7 +196,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
         <div>
           <div className="mb-4 flex items-center gap-4">
             <img src={GreenPin} alt="" className="h-4" />
-            <div className="flex items-center">
+            <div className="flex items-center gap-2">
               <p className="font-brand uppercase">Milan</p>
               <a
                 href="https://maps.app.goo.gl/4f3PAeKVTNf6zVNx9"
@@ -204,7 +204,7 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
                 rel="noopener noreferrer"
                 className="text-black visited:text-black"
               >
-                <ArrowUpRight size={24} />
+                <img src={ArrowRightUp} alt="" className="h-10" />
               </a>
             </div>
           </div>
