@@ -83,7 +83,7 @@ export const sprites: Sprite[] = [
     offset: { x: 765, y: -853, scale: { x: 0.05, y: 0.05 } },
   },
   {
-    key: "human-4",
+    key: "human4",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -95,7 +95,7 @@ export const sprites: Sprite[] = [
     offset: { x: 760, y: -870, scale: { x: 0.5, y: 0.5 } },
   },
   {
-    key: "red-bubble",
+    key: "redbubble",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -107,7 +107,7 @@ export const sprites: Sprite[] = [
     offset: { x: 1116, y: -426 },
   },
   {
-    key: "purple-bubble",
+    key: "purplebubble",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -276,7 +276,7 @@ export const sprites: Sprite[] = [
     offset: { x: -310, y: -170, scale: { x: 0.25, y: 0.25 } },
   },
   {
-    key: "human-2",
+    key: "human2",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -809,7 +809,7 @@ export const sprites: Sprite[] = [
     offset: { x: 1700, y: -374, scale: { x: 0.5, y: 0.5 } },
   },
   {
-    key: "human-1",
+    key: "human1",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1075,7 +1075,7 @@ export const sprites: Sprite[] = [
     offset: { x: 130, y: 815, scale: { x: 0.05, y: 0.05 } },
   },
   {
-    key: "human-5",
+    key: "human5",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1087,7 +1087,7 @@ export const sprites: Sprite[] = [
     offset: { x: 130, y: 780, scale: { x: 0.375, y: 0.375 } },
   },
   {
-    key: "otter-1",
+    key: "otter1",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1099,7 +1099,7 @@ export const sprites: Sprite[] = [
     offset: { x: -254, y: 270, scale: { x: 0.3, y: 0.3 } },
   },
   {
-    key: "otter-2",
+    key: "otter2",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1111,7 +1111,7 @@ export const sprites: Sprite[] = [
     offset: { x: -186, y: 148, scale: { x: 0.5, y: 0.5 } },
   },
   {
-    key: "otter-3",
+    key: "otter3",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1123,7 +1123,7 @@ export const sprites: Sprite[] = [
     offset: { x: 244, y: -90, scale: { x: 0.4, y: 0.4 } },
   },
   {
-    key: "otter-4",
+    key: "otter4",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1295,7 +1295,7 @@ export const sprites: Sprite[] = [
     offset: { x: 337, y: 767, scale: { x: 0.25, y: 0.25 } },
   },
   {
-    key: "human-3",
+    key: "human3",
     image: "",
     component: (props) => (
       <AnimatedSprite
@@ -1366,8 +1366,8 @@ export const sprites: Sprite[] = [
 ];
 
 const starSpriteSheetChoices = [
-  "./spritesheet/starOne.json",
-  "./spritesheet/starTwo.json",
+  "./spritesheet/star-1.json",
+  "./spritesheet/star-2.json",
 ];
 
 export const generateRandomStars = (

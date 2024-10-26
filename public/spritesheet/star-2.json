@@ -98,7 +98,7 @@
   "meta": {
     "app": "https://www.codeandweb.com/texturepacker",
     "version": "1.1",
-    "image": "starTwo.png",
+    "image": "star-2.png",
     "format": "RGBA8888",
     "size": { "w": 797, "h": 498 },
     "scale": "1",
