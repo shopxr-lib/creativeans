@@ -87,7 +87,7 @@ const assetManifest = {
     {
       name: "loading",
       assets: [
-        { alias: "loaderSprite", src: "./spritesheet/preloaderHumans.json" },
+        { alias: "loaderSprite", src: "./spritesheet/preloaderHumans.png" },
       ],
     },
     {
