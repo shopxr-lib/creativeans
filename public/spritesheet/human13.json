@@ -1,0 +1,37 @@
+{
+  "frames": {
+    "13-edited-1.png": {
+      "frame": { "x": 48, "y": 46, "w": 39, "h": 74 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 3, "y": 0, "w": 39, "h": 74 },
+      "sourceSize": { "w": 45, "h": 74 }
+    },
+    "13-edited-2.png": {
+      "frame": { "x": 48, "y": 1, "w": 43, "h": 74 },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 0, "w": 43, "h": 74 },
+      "sourceSize": { "w": 45, "h": 74 }
+    },
+    "13-edited-3.png": {
+      "frame": { "x": 1, "y": 1, "w": 45, "h": 74 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 45, "h": 74 },
+      "sourceSize": { "w": 45, "h": 74 }
+    }
+  },
+  "animations": {
+    "13-edited": ["13-edited-1.png", "13-edited-2.png", "13-edited-3.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "human13.png",
+    "format": "RGBA8888",
+    "size": { "w": 123, "h": 86 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:0aaba4b7360a5c0aa04a3e7e3ff6a0a5:6b8024f2db7c12e12253b50943d2df0b:10b1ab32299eab8d0c44f72c20361787$"
+  }
+}

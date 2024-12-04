@@ -1579,6 +1579,54 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 0, y: 0 },
   },
+  {
+    key: "human13",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human13.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 600, y: 80, scale: { x: 1, y: 1 } },
+  },
+  {
+    key: "human14",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human14.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 450, y: 186, scale: { x: 1, y: 1 } },
+  },
+  {
+    key: "human15",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human15.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 490, y: 180, scale: { x: 1, y: 1 } },
+  },
+  {
+    key: "human16",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human16.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 380, y: 236, scale: { x: 1, y: 1 } },
+  },
 ];
 
 const starSpriteSheetChoices = [
