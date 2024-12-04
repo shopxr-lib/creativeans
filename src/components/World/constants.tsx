@@ -1151,7 +1151,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 244, y: -90, scale: { x: 0.4, y: 0.4 } },
+    offset: { x: 244, y: -90, scale: { x: 0.5, y: 0.5 } },
   },
   {
     key: "otter4",
@@ -1163,7 +1163,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 182, y: -156, scale: { x: 0.4, y: 0.4 } },
+    offset: { x: 182, y: -156, scale: { x: 0.3, y: 0.3 } },
   },
   {
     key: "human3a-shadow",
