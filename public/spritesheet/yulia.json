@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "yulia-edited-1.png": {
+      "frame": { "x": 173, "y": 1, "w": 53, "h": 73 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 3, "y": 0, "w": 53, "h": 73 },
+      "sourceSize": { "w": 56, "h": 73 }
+    },
+    "yulia-edited-2.png": {
+      "frame": { "x": 117, "y": 1, "w": 54, "h": 73 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 2, "y": 0, "w": 54, "h": 73 },
+      "sourceSize": { "w": 56, "h": 73 }
+    },
+    "yulia-edited-3.png": {
+      "frame": { "x": 1, "y": 1, "w": 56, "h": 73 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 56, "h": 73 },
+      "sourceSize": { "w": 56, "h": 73 }
+    },
+    "yulia-edited-4.png": {
+      "frame": { "x": 59, "y": 1, "w": 56, "h": 73 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 56, "h": 73 },
+      "sourceSize": { "w": 56, "h": 73 }
+    }
+  },
+  "animations": {
+    "yulia-edited": [
+      "yulia-edited-1.png",
+      "yulia-edited-2.png",
+      "yulia-edited-3.png",
+      "yulia-edited-4.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "yulia.png",
+    "format": "RGBA8888",
+    "size": { "w": 227, "h": 75 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:8bc4a929b1ffbe5340e38fb64cbdc8e8:2e0474129aa895cbce70b84472aa7f78:ca4eab7d9faac782b69c33b50e507a87$"
+  }
+}

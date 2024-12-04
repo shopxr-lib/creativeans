@@ -1627,6 +1627,18 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: 380, y: 236, scale: { x: 1, y: 1 } },
   },
+  {
+    key: "yulia",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/yulia.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -800, y: -50, scale: { x: 1, y: 1 } },
+  },
 ];
 
 const starSpriteSheetChoices = [
