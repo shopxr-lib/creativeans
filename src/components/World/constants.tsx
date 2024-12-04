@@ -41,7 +41,6 @@ import StripesBallImg from "../../assets/images/Creativeans-stripes-ball.webp";
 import Lollipop from "../Lollipop/LolliPop";
 import CottonTree from "../../assets/images/Creativeans-Cotton-Tree.webp";
 import Human8Shadow from "../../assets/images/Creativeans-shadow-human-8.webp";
-import Human5Shadow from "../../assets/images/Creativeans-shadow-human-5.webp";
 import Human25Shadow from "../../assets/images/Creativeans-shadow-human-25.webp";
 import Human4Shadow from "../../assets/images/Creativeans-shadow-human-4.webp";
 import HumanGenericShadow from "../../assets/images/Creativeans-shadow-generic-x5.png";
@@ -1119,23 +1118,6 @@ export const sprites: Sprite[] = [
     offset: { x: 305, y: -305 },
   },
   {
-    key: "human-5-shadow",
-    image: Human5Shadow,
-    offset: { x: 130, y: 815, scale: { x: 0.05, y: 0.05 } },
-  },
-  {
-    key: "human5",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human5.json"
-        animationSpeed={0.07}
-      />
-    ),
-    offset: { x: 130, y: 780, scale: { x: 0.375, y: 0.375 } },
-  },
-  {
     key: "otter1",
     image: "",
     component: (props) => (
@@ -1337,23 +1319,6 @@ export const sprites: Sprite[] = [
         }}
       />
     ),
-  },
-  {
-    key: "human-3-shadow",
-    image: HumanGenericShadow,
-    offset: { x: 337, y: 767, scale: { x: 0.25, y: 0.25 } },
-  },
-  {
-    key: "human3",
-    image: "",
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        spritesheet="./spritesheet/human3.json"
-        animationSpeed={0.07}
-      />
-    ),
-    offset: { x: 336, y: 732, scale: { x: 0.43, y: 0.43 } },
   },
   {
     key: "fish-angel-1",
