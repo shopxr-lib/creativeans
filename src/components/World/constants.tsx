@@ -1489,6 +1489,96 @@ export const sprites: Sprite[] = [
     ),
     offset: { x: -340, y: -870, scale: { x: 1, y: 1 } },
   },
+  {
+    key: "human6",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human6.json"
+        animationSpeed={0.07}
+        trails={[
+          { x: 570, y: -190, durationMs: 4000 },
+          {
+            x: 656,
+            y: -140,
+            visible: false,
+            speed: 1,
+            skipLinearInterpolation: true,
+            delayMs: 12000,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 570, y: -190 },
+  },
+  {
+    key: "human6-1",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human6-1.json"
+        animationSpeed={0.07}
+        trails={[
+          {
+            x: 640,
+            y: -140,
+            visible: false,
+            speed: 1,
+            delayMs: 4000,
+          },
+          {
+            x: 640,
+            y: -140,
+            speed: 1,
+            visible: true,
+            delayMs: 8000,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 640,
+            y: -140,
+            speed: 1,
+            visible: false,
+            delayMs: 4000,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
+  {
+    key: "human6-2",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human6-2.json"
+        animationSpeed={0.07}
+        trails={[
+          {
+            x: 656,
+            y: -140,
+            visible: false,
+            delayMs: 12000,
+            speed: 1,
+          },
+          { x: 656, y: -140, visible: true, durationMs: 3000 },
+          {
+            x: 570,
+            y: -190,
+            speed: 1,
+            visible: false,
+            skipLinearInterpolation: true,
+            delayMs: 1000,
+          },
+        ]}
+      />
+    ),
+    offset: { x: 0, y: 0 },
+  },
 ];
 
 const starSpriteSheetChoices = [
