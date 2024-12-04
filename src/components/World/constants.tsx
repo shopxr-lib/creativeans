@@ -756,6 +756,54 @@ export const sprites: Sprite[] = [
     offset: { x: 1000, y: -117, scale: { x: 0.2, y: 0.2 } },
   },
   {
+    key: "human9",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human9.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1280, y: -910 },
+  },
+  {
+    key: "human11",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human11.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1310, y: -915 },
+  },
+  {
+    key: "human7",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human7.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1340, y: -810 },
+  },
+  {
+    key: "human10",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human10.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: 1380, y: -820 },
+  },
+  {
     key: "fish-orange",
     image: FishOrange,
     component: (props) => (
