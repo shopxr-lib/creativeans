@@ -830,12 +830,12 @@ export const sprites: Sprite[] = [
     offset: { x: 1797, y: -364 },
   },
   {
-    key: "khairul",
+    key: "human1",
     image: "",
     component: (props) => (
       <AnimatedSprite
         {...props}
-        spritesheet="./spritesheet/khairul.json"
+        spritesheet="./spritesheet/human1.json"
         animationSpeed={0.07}
         trails={[
           { x: 3432, y: 626, visible: true, speed: 0.0003 },
@@ -855,15 +855,15 @@ export const sprites: Sprite[] = [
         ]}
       />
     ),
-    offset: { x: 1700, y: -374, scale: { x: 0.5, y: 0.5 } },
+    offset: { x: 1700, y: -374, scale: { x: 0.6, y: 0.6 } },
   },
   {
-    key: "human1",
+    key: "khairul",
     image: "",
     component: (props) => (
       <AnimatedSprite
         {...props}
-        spritesheet="./spritesheet/human1.json"
+        spritesheet="./spritesheet/khairul.json"
         animationSpeed={0.07}
         trails={[
           { x: 3459, y: 636, visible: true, speed: 0.0003 },
