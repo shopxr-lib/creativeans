@@ -1,0 +1,65 @@
+{
+  "frames": {
+    "23-edited-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    },
+    "23-edited-2.png": {
+      "frame": { "x": 1, "y": 40, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    },
+    "23-edited-3.png": {
+      "frame": { "x": 1, "y": 79, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    },
+    "23-edited-4.png": {
+      "frame": { "x": 1, "y": 118, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    },
+    "23-edited-5.png": {
+      "frame": { "x": 1, "y": 157, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    },
+    "23-edited-6.png": {
+      "frame": { "x": 1, "y": 196, "w": 46, "h": 37 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 46, "h": 37 },
+      "sourceSize": { "w": 46, "h": 37 }
+    }
+  },
+  "animations": {
+    "23-edited": [
+      "23-edited-1.png",
+      "23-edited-2.png",
+      "23-edited-3.png",
+      "23-edited-4.png",
+      "23-edited-5.png",
+      "23-edited-6.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "human23.png",
+    "format": "RGBA8888",
+    "size": { "w": 48, "h": 234 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:2a3fd0b9067525c78b4b5fcaef3b46de:178e1f3f2197bb2f85bd7cf44cb46687:92960457ed822b2df600b6aa92a8a9e3$"
+  }
+}

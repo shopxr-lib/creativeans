@@ -1,0 +1,65 @@
+{
+  "frames": {
+    "24-edited-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    },
+    "24-edited-2.png": {
+      "frame": { "x": 1, "y": 69, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    },
+    "24-edited-3.png": {
+      "frame": { "x": 1, "y": 137, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    },
+    "24-edited-4.png": {
+      "frame": { "x": 1, "y": 205, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    },
+    "24-edited-5.png": {
+      "frame": { "x": 1, "y": 273, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    },
+    "24-edited-6.png": {
+      "frame": { "x": 1, "y": 341, "w": 42, "h": 66 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 66 },
+      "sourceSize": { "w": 42, "h": 66 }
+    }
+  },
+  "animations": {
+    "24-edited": [
+      "24-edited-1.png",
+      "24-edited-2.png",
+      "24-edited-3.png",
+      "24-edited-4.png",
+      "24-edited-5.png",
+      "24-edited-6.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "human24.png",
+    "format": "RGBA8888",
+    "size": { "w": 44, "h": 408 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:4ea8681d6ae6a43320d5d3801de70156:d6a06e82f6455b0e54dcc03cd120aeef:247c5d2ac4c57d4f9b67c15e0aec7e68$"
+  }
+}

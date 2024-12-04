@@ -1,0 +1,105 @@
+{
+  "frames": {
+    "Mentis-edited-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-2.png": {
+      "frame": { "x": 374, "y": 1, "w": 36, "h": 37 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 1, "w": 36, "h": 37 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-3.png": {
+      "frame": { "x": 39, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-4.png": {
+      "frame": { "x": 77, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-5.png": {
+      "frame": { "x": 115, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-6.png": {
+      "frame": { "x": 153, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-7.png": {
+      "frame": { "x": 191, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-8.png": {
+      "frame": { "x": 229, "y": 1, "w": 36, "h": 38 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 36, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-9.png": {
+      "frame": { "x": 267, "y": 1, "w": 35, "h": 38 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 1, "y": 0, "w": 35, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-10.png": {
+      "frame": { "x": 304, "y": 1, "w": 33, "h": 38 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 3, "y": 0, "w": 33, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    },
+    "Mentis-edited-11.png": {
+      "frame": { "x": 339, "y": 1, "w": 33, "h": 38 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 3, "y": 0, "w": 33, "h": 38 },
+      "sourceSize": { "w": 36, "h": 38 }
+    }
+  },
+  "animations": {
+    "Mentis-edited": [
+      "Mentis-edited-1.png",
+      "Mentis-edited-2.png",
+      "Mentis-edited-3.png",
+      "Mentis-edited-4.png",
+      "Mentis-edited-5.png",
+      "Mentis-edited-6.png",
+      "Mentis-edited-7.png",
+      "Mentis-edited-8.png",
+      "Mentis-edited-9.png",
+      "Mentis-edited-10.png",
+      "Mentis-edited-11.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "mentis.png",
+    "format": "RGBA8888",
+    "size": { "w": 411, "h": 40 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:bb13a4f9a01ebe6a833ffed621c58908:b0b90841a6e3ccd5d3d1abb259b45147:be5aba295188be76fdcb6c73e6e0febf$"
+  }
+}

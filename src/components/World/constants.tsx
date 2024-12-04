@@ -46,6 +46,7 @@ import Human25Shadow from "../../assets/images/Creativeans-shadow-human-25.webp"
 import Human4Shadow from "../../assets/images/Creativeans-shadow-human-4.webp";
 import HumanGenericShadow from "../../assets/images/Creativeans-shadow-generic-x5.png";
 import HumanGenericShadowLight from "../../assets/images/Creativeans-shadow-generic-x3.png";
+import RockImg from "../../assets/images/rock.png";
 import AnimatedSprite from "../AnimatedSprite/AnimatedSprite";
 import CustomSprite from "../CustomSprite";
 
@@ -1362,6 +1363,83 @@ export const sprites: Sprite[] = [
       />
     ),
     offset: { x: -333, y: 1433, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "kenneth",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/kenneth.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -410, y: -880 },
+  },
+  {
+    key: "rock",
+    image: RockImg,
+    offset: { x: -430, y: -800, scale: { x: 1, y: 1 } },
+  },
+  {
+    key: "mentis",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/mentis.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -410, y: -810 },
+  },
+  {
+    key: "beetle",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/beetle.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -450, y: -810 },
+  },
+  {
+    key: "human22",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human22.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -360, y: -800, scale: { x: 1.25, y: 1.25 } },
+  },
+  {
+    key: "human23",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human23.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -300, y: -810, scale: { x: 1.25, y: 1.25 } },
+  },
+  {
+    key: "human24",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human24.json"
+        animationSpeed={0.07}
+      />
+    ),
+    offset: { x: -340, y: -870, scale: { x: 1, y: 1 } },
   },
 ];
 

@@ -1,0 +1,89 @@
+{
+  "frames": {
+    "Beetles-edited-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-1-1.png": {
+      "frame": { "x": 1, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-1-2.png": {
+      "frame": { "x": 1, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-1-3.png": {
+      "frame": { "x": 1, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-2.png": {
+      "frame": { "x": 40, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-3.png": {
+      "frame": { "x": 79, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-3-1.png": {
+      "frame": { "x": 79, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-3-2.png": {
+      "frame": { "x": 79, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    },
+    "Beetles-edited-3-3.png": {
+      "frame": { "x": 79, "y": 1, "w": 37, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 37, "h": 42 },
+      "sourceSize": { "w": 37, "h": 42 }
+    }
+  },
+  "animations": {
+    "Beetles-edited": [
+      "Beetles-edited-1.png",
+      "Beetles-edited-1-1.png",
+      "Beetles-edited-1-2.png",
+      "Beetles-edited-1-3.png",
+      "Beetles-edited-2.png",
+      "Beetles-edited-3.png",
+      "Beetles-edited-3-1.png",
+      "Beetles-edited-3-2.png",
+      "Beetles-edited-3-3.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "beetle.png",
+    "format": "RGBA8888",
+    "size": { "w": 117, "h": 44 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:caa644b27d79449af7255bc9d9cff1ae:b0d5fe442bad8d8ae32bb3c7a4d5bada:62dadf09b6c2e6072d46c55899178eb7$"
+  }
+}
