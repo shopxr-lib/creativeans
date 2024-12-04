@@ -5,8 +5,8 @@ import DragIcon from "../../assets/images/drag-icon.gif";
 
 const loaderSprite = "./spritesheet/preloaderHumans.json";
 
-const width = 100;
-const height = 100;
+const width = 250;
+const height = 250;
 
 type Props = {
   progress: number;
@@ -45,7 +45,7 @@ const Loading: React.FC<Props> = ({ progress }) => {
             y: height / 2,
           }}
           animationSpeed={0.1}
-          scale={0.1}
+          scale={0.25}
           alpha={0.8}
         />
       </Stage>
