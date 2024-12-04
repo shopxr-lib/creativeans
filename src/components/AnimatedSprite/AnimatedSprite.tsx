@@ -24,6 +24,7 @@ type Props = React.ComponentProps<typeof Sprite> &
       speed?: number;
       delayMs?: number;
       skipLinearInterpolation?: boolean;
+      durationMs?: number;
     }[];
     scale?:
       | number
@@ -123,9 +124,15 @@ const AnimatedSprite: React.FC<Props> = (props) => {
       return;
     }
 
-    // Update progress
-    const speed = currentTrail?.speed ?? defaultSpeed;
-    const newProgress = progress + delta * speed;
+    // Update progress (prioritize durationMs)
+    let newProgress;
+    if (currentTrail.durationMs) {
+      newProgress = progress + (delta * 16.67) / currentTrail.durationMs; // Convert delta to milliseconds
+    } else {
+      const speed = currentTrail?.speed ?? defaultSpeed;
+      newProgress = progress + delta * speed;
+    }
+
     if (newProgress >= 1) {
       setProgress(0);
       setCurrentIndex(nextIndex);
