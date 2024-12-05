@@ -11,22 +11,14 @@ import { Texture, Resource, Assets } from "pixi.js";
 import { useSidebar } from "../../context/Sidebar/hooks";
 import { usePointerHandler } from "../../lib/hooks/usePointerHandler";
 import { useEventContext } from "../../context/Event/hooks";
+import { type Trail } from "../../lib/types";
 
 const defaultSpeed = 0.005;
 const defaultDelay = 0;
 
 type Props = React.ComponentProps<typeof Sprite> &
   Partial<React.ComponentProps<typeof PixiAnimatedSprite>> & {
-    trails?: {
-      x: number;
-      y: number;
-      visible?: boolean;
-      speed?: number;
-      delayMs?: number;
-      skipLinearInterpolation?: boolean;
-      durationMs?: number;
-      stopAnimation?: boolean;
-    }[];
+    trails?: Trail[];
     scale?:
       | number
       | {

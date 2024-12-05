@@ -1,0 +1,49 @@
+{
+  "frames": {
+    "30-edited-1.png": {
+      "frame": { "x": 32, "y": 1, "w": 28, "h": 70 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 28, "h": 70 },
+      "sourceSize": { "w": 29, "h": 70 }
+    },
+    "30-edited-2.png": {
+      "frame": { "x": 1, "y": 73, "w": 28, "h": 70 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 28, "h": 70 },
+      "sourceSize": { "w": 29, "h": 70 }
+    },
+    "30-edited-3.png": {
+      "frame": { "x": 31, "y": 73, "w": 28, "h": 70 },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 28, "h": 70 },
+      "sourceSize": { "w": 29, "h": 70 }
+    },
+    "30-edited-4.png": {
+      "frame": { "x": 1, "y": 1, "w": 29, "h": 70 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 29, "h": 70 },
+      "sourceSize": { "w": 29, "h": 70 }
+    }
+  },
+  "animations": {
+    "30-edited": [
+      "30-edited-1.png",
+      "30-edited-2.png",
+      "30-edited-3.png",
+      "30-edited-4.png"
+    ]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "human30.png",
+    "format": "RGBA8888",
+    "size": { "w": 61, "h": 144 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:2fe800902c98bbe2a8f2329b4462e6b5:37a5ae1c5c144aa7280832ae8f048694:892f5f87b7e8bb088ef1a9d95f33a383$"
+  }
+}
