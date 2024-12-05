@@ -319,7 +319,7 @@ export const sprites: Sprite[] = [
   {
     key: "bridge-top",
     image: BridgeTop,
-    offset: { x: 30, y: 70 },
+    offset: { x: 32, y: 70 },
   },
   {
     key: "brain-factory-shadow",
