@@ -4,7 +4,7 @@ import {
   AnimatedSprite as PixiAnimatedSprite,
 } from "@pixi/react";
 import { type EventMode } from "@pixi/events";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useWorld } from "../../context/World/hooks";
 import { glowFilter } from "../../constants/filters";
 import { Texture, Resource, Assets } from "pixi.js";
@@ -25,6 +25,7 @@ type Props = React.ComponentProps<typeof Sprite> &
       delayMs?: number;
       skipLinearInterpolation?: boolean;
       durationMs?: number;
+      stopAnimation?: boolean;
     }[];
     scale?:
       | number
@@ -40,9 +41,14 @@ type Props = React.ComponentProps<typeof Sprite> &
     spriteAnimationIntervals?: number[];
     initialSpriteAnimationPlaying?: boolean;
     metadata?: { objectKey: string };
+    customInitialFrame?: number;
   };
 
-const AnimatedSprite: React.FC<Props> = (props) => {
+const AnimatedSprite: React.FC<Props> = ({
+  trails,
+  customInitialFrame,
+  ...props
+}) => {
   const worldContext = useWorld();
   const [position, setPosition] = useState({
     x: props.x || 0,
@@ -53,6 +59,10 @@ const AnimatedSprite: React.FC<Props> = (props) => {
   const [opacity, setOpacity] = useState(1);
   const [delayTimer, setDelayTimer] = useState(0);
   const [hover, setHover] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(
+    props.initialSpriteAnimationPlaying ?? true,
+  );
+  const [initialFrame, setInitialFrame] = useState(customInitialFrame ?? 0);
 
   const sidebarContext = useSidebar();
   const pointerHandler = usePointerHandler({
@@ -70,17 +80,17 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     setHover(false);
   };
 
-  const isAnimating = props.trails && props.trails.length > 1;
+  const isAnimating = trails && trails.length > 1;
 
   useTick((delta, ticker) => {
-    if (!props.trails || props.trails.length < 2) {
+    if (!trails || trails.length < 2) {
       return;
     }
 
-    const currentTrail = props.trails[currentIndex];
+    const currentTrail = trails[currentIndex];
 
-    const nextIndex = (currentIndex + 1) % props.trails.length;
-    const nextTrail = props.trails[nextIndex];
+    const nextIndex = (currentIndex + 1) % trails.length;
+    const nextTrail = trails[nextIndex];
 
     const currentPoint = calculateActualPosition(currentTrail, {
       position: {
@@ -116,6 +126,11 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     } else {
       setOpacity((prev) => Math.min(1, prev + delta * 0.05)); // Fade in
     }
+
+    if (currentTrail.stopAnimation) {
+      setInitialFrame(customInitialFrame ?? 0);
+    }
+    setIsPlaying(!currentTrail.stopAnimation);
 
     // Handle delay, skip progress update if delay is not met
     const delay = currentTrail?.delayMs ?? defaultDelay;
@@ -154,32 +169,6 @@ const AnimatedSprite: React.FC<Props> = (props) => {
     });
   }, [props.spritesheet]);
 
-  const [isPlaying, setIsPlaying] = useState(
-    props.initialSpriteAnimationPlaying ?? true,
-  );
-  const intervalIndexRef = useRef(0);
-  const elapsedRef = useRef(0);
-
-  useTick((delta) => {
-    if (
-      props.spriteAnimationIntervals &&
-      props.spriteAnimationIntervals.length > 0
-    ) {
-      elapsedRef.current += delta * 16.67; // Convert delta to milliseconds
-
-      if (
-        elapsedRef.current >=
-        props.spriteAnimationIntervals[intervalIndexRef.current]
-      ) {
-        elapsedRef.current = 0;
-        intervalIndexRef.current =
-          (intervalIndexRef.current + 1) %
-          props.spriteAnimationIntervals.length;
-        setIsPlaying((prev) => !prev);
-      }
-    }
-  });
-
   const eventContext = useEventContext();
 
   const commonProps = {
@@ -206,6 +195,7 @@ const AnimatedSprite: React.FC<Props> = (props) => {
       <PixiAnimatedSprite
         {...props}
         {...commonProps}
+        initialFrame={initialFrame}
         textures={frames}
         isPlaying={isPlaying}
       />
