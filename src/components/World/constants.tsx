@@ -236,68 +236,117 @@ export const sprites: Sprite[] = [
     offset: { x: -670, y: -775 },
   },
   {
-    key: "human-2-shadow",
-    image: HumanGenericShadow,
-    component: (props) => (
-      <AnimatedSprite
-        {...props}
-        animationSpeed={0.07}
-        trails={[
-          {
-            x: 295,
-            y: 227,
-            speed: 0.003,
-          },
-          {
-            x: 51,
-            y: 35,
-            speed: 0.003,
-          },
-          {
-            x: -201,
-            y: -55,
-            speed: 0.005,
-          },
-          {
-            x: -315,
-            y: -135,
-            speed: 1,
-          },
-          {
-            x: -315,
-            y: -135,
-            visible: false,
-            delayMs: 2000,
-            skipLinearInterpolation: true,
-          },
-        ]}
-      />
-    ),
-    offset: { x: -310, y: -170, scale: { x: 0.25, y: 0.25 } },
-  },
-  {
-    key: "human2",
+    key: "walking-human1",
     image: "",
     component: (props) => (
       <AnimatedSprite
         {...props}
-        spritesheet="./spritesheet/human2.json"
+        spritesheet="./spritesheet/walking-human1.json"
         animationSpeed={0.07}
+        customInitialFrame={1}
         trails={[
           {
             x: 300,
             y: 192,
-            speed: 0.003,
+            durationMs: 3000,
+          },
+          {
+            x: 220,
+            y: 120,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: 220,
+            y: 120,
+            stopAnimation: false,
+            durationMs: 6000,
           },
           {
             x: 56,
             y: 0,
-            speed: 0.003,
+            durationMs: 6000,
+          },
+          {
+            x: -130,
+            y: -70,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: -130,
+            y: -70,
+            durationMs: 3000,
           },
           {
             x: -196,
             y: -90,
-            speed: 0.005,
+            durationMs: 3000,
+          },
+          {
+            x: -260,
+            y: -120,
+            stopAnimation: true,
+            delayMs: 3000,
+          },
+          {
+            x: -260,
+            y: -120,
+            durationMs: 3000,
+          },
+          {
+            x: -310,
+            y: -170,
+            speed: 1,
+          },
+          {
+            x: -310,
+            y: -170,
+            visible: false,
+            delayMs: 3000,
+            skipLinearInterpolation: true,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -310, y: -170 },
+  },
+  {
+    key: "human27",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human27.json"
+        animationSpeed={0.07}
+        customInitialFrame={0}
+        trails={[
+          {
+            x: -130,
+            y: -70,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: -130,
+            y: -70,
+            durationMs: 3000,
+          },
+          {
+            x: -196,
+            y: -90,
+            durationMs: 3000,
+          },
+          {
+            x: -260,
+            y: -120,
+            stopAnimation: true,
+            delayMs: 3000,
+          },
+          {
+            x: -260,
+            y: -120,
+            durationMs: 3000,
           },
           {
             x: -310,
@@ -311,10 +360,106 @@ export const sprites: Sprite[] = [
             delayMs: 2000,
             skipLinearInterpolation: true,
           },
+          {
+            x: 300,
+            y: 192,
+            durationMs: 3000,
+          },
+          {
+            x: 220,
+            y: 120,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: 220,
+            y: 120,
+            durationMs: 6000,
+          },
+          {
+            x: 56,
+            y: 0,
+            durationMs: 6000,
+          },
         ]}
       />
     ),
-    offset: { x: -310, y: -170, scale: { x: 0.4, y: 0.4 } },
+    offset: { x: -310, y: -170 },
+  },
+  {
+    key: "human29",
+    image: "",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/human29.json"
+        animationSpeed={0.07}
+        customInitialFrame={0}
+        trails={[
+          {
+            x: -260,
+            y: -120,
+            stopAnimation: true,
+            delayMs: 3000,
+          },
+          {
+            x: -260,
+            y: -120,
+            durationMs: 3000,
+          },
+          {
+            x: -310,
+            y: -170,
+            speed: 1,
+          },
+          {
+            x: -310,
+            y: -170,
+            visible: false,
+            delayMs: 2000,
+            skipLinearInterpolation: true,
+          },
+          {
+            x: 300,
+            y: 192,
+            durationMs: 3000,
+          },
+          {
+            x: 220,
+            y: 120,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: 220,
+            y: 120,
+            durationMs: 6000,
+          },
+          {
+            x: 56,
+            y: 0,
+            durationMs: 6000,
+          },
+          {
+            x: -130,
+            y: -70,
+            delayMs: 3000,
+            stopAnimation: true,
+          },
+          {
+            x: -130,
+            y: -70,
+            durationMs: 3000,
+          },
+          {
+            x: -196,
+            y: -90,
+            durationMs: 3000,
+          },
+        ]}
+      />
+    ),
+    offset: { x: -310, y: -170 },
   },
   {
     key: "bridge-top",
