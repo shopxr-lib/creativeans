@@ -1,7 +1,8 @@
 import React from "react";
 import { Sprite as PixiSprite } from "@pixi/react";
 import WorldBaseImg from "../../assets/images/Creativeans-world-Base layer.webp";
-import { sprites, stars, type Sprite } from "./constants";
+import { sprites, stars } from "./constants";
+import { type Sprite } from "./utils";
 import { Stage } from "../../context/World/ContextBridge";
 import { useWorld } from "../../context/World/hooks";
 import Sidebar from "../Sidebar/Sidebar";
