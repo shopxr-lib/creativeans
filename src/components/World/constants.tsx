@@ -547,8 +547,17 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/elevator.json"
         animationSpeed={0.1}
-        spriteAnimationIntervals={[1000, 8900]}
         initialSpriteAnimationPlaying
+        trails={[
+          { x: 285, y: 1040, delayMs: 1000, speed: 1 },
+          {
+            x: 285,
+            y: 1040,
+            stopAnimation: true,
+            delayMs: 10000,
+            speed: 1,
+          },
+        ]}
       />
     ),
     offset: { x: 285, y: 1040 },
@@ -565,7 +574,7 @@ export const sprites: Sprite[] = [
             x: 373,
             y: 1167,
             delayMs: 1000,
-            speed: 0.003,
+            durationMs: 7000,
           },
           {
             x: -1964,
@@ -573,7 +582,7 @@ export const sprites: Sprite[] = [
             speed: 1,
             skipLinearInterpolation: true,
           },
-          { x: 1473, y: 532 },
+          { x: 1473, y: 532, durationMs: 3000 },
         ]}
       />
     ),

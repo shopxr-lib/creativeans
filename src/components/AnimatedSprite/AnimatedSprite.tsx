@@ -30,7 +30,6 @@ type Props = React.ComponentProps<typeof Sprite> &
     };
     enableGlowEffect?: boolean;
     spritesheet?: string;
-    spriteAnimationIntervals?: number[];
     initialSpriteAnimationPlaying?: boolean;
     metadata?: { objectKey: string };
     customInitialFrame?: number;
