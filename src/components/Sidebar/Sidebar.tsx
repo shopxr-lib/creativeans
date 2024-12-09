@@ -51,10 +51,14 @@ const Sidebar: React.FC = () => {
                   )}
                   <IconButton
                     onClick={() => {
-                      window.parent.postMessage(
-                        "openPopup",
-                        "https://www.creativeans.com",
-                      );
+                      try {
+                        window.parent.postMessage(
+                          "openPopup",
+                          "https://www.creativeans.com",
+                        );
+                      } catch (e) {
+                        console.error("Error opening popup: ", e);
+                      }
                     }}
                   >
                     Contact Us
