@@ -713,7 +713,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 1340, y: -810 },
+    offset: { x: 1340, y: -810, scale: { x: 0.8, y: 0.8 } },
   },
   {
     key: "human10",
@@ -725,7 +725,7 @@ export const sprites: Sprite[] = [
         animationSpeed={0.07}
       />
     ),
-    offset: { x: 1380, y: -820 },
+    offset: { x: 1375, y: -815, scale: { x: 0.8, y: 0.8 } },
   },
   {
     key: "fish-orange",
