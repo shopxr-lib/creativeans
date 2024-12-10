@@ -6,24 +6,10 @@
       "trimmed": true,
       "spriteSourceSize": { "x": 3, "y": 0, "w": 39, "h": 74 },
       "sourceSize": { "w": 45, "h": 74 }
-    },
-    "13-edited-2.png": {
-      "frame": { "x": 48, "y": 1, "w": 43, "h": 74 },
-      "rotated": true,
-      "trimmed": true,
-      "spriteSourceSize": { "x": 1, "y": 0, "w": 43, "h": 74 },
-      "sourceSize": { "w": 45, "h": 74 }
-    },
-    "13-edited-3.png": {
-      "frame": { "x": 1, "y": 1, "w": 45, "h": 74 },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": { "x": 0, "y": 0, "w": 45, "h": 74 },
-      "sourceSize": { "w": 45, "h": 74 }
     }
   },
   "animations": {
-    "13-edited": ["13-edited-1.png", "13-edited-2.png", "13-edited-3.png"]
+    "13-edited": ["13-edited-1.png"]
   },
   "meta": {
     "app": "https://www.codeandweb.com/texturepacker",
