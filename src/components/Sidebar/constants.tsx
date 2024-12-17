@@ -192,7 +192,9 @@ export const sidebarInfos: Record<string, SidebarInfo> = {
               </a>
             </div>
           </div>
-          <p>The Energy Building, SCBD Jakarta 12190 Indonesia </p>
+          <p>
+            Panin Tower, GoWork 10th Floor, Senayan City Jakarta 10270 Indonesia
+          </p>
         </div>
         <div>
           <div className="mb-4 flex items-center gap-4">
