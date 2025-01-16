@@ -65,7 +65,7 @@ const AnimatedSprite: React.FC<Props> = ({
           sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
           break;
         case "openParentPopup":
-          window.postMessage("message", props.metadata?.objectKey ?? "");
+          window.parent.postMessage("message", props.metadata?.objectKey ?? "");
           break;
         default:
           break;
