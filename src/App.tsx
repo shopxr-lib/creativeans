@@ -39,7 +39,7 @@ function App() {
   );
 }
 
-const minDelayMs = 3000;
+const minDelayMs = 0;
 
 function useLoadBundles(manifest: AssetManifest) {
   const [progress, setProgress] = useState(0);
