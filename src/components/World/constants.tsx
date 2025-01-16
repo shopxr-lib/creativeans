@@ -1530,6 +1530,78 @@ export const sprites: Sprite[] = [
     offset: { x: -800, y: -50, scale: { x: 1, y: 1 } },
   },
   ...createHumanTrainAnimatedSprites(),
+  {
+    key: "cny-coins-1",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: -390, y: -80, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "cny-coins-2",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: -1290, y: 100, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "cny-coins-3",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: 0, y: 700, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "cny-coins-4",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: 392, y: -835, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "cny-coins-5",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: 1810, y: 0, scale: { x: 0.6, y: 0.6 } },
+  },
+  {
+    key: "cny-coins-6",
+    image: "spritesheet/cny-coins.png",
+    component: (props) => (
+      <AnimatedSprite
+        {...props}
+        spritesheet="./spritesheet/cny-coins.json"
+        animationSpeed={0.7}
+      />
+    ),
+    offset: { x: 921, y: -657, scale: { x: 0.6, y: 0.6 } },
+  },
 ];
 
 const starSpriteSheetChoices = [
