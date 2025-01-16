@@ -31,9 +31,11 @@ type Props = React.ComponentProps<typeof Sprite> &
     enableGlowEffect?: boolean;
     spritesheet?: string;
     initialSpriteAnimationPlaying?: boolean;
-    metadata?: { objectKey: string };
+    metadata?: { objectKey: string; onClickType: onClickType };
     customInitialFrame?: number;
   };
+
+type onClickType = "openSidebar" | "openParentPopup";
 
 const AnimatedSprite: React.FC<Props> = ({
   trails,
@@ -58,7 +60,16 @@ const AnimatedSprite: React.FC<Props> = ({
   const sidebarContext = useSidebar();
   const pointerHandler = usePointerHandler({
     handleClick: () => {
-      sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
+      switch (props.metadata?.onClickType) {
+        case "openSidebar":
+          sidebarContext.openSidebar(props.metadata?.objectKey ?? "");
+          break;
+        case "openParentPopup":
+          window.postMessage("message", props.metadata?.objectKey ?? "");
+          break;
+        default:
+          break;
+      }
     },
     onPointerUp: () => setHover(false),
   });

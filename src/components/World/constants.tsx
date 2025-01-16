@@ -260,6 +260,7 @@ export const sprites: Sprite[] = [
         enableGlowEffect
         metadata={{
           objectKey: "brain",
+          onClickType: "openSidebar",
         }}
       />
     ),
@@ -1538,6 +1539,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform1",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: -390, y: -80, scale: { x: 0.6, y: 0.6 } },
@@ -1550,6 +1556,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform2",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: -1290, y: 100, scale: { x: 0.6, y: 0.6 } },
@@ -1562,6 +1573,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform3",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: 0, y: 700, scale: { x: 0.6, y: 0.6 } },
@@ -1574,6 +1590,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform4",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: 392, y: -835, scale: { x: 0.6, y: 0.6 } },
@@ -1586,6 +1607,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform5",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: 1810, y: 0, scale: { x: 0.6, y: 0.6 } },
@@ -1598,6 +1624,11 @@ export const sprites: Sprite[] = [
         {...props}
         spritesheet="./spritesheet/cny-coins.json"
         animationSpeed={0.7}
+        enableGlowEffect
+        metadata={{
+          objectKey: "cnyform6",
+          onClickType: "openParentPopup",
+        }}
       />
     ),
     offset: { x: 921, y: -657, scale: { x: 0.6, y: 0.6 } },
