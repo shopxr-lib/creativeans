@@ -31,4 +31,7 @@ a {
     font-weight: normal;
     font-style: normal;
   }
+  :root {
+    --radius: 0.5rem;
+  }
 }

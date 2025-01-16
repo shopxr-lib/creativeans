@@ -8,6 +8,13 @@ import Loading from "./components/Loading";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Assets } from "pixi.js";
 import { sprites } from "./components/World/constants";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const World = lazy(() => import("./components/World/World"));
 
@@ -20,6 +27,15 @@ function App() {
   const initialScale = isLargeScreen ? 1.2 : isMediumScreen ? 0.7 : 0.5;
 
   const { progress } = useLoadBundles(assetManifest);
+
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisited");
+    if (!hasVisited && progress >= 100) {
+      setIsDialogOpen(true);
+      localStorage.setItem("hasVisited", "true");
+    }
+  }, [progress]);
 
   return (
     <EventProvider initialEnabled>
@@ -35,6 +51,29 @@ function App() {
           </Suspense>
         </SidebarProvider>
       </WorldProvider>
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Welcome to Wonderland!</DialogTitle>
+            <DialogDescription>
+              Celebrate this Chinese New Year with us in a magical way! Hidden
+              across our animated Wonderland are 6 golden coins, each holding a
+              special surprise just for you.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex flex-col gap-4">
+            <ol className="list-inside list-decimal">
+              <p className="font-semibold">Your mission:</p>
+              <li>Explore Wonderland and find all 6 golden coins.</li>
+              <li>Click each coin to reveal your prize.</li>
+              <li>Collect all 6 gifts—every coin unlocks something amazing!</li>
+            </ol>
+            <em className="text-sm text-gray-500">
+              P.S. Look closely! These coins are hidden in plain sight.
+            </em>
+          </div>
+        </DialogContent>
+      </Dialog>
     </EventProvider>
   );
 }
