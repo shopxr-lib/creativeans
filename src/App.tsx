@@ -30,11 +30,15 @@ function App() {
 
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   useEffect(() => {
-    const hasVisited = localStorage.getItem("hasVisited");
-    if (!hasVisited && progress >= 100) {
-      setIsDialogOpen(true);
-      localStorage.setItem("hasVisited", "true");
-    }
+    const asyncOpenPopup = async () => {
+      const hasVisited = localStorage.getItem("hasVisited");
+      if (!hasVisited && progress >= 100) {
+        await wait(2000);
+        setIsDialogOpen(true);
+        localStorage.setItem("hasVisited", "true");
+      }
+    };
+    asyncOpenPopup();
   }, [progress]);
 
   return (
@@ -52,7 +56,8 @@ function App() {
         </SidebarProvider>
       </WorldProvider>
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent>
+        {/* change translate-y to offset the header in the hosting website */}
+        <DialogContent className="w-4/5 translate-y-[-60%] rounded-md text-sm sm:text-base">
           <DialogHeader>
             <DialogTitle>Welcome to Wonderland!</DialogTitle>
             <DialogDescription>
@@ -141,6 +146,8 @@ const assetManifest = {
     },
   ],
 };
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 Assets.init({ manifest: assetManifest });
 
