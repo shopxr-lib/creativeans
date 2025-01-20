@@ -83,7 +83,7 @@ function App() {
   );
 }
 
-const minDelayMs = 0;
+const minDelayMs = import.meta.env.PROD ? 3000 : 0;
 
 function useLoadBundles(manifest: AssetManifest) {
   const [progress, setProgress] = useState(0);
